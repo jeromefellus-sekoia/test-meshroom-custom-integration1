@@ -1,4 +1,7 @@
 dst_tenant: sekoia
 mode: pull
+settings:
+  intake_uuid: 9be4a6ac-fbd9-4a13-b681-55fb3d9a61a6
 src_tenant: example
+status: up
 topic: events
