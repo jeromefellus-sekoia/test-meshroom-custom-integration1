@@ -1,0 +1,8 @@
+uuid: "bd27ff3f-8567-4d47-b4f0-03600a7c51ee"
+name: "example"
+slug: "example"
+description: "An example intake format to show how Sekoia.io can consume events from 3rd-parties with custom parsing and ECS field mapping"
+data_sources:
+  DNS records: fake DNS infos
+automation_connector_uuid: "bd27ff3f-8567-4d47-b4f0-03600a7c51ee"
+automation_module_uuid: "bd27ff3f-8567-4d47-b4f0-03600a7c51ee"

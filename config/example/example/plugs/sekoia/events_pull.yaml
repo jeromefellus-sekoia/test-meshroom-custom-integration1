@@ -1,0 +1,4 @@
+dst_tenant: sekoia
+mode: pull
+src_tenant: example
+topic: events
