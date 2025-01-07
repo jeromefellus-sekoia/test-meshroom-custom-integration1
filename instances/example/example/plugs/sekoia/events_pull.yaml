@@ -1,4 +1,7 @@
 dst_instance: sekoia
 mode: pull
+settings:
+  intake_uuid: 69f68522-ada4-4889-9d71-1ae08534a872
 src_instance: example
+status: up
 topic: events

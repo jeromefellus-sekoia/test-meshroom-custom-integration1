@@ -1,6 +1,8 @@
 automation_connector_uuid: 19821a46-1b69-4f6f-b8c0-d2957759664a
+automation_library_fork_url: git@github.com:jeromefellus-sekoia/automation-library.git
 automation_module_uuid: 19821a46-1b69-4f6f-b8c0-d2957759664a
 intake_format_uuid: 19821a46-1b69-4f6f-b8c0-d2957759664a
+intake_formats_fork_url: git@github.com:jeromefellus-sekoia/intake-format-example.git
 mode: pull
 product: sekoia
 role: consumer
