@@ -1,0 +1,4 @@
+dst_instance: sekoia
+mode: pull
+src_instance: example
+topic: events

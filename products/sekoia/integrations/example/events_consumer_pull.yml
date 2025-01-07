@@ -1,0 +1,8 @@
+automation_connector_uuid: 19821a46-1b69-4f6f-b8c0-d2957759664a
+automation_module_uuid: 19821a46-1b69-4f6f-b8c0-d2957759664a
+intake_format_uuid: 19821a46-1b69-4f6f-b8c0-d2957759664a
+mode: pull
+product: sekoia
+role: consumer
+target_product: example
+topic: events

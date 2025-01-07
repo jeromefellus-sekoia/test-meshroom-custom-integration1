@@ -1,0 +1,14 @@
+{
+    "configuration": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "title": "example",
+        "type": "object",
+        "properties": {},
+        "required": []
+    },
+    "description": "example",
+    "name": "example",
+    "uuid": "19821a46-1b69-4f6f-b8c0-d2957759664a",
+    "slug": "example",
+    "version": "0.1.0"
+}
