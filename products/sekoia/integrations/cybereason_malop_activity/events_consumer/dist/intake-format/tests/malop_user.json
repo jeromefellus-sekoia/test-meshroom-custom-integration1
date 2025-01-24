@@ -1,0 +1,52 @@
+{
+  "input": {
+    "message": "CEF:0|Cybereason|Cybereason|1.0|6|Malop User Added|5|CybereasonCEFgeneratorBatchId1=2ac124fd-def2-4073-b408-d3b3f0e764b0 cs1=11.-6654920844431693523 dpriv=None dhost=desktop-aas6kq7 CybereasonCEFgeneratorOrganizationName1=INTEGRATION duser=system cs1Label=MalopId"
+  },
+  "expected": {
+    "message": "CEF:0|Cybereason|Cybereason|1.0|6|Malop User Added|5|CybereasonCEFgeneratorBatchId1=2ac124fd-def2-4073-b408-d3b3f0e764b0 cs1=11.-6654920844431693523 dpriv=None dhost=desktop-aas6kq7 CybereasonCEFgeneratorOrganizationName1=INTEGRATION duser=system cs1Label=MalopId",
+    "event": {
+      "action": "Malop User Added",
+      "category": [
+        "intrusion_detection"
+      ],
+      "code": "6",
+      "kind": "event",
+      "severity": 5,
+      "type": [
+        "info"
+      ]
+    },
+    "cybereason": {
+      "cef": {
+        "version": "0"
+      },
+      "event": {
+        "id": "2ac124fd-def2-4073-b408-d3b3f0e764b0"
+      },
+      "malop": {
+        "id": "11.-6654920844431693523"
+      }
+    },
+    "host": {
+      "hostname": "desktop-aas6kq7",
+      "name": "desktop-aas6kq7"
+    },
+    "observer": {
+      "product": "Cybereason",
+      "vendor": "Cybereason",
+      "version": "1.0"
+    },
+    "related": {
+      "hosts": [
+        "desktop-aas6kq7"
+      ],
+      "user": [
+        "system"
+      ]
+    },
+    "user": {
+      "domain": "INTEGRATION",
+      "name": "system"
+    }
+  }
+}

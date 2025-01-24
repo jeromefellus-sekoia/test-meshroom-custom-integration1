@@ -1,0 +1,6 @@
+description: DNS queries inspected by Cloudflare Gateway
+name: cloudflare_gateway_dns
+produces:
+  events:
+  - {}
+vendor: Cloudflare

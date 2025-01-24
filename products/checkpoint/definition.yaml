@@ -1,0 +1,17 @@
+description: "Check Point Harmony is the industry\u2019s first unified security solution\
+  \ for users devices and access."
+name: checkpoint
+settings:
+- description: Client Id to interact with Checkpoint API
+  name: client_id
+  required: true
+- description: Secret key to work with Checkpoint API
+  name: secret_key
+  required: true
+  secret: true
+- description: Authentication url to authenticate Checkpoint API
+  name: authentication_url
+  required: true
+- default: https://cloudinfra-gw.portal.checkpoint.com
+  description: Base url to interact with Checkpoint API
+  name: base_url

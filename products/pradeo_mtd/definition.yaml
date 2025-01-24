@@ -1,0 +1,7 @@
+description: Detect and analyze malicious traffic patterns, identifying on your mobile
+  phone fleet potential security threats before they can cause harm.
+name: pradeo_mtd
+produces:
+  events:
+  - {}
+vendor: Pradeo

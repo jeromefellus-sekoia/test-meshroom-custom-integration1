@@ -1,0 +1,29 @@
+description: Google module
+name: google
+settings:
+- description: Credentials to use. You can find them in the credentials file
+  name: credentials
+  properties:
+  - name: type
+    required: true
+  - name: project_id
+    required: true
+  - name: private_key_id
+    required: true
+  - name: private_key
+    required: true
+  - name: client_email
+    required: true
+  - name: client_id
+    required: true
+  - name: auth_uri
+    required: true
+  - name: token_uri
+    required: true
+    secret: true
+  - name: auth_provider_x509_cert_url
+    required: true
+  - name: client_x509_cert_url
+    required: true
+  required: true
+  type: object

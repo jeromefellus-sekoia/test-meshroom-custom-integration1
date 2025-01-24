@@ -1,0 +1,81 @@
+{
+  "input": {
+    "message": "{\"time\":\"2022-08-29T15:03:25.4715017Z\",\"resourceId\":\"/SUBSCRIPTIONS/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/RESOURCEGROUPS/YYYYYYYYYYYYYYYYY/PROVIDERS/MICROSOFT.CDN/PROFILES/ZZZZZZZZZZZZZZZ\",\"category\":\"FrontDoorAccessLog\",\"operationName\":\"Microsoft.Cdn/Profiles/AccessLog/Write\",\"properties\":{\"trackingReference\":\"0PdUMYwAAAAAA35SK7dpvSZxm/Y92xsH7UEFSMjAxMDgwMzg1MDQ5ADkxZjFmYTAyLWMzZGEtNDBlMi04ZWM2LWQ0OTQ1OWJiNzc5OQ==\",\"httpMethod\":\"GET\",\"httpVersion\":\"1.1.0.0\",\"requestUri\":\"http://example.1.azurefd.net:80/\",\"requestBytes\":\"109\",\"responseBytes\":\"221\",\"userAgent\":\"curl/7.77.0\",\"clientIp\":\"1.2.3.4\",\"socketIp\":\"1.2.3.4\",\"clientPort\":\"53170\",\"timeToFirstByte\":\"0.002\",\"timeTaken\":\"0.002\",\"requestProtocol\":\"HTTP\",\"securityProtocol\":\"\",\"endpoint\":\"example.1.azurefd.net\",\"routingRuleName\":\"example.1.azurefd.net\",\"rulesEngineMatchNames\":[\"DefaultHttpsRedirectRule\"],\"httpStatusCode\":\"307\",\"httpStatusDetails\":\"307\",\"pop\":\"PAR\",\"cacheStatus\":\"CONFIG_NOCACHE\",\"ErrorInfo\":\"NoError\",\"hostName\":\"example.1.azurefd.net\",\"originUrl\":\"N/A\",\"originIp\":\"N/A\",\"originName\":\"N/A\",\"referer\":\"\",\"clientCountry\":\"France\",\"domain\":\"example.1.azurefd.net:80\",\"securityCipher\":\"\"}}\n"
+  },
+  "expected": {
+    "message": "{\"time\":\"2022-08-29T15:03:25.4715017Z\",\"resourceId\":\"/SUBSCRIPTIONS/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/RESOURCEGROUPS/YYYYYYYYYYYYYYYYY/PROVIDERS/MICROSOFT.CDN/PROFILES/ZZZZZZZZZZZZZZZ\",\"category\":\"FrontDoorAccessLog\",\"operationName\":\"Microsoft.Cdn/Profiles/AccessLog/Write\",\"properties\":{\"trackingReference\":\"0PdUMYwAAAAAA35SK7dpvSZxm/Y92xsH7UEFSMjAxMDgwMzg1MDQ5ADkxZjFmYTAyLWMzZGEtNDBlMi04ZWM2LWQ0OTQ1OWJiNzc5OQ==\",\"httpMethod\":\"GET\",\"httpVersion\":\"1.1.0.0\",\"requestUri\":\"http://example.1.azurefd.net:80/\",\"requestBytes\":\"109\",\"responseBytes\":\"221\",\"userAgent\":\"curl/7.77.0\",\"clientIp\":\"1.2.3.4\",\"socketIp\":\"1.2.3.4\",\"clientPort\":\"53170\",\"timeToFirstByte\":\"0.002\",\"timeTaken\":\"0.002\",\"requestProtocol\":\"HTTP\",\"securityProtocol\":\"\",\"endpoint\":\"example.1.azurefd.net\",\"routingRuleName\":\"example.1.azurefd.net\",\"rulesEngineMatchNames\":[\"DefaultHttpsRedirectRule\"],\"httpStatusCode\":\"307\",\"httpStatusDetails\":\"307\",\"pop\":\"PAR\",\"cacheStatus\":\"CONFIG_NOCACHE\",\"ErrorInfo\":\"NoError\",\"hostName\":\"example.1.azurefd.net\",\"originUrl\":\"N/A\",\"originIp\":\"N/A\",\"originName\":\"N/A\",\"referer\":\"\",\"clientCountry\":\"France\",\"domain\":\"example.1.azurefd.net:80\",\"securityCipher\":\"\"}}\n",
+    "event": {
+      "category": [
+        "web"
+      ],
+      "dataset": "access",
+      "module": "azure.waf",
+      "type": [
+        "access"
+      ]
+    },
+    "@timestamp": "2022-08-29T15:03:25.471501Z",
+    "azure_front_door": {
+      "category": "FrontDoorAccessLog",
+      "operation_name": "Microsoft.Cdn/Profiles/AccessLog/Write",
+      "resource_id": "/SUBSCRIPTIONS/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/RESOURCEGROUPS/YYYYYYYYYYYYYYYYY/PROVIDERS/MICROSOFT.CDN/PROFILES/ZZZZZZZZZZZZZZZ",
+      "tracking_reference": "0PdUMYwAAAAAA35SK7dpvSZxm/Y92xsH7UEFSMjAxMDgwMzg1MDQ5ADkxZjFmYTAyLWMzZGEtNDBlMi04ZWM2LWQ0OTQ1OWJiNzc5OQ=="
+    },
+    "cloud": {
+      "provider": "azure"
+    },
+    "http": {
+      "request": {
+        "bytes": 109,
+        "method": "GET"
+      },
+      "response": {
+        "bytes": 221,
+        "status_code": 307
+      },
+      "version": "1.1"
+    },
+    "network": {
+      "protocol": "HTTP"
+    },
+    "observer": {
+      "hostname": "example.1.azurefd.net",
+      "product": "Azure Front Door",
+      "vendor": "Microsoft"
+    },
+    "related": {
+      "hosts": [
+        "example.1.azurefd.net"
+      ],
+      "ip": [
+        "1.2.3.4"
+      ]
+    },
+    "source": {
+      "address": "1.2.3.4",
+      "ip": "1.2.3.4",
+      "port": 53170
+    },
+    "url": {
+      "domain": "example.1.azurefd.net",
+      "original": "http://example.1.azurefd.net:80/",
+      "path": "/",
+      "port": 80,
+      "registered_domain": "azurefd.net",
+      "scheme": "http",
+      "subdomain": "example.1",
+      "top_level_domain": "net"
+    },
+    "user_agent": {
+      "device": {
+        "name": "Other"
+      },
+      "name": "curl",
+      "original": "curl/7.77.0",
+      "os": {
+        "name": "Other"
+      },
+      "version": "7.77.0"
+    }
+  }
+}

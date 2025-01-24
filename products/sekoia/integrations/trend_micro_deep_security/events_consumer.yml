@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/b2d961ae-0f7e-400b-879a-f97be24cc02d
+intake_format_uuid: b2d961ae-0f7e-400b-879a-f97be24cc02d
+product: sekoia
+role: consumer
+target_product: trend_micro_deep_security
+topic: events

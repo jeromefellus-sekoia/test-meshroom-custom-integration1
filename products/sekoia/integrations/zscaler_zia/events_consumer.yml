@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/dc0f339f-5dbe-4e68-9fa0-c63661820941
+intake_format_uuid: dc0f339f-5dbe-4e68-9fa0-c63661820941
+product: sekoia
+role: consumer
+target_product: zscaler_zia
+topic: events

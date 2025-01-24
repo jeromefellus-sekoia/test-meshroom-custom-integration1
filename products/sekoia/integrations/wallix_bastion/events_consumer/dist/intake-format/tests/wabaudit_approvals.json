@@ -1,0 +1,34 @@
+{
+  "input": {
+    "message": "[wabaudit] action=\"list\" type=\"Approvals\" user=\"OPERATOR\" client_ip=\"127.0.0.1\" infos=\"\"\n"
+  },
+  "expected": {
+    "message": "[wabaudit] action=\"list\" type=\"Approvals\" user=\"OPERATOR\" client_ip=\"127.0.0.1\" infos=\"\"\n",
+    "event": {
+      "action": "Approvals",
+      "provider": "wabengine",
+      "type": [
+        "access"
+      ]
+    },
+    "related": {
+      "ip": [
+        "127.0.0.1"
+      ],
+      "user": [
+        "OPERATOR"
+      ]
+    },
+    "source": {
+      "address": "127.0.0.1",
+      "ip": "127.0.0.1"
+    },
+    "user": {
+      "name": "OPERATOR"
+    },
+    "wallix": {
+      "action": "list",
+      "type": "Approvals"
+    }
+  }
+}

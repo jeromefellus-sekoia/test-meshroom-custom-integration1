@@ -1,0 +1,10 @@
+description: Interact with WithSecure Elements
+name: withsecure
+settings:
+- description: Client identifier
+  name: client_id
+  required: true
+- description: API secret to authenticate
+  name: secret
+  required: true
+  secret: true

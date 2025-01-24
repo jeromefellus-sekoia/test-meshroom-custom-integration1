@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/064f7e8b-ce5f-474d-802e-e88fe2193365
+intake_format_uuid: 064f7e8b-ce5f-474d-802e-e88fe2193365
+product: sekoia
+role: consumer
+target_product: trend_micro_apex_one
+topic: events

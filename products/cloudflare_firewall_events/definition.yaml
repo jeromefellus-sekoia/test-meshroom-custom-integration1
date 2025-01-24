@@ -1,0 +1,9 @@
+description: 'Cloudflare is a global network designed to make everything you connect
+  to the Internet secure, private, fast, and reliable.
+
+  This intake parse events representing actions taken by Cloudflare WAF.'
+name: cloudflare_firewall_events
+produces:
+  events:
+  - {}
+vendor: Cloudflare

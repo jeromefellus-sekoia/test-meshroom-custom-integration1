@@ -1,0 +1,6 @@
+description: Provides data enrichment for domains and IP addresses.
+name: whois
+settings:
+- description: Use system proxy settings
+  name: proxy
+  type: boolean

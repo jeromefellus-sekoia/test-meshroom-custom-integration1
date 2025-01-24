@@ -1,0 +1,4 @@
+product: myedr
+role: executor
+target_product: sekoia
+topic: search_threat

@@ -1,0 +1,14 @@
+{
+    "configuration": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "title": "myedr",
+        "type": "object",
+        "properties": {},
+        "required": []
+    },
+    "description": "myedr",
+    "name": "myedr",
+    "uuid": "9ba29226-5292-45d2-9b10-e0d772babee1",
+    "slug": "myedr",
+    "version": "0.1.0"
+}

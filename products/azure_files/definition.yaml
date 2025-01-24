@@ -1,0 +1,9 @@
+description: Microsoft Azure Files is a cloud-based file storage service by Microsoft
+  Azure, offering scalable and secure file shares accessible from anywhere, enabling
+  easy file sharing across applications and virtual machines with seamless integration
+  into Azure infrastructure.
+name: azure_files
+produces:
+  events:
+  - mode: pull
+vendor: Azure

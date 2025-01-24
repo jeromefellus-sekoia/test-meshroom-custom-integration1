@@ -1,0 +1,35 @@
+{
+  "input": {
+    "message": "[wabaudit] action=\"edit\" type=\"Recording Options\" user=\"admin\" client_ip=\"10.10.43.28\" infos=\"Recording Options ['No encryption, with checksum' to 'No encryption, no checksum']\""
+  },
+  "expected": {
+    "message": "[wabaudit] action=\"edit\" type=\"Recording Options\" user=\"admin\" client_ip=\"10.10.43.28\" infos=\"Recording Options ['No encryption, with checksum' to 'No encryption, no checksum']\"",
+    "event": {
+      "action": "Recording Options",
+      "provider": "wabengine",
+      "reason": "Recording Options ['No encryption, with checksum' to 'No encryption, no checksum']",
+      "type": [
+        "change"
+      ]
+    },
+    "related": {
+      "ip": [
+        "10.10.43.28"
+      ],
+      "user": [
+        "admin"
+      ]
+    },
+    "source": {
+      "address": "10.10.43.28",
+      "ip": "10.10.43.28"
+    },
+    "user": {
+      "name": "admin"
+    },
+    "wallix": {
+      "action": "edit",
+      "type": "Recording Options"
+    }
+  }
+}

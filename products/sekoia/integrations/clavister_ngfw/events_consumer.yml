@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/64d118f0-84a5-4f46-ab05-7776bd6d0eed
+intake_format_uuid: 64d118f0-84a5-4f46-ab05-7776bd6d0eed
+product: sekoia
+role: consumer
+target_product: clavister_ngfw
+topic: events

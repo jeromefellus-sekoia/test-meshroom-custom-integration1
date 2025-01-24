@@ -1,0 +1,9 @@
+description: A new detection and response platform (NDR) that enables to identify
+  with certainty malicious actions and suspicious behaviors based on a mapping of
+  all assets present on the information system. This format parses events up to the
+  version 102.
+name: aioniq
+produces:
+  events:
+  - {}
+vendor: GateWatcher

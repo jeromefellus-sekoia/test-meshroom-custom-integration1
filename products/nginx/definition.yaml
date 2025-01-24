@@ -1,0 +1,8 @@
+description: 'NGINX is an HTTP and reverse proxy server.
+
+  Sending NGINX logs will help detect suspicious connections and intrusion attempts.'
+name: nginx
+produces:
+  events:
+  - {}
+vendor: NGINX

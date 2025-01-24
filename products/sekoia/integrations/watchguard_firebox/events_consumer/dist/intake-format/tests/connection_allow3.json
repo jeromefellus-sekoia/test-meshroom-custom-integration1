@@ -1,0 +1,67 @@
+{
+  "input": {
+    "message": "LEEF:1.0|WatchGuard|XTM|12.8.2.B666661|30000151|serial=000000000000\tpolicy=DNS-Wifi-Home-00\tdisp=Allow\tin_if=Wifi_Home\tout_if=Firebox\tgeo_dst=USA\tsrc=10.10.10.11\tsrcPort=38547\tdst=8.8.4.4\tdstPort=53\tdstPostNAT=10.10.10.1\tduration=40\tsent_bytes=60\trcvd_bytes=116"
+  },
+  "expected": {
+    "message": "LEEF:1.0|WatchGuard|XTM|12.8.2.B666661|30000151|serial=000000000000\tpolicy=DNS-Wifi-Home-00\tdisp=Allow\tin_if=Wifi_Home\tout_if=Firebox\tgeo_dst=USA\tsrc=10.10.10.11\tsrcPort=38547\tdst=8.8.4.4\tdstPort=53\tdstPostNAT=10.10.10.1\tduration=40\tsent_bytes=60\trcvd_bytes=116",
+    "event": {
+      "action": "Allow",
+      "category": [
+        "network"
+      ],
+      "code": "30000151",
+      "type": [
+        "allowed",
+        "connection"
+      ]
+    },
+    "destination": {
+      "address": "8.8.4.4",
+      "bytes": 116,
+      "geo": {
+        "country_iso_code": "USA"
+      },
+      "ip": "8.8.4.4",
+      "port": 53
+    },
+    "observer": {
+      "egress": {
+        "interface": {
+          "name": "Firebox"
+        }
+      },
+      "ingress": {
+        "interface": {
+          "name": "Wifi_Home"
+        }
+      },
+      "product": "XTM",
+      "serial_number": "000000000000",
+      "type": "firewall",
+      "vendor": "WatchGuard",
+      "version": "12.8.2.B666661"
+    },
+    "related": {
+      "ip": [
+        "10.10.10.11",
+        "8.8.4.4"
+      ]
+    },
+    "rule": {
+      "ruleset": "DNS-Wifi-Home-00"
+    },
+    "source": {
+      "address": "10.10.10.11",
+      "bytes": 60,
+      "ip": "10.10.10.11",
+      "port": 38547
+    },
+    "watchguard": {
+      "firebox": {
+        "network": {
+          "duration": 40
+        }
+      }
+    }
+  }
+}

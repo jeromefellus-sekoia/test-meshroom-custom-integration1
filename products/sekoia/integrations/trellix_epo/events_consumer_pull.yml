@@ -1,0 +1,56 @@
+automation_connector_uuid: ba40ab72-1456-11ee-be56-0242ac120002
+automation_module_uuid: 888071f8-1456-11ee-be56-0242ac120002
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/ba40ab72-1456-11ee-be56-0242ac120002
+intake_format_uuid: ba40ab72-1456-11ee-be56-0242ac120002
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: module_configuration
+  properties:
+  - description: Client id to interact with Trellix API
+    name: client_id
+    required: true
+  - description: Client secret to interact with Trellix API
+    name: client_secret
+    required: true
+    secret: true
+  - description: Api key to interact with Trellix API
+    name: api_key
+    required: true
+  - default: 1
+    description: Delay between running the connector
+    name: delay
+    type: integer
+  - default: https://api.manage.trellix.com
+    description: Base url of the Trellix API
+    name: base_url
+  - default: https://iam.mcafee-cloud.com/iam/v1.1
+    description: Url of the authentication server
+    name: auth_url
+  type: object
+- name: connector_configuration
+  properties:
+  - default: 300
+    description: Interval, in seconds, between two fetches of events
+    name: frequency
+    type: integer
+  - default: 1000
+    description: The max size of chunks for the batch processing
+    name: chunk_size
+    type: integer
+  - default: 60
+    description: Maximum number of requests per minute
+    name: ratelimit_per_minute
+    type: integer
+  - default: 2000
+    description: Maximum number of requests per day
+    name: ratelimit_per_day
+    type: integer
+  - default: 100
+    description: Number of records to fetch per 1 request
+    name: records_per_request
+    type: integer
+  type: object
+target_product: trellix_epo
+topic: events

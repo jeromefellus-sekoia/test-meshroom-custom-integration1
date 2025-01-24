@@ -1,0 +1,33 @@
+{
+  "input": {
+    "message": "SRC_Start srcmstr root root OK 21 sep 2022 00:00:08.467005 No associated roles syslog_ng"
+  },
+  "expected": {
+    "message": "SRC_Start srcmstr root root OK 21 sep 2022 00:00:08.467005 No associated roles syslog_ng",
+    "event": {
+      "action": "SRC_Start",
+      "category": [
+        "process"
+      ]
+    },
+    "action": {
+      "status": "OK",
+      "target": "process"
+    },
+    "file": {
+      "name": "syslog_ng"
+    },
+    "group": {
+      "name": "root"
+    },
+    "observer": {
+      "vendor": "IBM"
+    },
+    "process": {
+      "name": "srcmstr",
+      "user": {
+        "name": "root"
+      }
+    }
+  }
+}

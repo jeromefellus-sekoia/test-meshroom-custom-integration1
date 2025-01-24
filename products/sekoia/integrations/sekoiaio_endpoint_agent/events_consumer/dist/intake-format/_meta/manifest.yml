@@ -1,0 +1,20 @@
+uuid: 250e4095-fa08-4101-bb02-e72f870fcbd1
+name: Sekoia.io Endpoint Agent
+slug: sekoiaio-endpoint-agent
+description: "The Sekoia.io Endpoint Agent gathers security event logs from Windows, Linux and MacOS systems.\nThis visibility aids in detecting lateral movement and malicious behavior,  illuminating attack paths and compromised systems within your Information System. \nDownload the Sekoia.io Endpoint agent for Windows [here](/api/v1/xdr-agent/download/agent-latest.exe),  for GNU/Linux [here](/api/v1/xdr-agent/download/agent-latest), for macOS [M1, M2, or M3](/api/v1/xdr-agent/download/agent-latest.zip) or [Intel x86](/api/v1/xdr-agent/download/agent-latest-x86.zip).  Find installation instructions in the [documentation](https://docs.sekoia.io/operation_center/data_collection/ingestion_methods/sekoiaio/)."
+data_sources:
+  Access tokens: security identifiers are extracted from several events
+  Anti-virus: Windows Defender events are analyzed, and need to be specifically set up
+  Authentication logs: audit logon events are examined in detail
+  DLL monitoring: information about dlls are extracted from several events
+  File monitoring: information about files are extracted from several events
+  Host network interface: Windows Filtering Platform collects information on processes having network activities
+  Loaded DLLs: Sysmon events provide information on DLL loading
+  PowerShell logs: Windows PowerShell logs are analyzed, and need to be specifically set up
+  Process command-line parameters: Windows Security Auditing logs provide information about process creation
+  Process monitoring: Windows Security Auditing logs are process tracking events
+  Process use of network: Windows Filtering Platform collects information on processes having network activities
+  Windows event logs: events related to Windows Event logs shutdown or restart are analyzed
+  Windows Registry: registry auditing events are examined in detail
+  WMI Objects: Windows WMI Activity events are analyzed, and events related to WMI process too
+automation_module_uuid: 92d8bb47-7c51-445d-81de-ae04edbb6f0a

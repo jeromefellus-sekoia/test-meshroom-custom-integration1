@@ -1,0 +1,7 @@
+description: Trend Micro APEX ONE is Endpoint Detection and Response (EDR) solution
+  that detects and protects your endpoints against threats.
+name: trend_micro_apex_one
+produces:
+  events:
+  - {}
+vendor: Trend Micro

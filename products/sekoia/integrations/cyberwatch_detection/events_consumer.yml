@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/c6a43439-7b9d-4678-804b-ebda6756db60
+intake_format_uuid: c6a43439-7b9d-4678-804b-ebda6756db60
+product: sekoia
+role: consumer
+target_product: cyberwatch_detection
+topic: events

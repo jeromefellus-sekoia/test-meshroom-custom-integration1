@@ -1,0 +1,20 @@
+automation_connector_uuid: 584ebe4c-d94f-44ed-b53b-fe4f7ccaf6c8
+automation_module_uuid: 2dc2855e-3f9a-441c-af2a-30c64e0d0f4a
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/caa13404-9243-493b-943e-9848cadb1f99
+intake_format_uuid: caa13404-9243-493b-943e-9848cadb1f99
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: connector_configuration
+  properties:
+  - name: client_id
+    required: true
+  - name: client_secret
+    required: true
+    secret: true
+  - name: tenant_id
+    required: true
+  type: object
+target_product: o365
+topic: events

@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/8a9894f8-d7bc-4c06-b96a-8808b3c6cade
+intake_format_uuid: 8a9894f8-d7bc-4c06-b96a-8808b3c6cade
+product: sekoia
+role: consumer
+target_product: cisco_ise
+topic: events

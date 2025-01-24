@@ -1,0 +1,12 @@
+description: 'Tenable Identity Exposure / Alsid is an automated security solution
+  that monitors the components of Active Directory infrastructures by detecting attacks
+  in real time, identifying existing weaknesses and vulnerabilities.
+
+  Sending Tenable Identity Exposure / Alsid logs to Sekoia.io will bring you a better
+  visibility on the AD security. Detected AD attacks are contextualized with our Cyber
+  Threat Intelligence (CTI).'
+name: alsid
+produces:
+  events:
+  - {}
+vendor: Tenable

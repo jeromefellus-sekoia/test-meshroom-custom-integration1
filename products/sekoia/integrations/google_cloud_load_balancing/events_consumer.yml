@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/4d50ae7e-ccac-4a5b-9a4c-58a7893f93bb
+intake_format_uuid: 4d50ae7e-ccac-4a5b-9a4c-58a7893f93bb
+product: sekoia
+role: consumer
+target_product: google_cloud_load_balancing
+topic: events

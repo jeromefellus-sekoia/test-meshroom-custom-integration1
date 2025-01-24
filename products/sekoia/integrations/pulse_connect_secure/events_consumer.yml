@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/7a12aa3b-ec73-4ebb-8fb3-f7c543fd84a5
+intake_format_uuid: 7a12aa3b-ec73-4ebb-8fb3-f7c543fd84a5
+product: sekoia
+role: consumer
+target_product: pulse_connect_secure
+topic: events

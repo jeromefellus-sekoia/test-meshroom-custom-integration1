@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/23b75d0c-2026-4d3e-b916-636c27ba4931
+intake_format_uuid: 23b75d0c-2026-4d3e-b916-636c27ba4931
+product: sekoia
+role: consumer
+target_product: cisco_secure_web_appliance
+topic: events

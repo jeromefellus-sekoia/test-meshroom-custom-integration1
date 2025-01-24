@@ -1,0 +1,7 @@
+description: Check Point Harmony Mobile is the industry's first unified security solution
+  for users devices and access
+name: checkpoint_harmony_mobile
+produces:
+  events:
+  - mode: pull
+vendor: Checkpoint

@@ -1,0 +1,7 @@
+description: "Jiz\xF4 NDR is a network observability platform that enables decision-makers\
+  \ to anticipate, identify and block cyber-attacks."
+name: sesameit_jizo
+produces:
+  events:
+  - {}
+vendor: SesameIT

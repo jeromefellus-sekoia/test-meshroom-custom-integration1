@@ -1,0 +1,40 @@
+automation_connector_uuid: 7902efc5-a9c4-4ff1-9f82-b0551ec9d003
+automation_module_uuid: ee0e5c81-5410-48d4-b155-135679c5ebb8
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/d9f337a4-1303-47d4-b15f-1f83807ff3cc
+intake_format_uuid: d9f337a4-1303-47d4-b15f-1f83807ff3cc
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: module_configuration
+  properties:
+  - description: Imperva API base URL
+    name: base_url
+    required: true
+  - description: Imperva API ID
+    name: api_id
+    required: true
+  - description: Imperva API key
+    name: api_key
+    required: true
+  - description: Encryption keys
+    name: keys
+    properties:
+    - name: <public key id>
+      properties:
+      - name: private
+      type: object
+    type: object
+  type: object
+- name: connector_configuration
+  properties:
+  - description: Batch frequency in seconds, default 2s
+    name: frequency
+    type: integer
+  - default: 500
+    description: The size of chunks for the batch processing
+    name: chunk_size
+    type: integer
+  type: object
+target_product: imperva_waf
+topic: events

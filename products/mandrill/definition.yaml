@@ -1,0 +1,6 @@
+description: Mandrill is a transactional email platform from Mailchimp.
+name: mandrill
+settings:
+- description: APIKEY for Mandrill
+  name: apikey
+  required: true

@@ -1,0 +1,35 @@
+{
+  "input": {
+    "message": "[wabaudit] action=\"delete\" type=\"Apikey\" object=\"apikey_154954882800\" user=\"QA_ADMIN\" client_ip=\"10.10.45.212\" infos=\"\""
+  },
+  "expected": {
+    "message": "[wabaudit] action=\"delete\" type=\"Apikey\" object=\"apikey_154954882800\" user=\"QA_ADMIN\" client_ip=\"10.10.45.212\" infos=\"\"",
+    "event": {
+      "action": "Apikey",
+      "provider": "wabengine",
+      "type": [
+        "deletion"
+      ]
+    },
+    "related": {
+      "ip": [
+        "10.10.45.212"
+      ],
+      "user": [
+        "QA_ADMIN"
+      ]
+    },
+    "source": {
+      "address": "10.10.45.212",
+      "ip": "10.10.45.212"
+    },
+    "user": {
+      "name": "QA_ADMIN"
+    },
+    "wallix": {
+      "action": "delete",
+      "object": "apikey_154954882800",
+      "type": "Apikey"
+    }
+  }
+}

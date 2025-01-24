@@ -1,0 +1,7 @@
+description: Proofpoint On Demand offers a real-time email processing feed to detect,
+  classify and mitigate threats.
+name: proofpoint_pod
+produces:
+  events:
+  - mode: pull
+vendor: ProofPoint

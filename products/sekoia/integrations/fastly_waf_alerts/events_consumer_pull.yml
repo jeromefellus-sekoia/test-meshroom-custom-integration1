@@ -1,0 +1,35 @@
+automation_connector_uuid: 46dcb5cc-d238-4449-89e7-322178e35b16
+automation_module_uuid: d8d68a10-622d-4ed9-97e4-d1a34ff3d6f8
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/916c13a8-c109-49f0-94db-d6a2300f5580
+intake_format_uuid: 916c13a8-c109-49f0-94db-d6a2300f5580
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: connector_configuration
+  properties:
+  - description: User's email
+    name: email
+    required: true
+  - description: API token
+    name: token
+    required: true
+    secret: true
+  - description: Corporation name
+    name: corp
+    required: true
+  - description: Site name
+    name: site
+    required: true
+  - default: 60
+    description: Batch frequency in seconds
+    name: frequency
+    required: true
+    type: integer
+  - default: 1000
+    description: The size of chunks for the batch processing
+    name: chunk_size
+    type: integer
+  type: object
+target_product: fastly_waf_alerts
+topic: events

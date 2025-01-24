@@ -1,0 +1,5 @@
+description: Tanium is a privately held cybersecurity and systems management
+name: tanium
+produces:
+  events:
+  - {}

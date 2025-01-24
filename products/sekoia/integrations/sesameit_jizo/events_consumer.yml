@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/46e14ac3-0b79-42d6-8630-da4fcdb8d5f1
+intake_format_uuid: 46e14ac3-0b79-42d6-8630-da4fcdb8d5f1
+product: sekoia
+role: consumer
+target_product: sesameit_jizo
+topic: events

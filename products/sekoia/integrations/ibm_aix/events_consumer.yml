@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/e8cb3372-41c8-409f-8e0e-ca4e6cecf7e6
+intake_format_uuid: e8cb3372-41c8-409f-8e0e-ca4e6cecf7e6
+product: sekoia
+role: consumer
+target_product: ibm_aix
+topic: events

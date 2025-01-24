@@ -1,0 +1,35 @@
+automation_connector_uuid: 8e09b78c-d6bd-4c5e-af66-72635b99bb32
+automation_module_uuid: 7a951812-28a2-445a-a257-f26deae34d44
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/80de6ccb-7246-40de-bcbb-bc830118c1f9
+intake_format_uuid: 80de6ccb-7246-40de-bcbb-bc830118c1f9
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: module_configuration
+  properties:
+  - description: The name of your Github organization
+    name: org_name
+    required: true
+  - description: The APIkey to authenticate call to the Github API
+    name: apikey
+  - description: Pem file to interact with Github API
+    name: pem_file
+  - description: Github app id to interact with Github API
+    name: app_id
+    type: integer
+  type: object
+- name: connector_configuration
+  properties:
+  - default: 60
+    description: Batch frequency in seconds
+    name: frequency
+    required: true
+    type: integer
+  - default: 20
+    description: The number of requests allowed to the API in one minute for the token
+    name: ratelimit_per_minute
+    type: integer
+  type: object
+target_product: github_audit_logs
+topic: events

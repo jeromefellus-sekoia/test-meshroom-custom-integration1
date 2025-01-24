@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/d6d15297-e977-4584-9bb3-f0290b99f014
+intake_format_uuid: d6d15297-e977-4584-9bb3-f0290b99f014
+product: sekoia
+role: consumer
+target_product: aruba_os
+topic: events

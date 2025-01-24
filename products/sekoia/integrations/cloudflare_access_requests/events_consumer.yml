@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/588a448b-c08d-4139-a746-b2b9f366e34b
+intake_format_uuid: 588a448b-c08d-4139-a746-b2b9f366e34b
+product: sekoia
+role: consumer
+target_product: cloudflare_access_requests
+topic: events

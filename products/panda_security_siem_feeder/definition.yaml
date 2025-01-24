@@ -1,0 +1,6 @@
+description: Panda SIEM Feeder forward logs from Panda security products to your SIEM.
+name: panda_security_siem_feeder
+produces:
+  events:
+  - {}
+vendor: Panda Security

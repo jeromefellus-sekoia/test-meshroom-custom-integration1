@@ -1,0 +1,20 @@
+{
+  "input": {
+    "message": "pam_unix(cron:session): session closed for user root"
+  },
+  "expected": {
+    "message": "pam_unix(cron:session): session closed for user root",
+    "event": {
+      "provider": "cron",
+      "reason": "session closed"
+    },
+    "related": {
+      "user": [
+        "root"
+      ]
+    },
+    "user": {
+      "name": "root"
+    }
+  }
+}

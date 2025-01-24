@@ -1,0 +1,64 @@
+{
+  "input": {
+    "message": "1565600128.411      0 192.168.0.1 TCP_DENIED/407 3980 GET http://api.example.org/api/v2/check - HIER_NONE/- text/html"
+  },
+  "expected": {
+    "message": "1565600128.411      0 192.168.0.1 TCP_DENIED/407 3980 GET http://api.example.org/api/v2/check - HIER_NONE/- text/html",
+    "event": {
+      "category": [
+        "network",
+        "web"
+      ],
+      "duration": 0,
+      "type": [
+        "connection",
+        "denied",
+        "error"
+      ]
+    },
+    "@timestamp": "2019-08-12T08:55:28.411000Z",
+    "http": {
+      "request": {
+        "method": "GET"
+      },
+      "response": {
+        "bytes": 3980,
+        "mime_type": "text/html",
+        "status_code": 407
+      }
+    },
+    "network": {
+      "direction": "egress",
+      "transport": "tcp"
+    },
+    "observer": {
+      "product": "Squid",
+      "type": "proxy",
+      "vendor": "Squid"
+    },
+    "related": {
+      "ip": [
+        "192.168.0.1"
+      ]
+    },
+    "source": {
+      "address": "192.168.0.1",
+      "ip": "192.168.0.1"
+    },
+    "squid": {
+      "cache_status": "denied",
+      "hierarchy_code": "HIER_NONE"
+    },
+    "url": {
+      "domain": "api.example.org",
+      "full": "http://api.example.org/api/v2/check",
+      "original": "http://api.example.org/api/v2/check",
+      "path": "/api/v2/check",
+      "port": 80,
+      "registered_domain": "example.org",
+      "scheme": "http",
+      "subdomain": "api",
+      "top_level_domain": "org"
+    }
+  }
+}

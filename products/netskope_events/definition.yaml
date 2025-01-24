@@ -1,0 +1,11 @@
+description: '[Netskope](https://www.netskope.com/) is a cybersecurity company, providing
+  solutions to protect data in cloud apps and network security applying zero trust
+  principles.
+
+  Sending Netskope events and alerts to Sekoia.io will help you to analyze authentications
+  and activities to your Cloud Applications.'
+name: netskope_events
+produces:
+  events:
+  - mode: pull
+vendor: Netskope

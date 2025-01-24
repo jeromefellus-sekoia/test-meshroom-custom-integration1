@@ -1,0 +1,36 @@
+{
+  "input": {
+    "message": "[wabaudit] action=\"add\" type=\"Application\" object=\"QA_APP_DUMMY\" user=\"admin\" client_ip=\"10.10.45.212\" infos=\"target [account@local@QA_DEVICE_DUMMY_WIN:RDP]\""
+  },
+  "expected": {
+    "message": "[wabaudit] action=\"add\" type=\"Application\" object=\"QA_APP_DUMMY\" user=\"admin\" client_ip=\"10.10.45.212\" infos=\"target [account@local@QA_DEVICE_DUMMY_WIN:RDP]\"",
+    "event": {
+      "action": "Application",
+      "provider": "wabengine",
+      "reason": "target [account@local@QA_DEVICE_DUMMY_WIN:RDP]",
+      "type": [
+        "creation"
+      ]
+    },
+    "related": {
+      "ip": [
+        "10.10.45.212"
+      ],
+      "user": [
+        "admin"
+      ]
+    },
+    "source": {
+      "address": "10.10.45.212",
+      "ip": "10.10.45.212"
+    },
+    "user": {
+      "name": "admin"
+    },
+    "wallix": {
+      "action": "add",
+      "object": "QA_APP_DUMMY",
+      "type": "Application"
+    }
+  }
+}

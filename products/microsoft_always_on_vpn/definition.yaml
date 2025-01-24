@@ -1,0 +1,7 @@
+description: Microsoft Always On VPN is a Windows 10 feature enabling secure connection
+  to protected networks
+name: microsoft_always_on_vpn
+produces:
+  events:
+  - {}
+vendor: Microsoft Windows

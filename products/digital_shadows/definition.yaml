@@ -1,0 +1,17 @@
+description: Digital Shadows Module
+name: digital_shadows
+settings:
+- default: https://api.searchlight.app/v1
+  description: URL of the SearchLight instance
+  name: api_url
+  required: true
+- description: SearchLight Account ID
+  name: searchlight_account_id
+  required: true
+- description: HTTP Basic authentication key
+  name: basicauth_key
+  required: true
+- description: HTTP Basic authentication secret
+  name: basicauth_secret
+  required: true
+  secret: true

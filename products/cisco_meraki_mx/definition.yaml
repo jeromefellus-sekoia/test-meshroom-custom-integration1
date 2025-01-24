@@ -1,0 +1,7 @@
+description: Cisco Meraki MX is multifunctional security and SD-WAN enterprise appliance
+  with a wide set of capabilities.
+name: cisco_meraki_mx
+produces:
+  events:
+  - {}
+vendor: Cisco

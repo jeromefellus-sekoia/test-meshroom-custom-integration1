@@ -1,0 +1,14 @@
+description: HarfangLab is an Endpoint detection and response (EDR) solution certified
+  by ANSSI since 2020
+name: harfanglab
+produces:
+  events:
+  - {}
+settings:
+- description: URL of the HarfangLab instance
+  name: url
+  required: true
+- description: Authentication token for the API
+  name: api_token
+  required: true
+  secret: true

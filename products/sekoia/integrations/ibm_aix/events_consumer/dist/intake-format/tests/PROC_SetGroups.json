@@ -1,0 +1,30 @@
+{
+  "input": {
+    "message": "PROC_SetGroups cron root root OK 25 sep 2022 23:00:00.835203 No associated roles group set: system,bin,sys,security,cron,audit,lp,ivmgr,apache"
+  },
+  "expected": {
+    "message": "PROC_SetGroups cron root root OK 25 sep 2022 23:00:00.835203 No associated roles group set: system,bin,sys,security,cron,audit,lp,ivmgr,apache",
+    "event": {
+      "action": "PROC_SetGroups",
+      "category": [
+        "process"
+      ]
+    },
+    "action": {
+      "status": "OK",
+      "target": "process"
+    },
+    "group": {
+      "name": "root"
+    },
+    "observer": {
+      "vendor": "IBM"
+    },
+    "process": {
+      "name": "cron",
+      "user": {
+        "name": "root"
+      }
+    }
+  }
+}

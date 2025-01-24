@@ -1,0 +1,163 @@
+action.properties.errorCode:
+  description: The code of the error associated to the request
+  name: action.properties.errorCode
+  type: keyword
+
+action.properties.errorMessage:
+  description: The message of the error associated to the request
+  name: action.properties.errorMessage
+  type: keyword
+
+action.properties.recipientAccountId:
+  description: The account ID that received the event
+  name: action.properties.recipientAccountId
+  type: keyword
+
+action.properties.requestParameters.userData:
+  description: The userData parameters sent with the request
+  name: action.properties.requestParameters.userData
+  type: keyword
+
+action.properties.resources.ARN:
+  description: A list of resources ARN`s accessed in the event
+  name: action.properties.resources.ARN
+  type: list
+
+action.properties.responseElements.publiclyAccessible:
+  description: Whether the requested ressource was public
+  name: action.properties.responseElements.publiclyAccessible
+  type: boolean
+
+action.properties.userIdentity.accountId:
+  description: User accountId
+  name: action.properties.userIdentity.accountId
+  type: keyword
+
+action.properties.userIdentity.arn:
+  description: User arn
+  name: action.properties.userIdentity.arn
+  type: keyword
+
+action.properties.userIdentity.invokedBy:
+  description: User invoked by
+  name: action.properties.userIdentity.invokedBy
+  type: keyword
+
+action.properties.userIdentity.principalId:
+  description: User principal id
+  name: action.properties.userIdentity.principalId
+  type: keyword
+
+action.properties.userIdentity.sessionContext.attributes.mfaAuthenticated:
+  description: User session mfaAuthenticated
+  name: action.properties.userIdentity.sessionContext.attributes.mfaAuthenticated
+  type: keyword
+
+action.properties.userIdentity.sessionContext.sessionIssuer.arn:
+  description: User session issuer arn
+  name: action.properties.userIdentity.sessionContext.sessionIssuer.arn
+  type: keyword
+
+action.properties.userIdentity.sessionContext.sessionIssuer.type:
+  description: User session issuer type
+  name: action.properties.userIdentity.sessionContext.sessionIssuer.type
+  type: keyword
+
+action.properties.userIdentity.sessionContext.sessionIssuer.userName:
+  description: User session issuer username
+  name: action.properties.userIdentity.sessionContext.sessionIssuer.userName
+  type: keyword
+
+action.properties.userIdentity.type:
+  description: User identity type
+  name: action.properties.userIdentity.type
+  type: keyword
+
+action.properties.userIdentity.userName:
+  description: User username
+  name: action.properties.userIdentity.userName
+  type: keyword
+
+action.target:
+  description: The target of the action
+  name: action.target
+  type: keyword
+
+aws.cloudtrail.cluster_name:
+  description: The name of the cluster
+  name: aws.cloudtrail.cluster_name
+  type: keyword
+
+aws.cloudtrail.flattened.request_parameters:
+  description: The flattened version of the field requestParameters
+  name: aws.cloudtrail.flattened.request_parameters
+  type: keyword
+
+aws.cloudtrail.flattened.response_elements:
+  description: The flattened version of the field responseElements
+  name: aws.cloudtrail.flattened.response_elements
+  type: keyword
+
+aws.cloudtrail.response_elements.pendingModifiedValues.masterUserPassword:
+  description: The new master password for the RDS instance
+  name: aws.cloudtrail.response_elements.pendingModifiedValues.masterUserPassword
+  type: keyword
+
+aws.cloudtrail.response_elements.policy.arn:
+  description: provides information about the queried policy arn
+  name: aws.cloudtrail.response_elements.policy.arn
+  type: keyword
+
+aws.cloudtrail.response_elements.policy.policyId:
+  description: provides information about the queried policyId
+  name: aws.cloudtrail.response_elements.policy.policyId
+  type: keyword
+
+aws.cloudtrail.response_elements.policy.policyName:
+  description: provides information about the queried policyName
+  name: aws.cloudtrail.response_elements.policy.policyName
+  type: keyword
+
+aws.cloudtrail.response_elements.user.userName:
+  description: The name of the user in the response
+  name: aws.cloudtrail.response_elements.user.userName
+  type: keyword
+
+aws.cloudtrail.user_identity.accessKeyId:
+  description: The identifier of the access key used
+  name: aws.cloudtrail.user_identity.accessKeyId
+  type: keyword
+
+aws.cloudtrail.user_identity.accountId:
+  description: The identifier of the account that sent the request
+  name: aws.cloudtrail.user_identity.accountId
+  type: keyword
+
+aws.cloudtrail.user_identity.arn:
+  description: The ARN of the principal that sent the request
+  name: aws.cloudtrail.user_identity.arn
+  observable:
+    name: User ARN
+    property: account_login
+    type: user-account
+  type: keyword
+
+aws.cloudtrail.user_identity.principalId:
+  description: The identifier of the principal that sent the request
+  name: aws.cloudtrail.user_identity.principalId
+  type: keyword
+
+aws.cloudtrail.user_identity.sessionContext.sessionIssuer.arn:
+  description: provides information about the session issuer arn
+  name: aws.cloudtrail.user_identity.sessionContext.sessionIssuer.arn
+  type: keyword
+
+aws.cloudtrail.user_identity.sessionContext.sessionIssuer.userName:
+  description: provides information about the session issuer username
+  name: aws.cloudtrail.user_identity.sessionContext.sessionIssuer.userName
+  type: keyword
+
+aws.cloudtrail.user_identity.type:
+  description: The type of the identity
+  name: aws.cloudtrail.user_identity.type
+  type: keyword

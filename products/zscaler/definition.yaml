@@ -1,0 +1,16 @@
+description: Integrates with Zscaler
+name: zscaler
+settings:
+- description: 'Zscaler Base Url (ex: zscalerone.net, zscaler.net, zscloud.net)'
+  name: base_url
+  required: true
+- description: Email ID of the API admin
+  name: username
+  required: true
+- description: Password for the API admin
+  name: password
+  required: true
+  secret: true
+- description: API key
+  name: api_key
+  required: true

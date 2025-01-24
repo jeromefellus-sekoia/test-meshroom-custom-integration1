@@ -1,0 +1,33 @@
+{
+  "input": {
+    "message": "FS_Chroot sshd root root OK 23 sep 2022 17:14:21.748158 No associated roles change root directory to: /var/empty"
+  },
+  "expected": {
+    "message": "FS_Chroot sshd root root OK 23 sep 2022 17:14:21.748158 No associated roles change root directory to: /var/empty",
+    "event": {
+      "action": "FS_Chroot",
+      "category": [
+        "process"
+      ]
+    },
+    "action": {
+      "status": "OK",
+      "target": "process"
+    },
+    "file": {
+      "name": "/var/empty"
+    },
+    "group": {
+      "name": "root"
+    },
+    "observer": {
+      "vendor": "IBM"
+    },
+    "process": {
+      "name": "sshd",
+      "user": {
+        "name": "root"
+      }
+    }
+  }
+}

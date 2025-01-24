@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/f0f95532-9928-4cde-a399-ddd992d48472
+intake_format_uuid: f0f95532-9928-4cde-a399-ddd992d48472
+product: sekoia
+role: consumer
+target_product: forcepoint_swg
+topic: events

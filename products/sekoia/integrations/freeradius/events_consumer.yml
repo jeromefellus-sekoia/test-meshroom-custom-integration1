@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/aeb7d407-db57-44b2-90b6-7df6738d5d7f
+intake_format_uuid: aeb7d407-db57-44b2-90b6-7df6738d5d7f
+product: sekoia
+role: consumer
+target_product: freeradius
+topic: events

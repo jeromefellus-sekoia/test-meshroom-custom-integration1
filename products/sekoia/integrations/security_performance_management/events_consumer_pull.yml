@@ -1,0 +1,34 @@
+automation_connector_uuid: 1b7e8b57-71b0-49b1-8d04-d936b984b91c
+automation_module_uuid: 59b7f559-0a07-456f-b1c0-41d9fbe6ad4a
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/57eda191-2f93-4fd9-99a2-fd8ffbcdff50
+intake_format_uuid: 57eda191-2f93-4fd9-99a2-fd8ffbcdff50
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: module_configuration
+  properties:
+  - description: The list of company uuids
+    items: string
+    name: company_uuids
+    required: true
+    type: array
+  - description: The API Token to authenticate calls to the Bitsight API
+    name: api_token
+    required: true
+    secret: true
+  type: object
+- name: connector_configuration
+  properties:
+  - default: 60
+    description: Batch frequency in seconds
+    name: frequency
+    required: true
+    type: integer
+  - default: 10000
+    description: Maximum number of events to send in a single batch
+    name: batch_limit
+    type: integer
+  type: object
+target_product: security_performance_management
+topic: events

@@ -1,0 +1,36 @@
+{
+  "input": {
+    "message": "[wabaudit] action=\"add\" type=\"CredChgPolicy\" object=\"QA_PASSWORD_CHANGE_POLICY\" user=\"admin\" client_ip=\"10.10.45.212\" infos=\"pwdLength [8], specialChars [1], changePeriod []\""
+  },
+  "expected": {
+    "message": "[wabaudit] action=\"add\" type=\"CredChgPolicy\" object=\"QA_PASSWORD_CHANGE_POLICY\" user=\"admin\" client_ip=\"10.10.45.212\" infos=\"pwdLength [8], specialChars [1], changePeriod []\"",
+    "event": {
+      "action": "CredChgPolicy",
+      "provider": "wabengine",
+      "reason": "pwdLength [8], specialChars [1], changePeriod []",
+      "type": [
+        "creation"
+      ]
+    },
+    "related": {
+      "ip": [
+        "10.10.45.212"
+      ],
+      "user": [
+        "admin"
+      ]
+    },
+    "source": {
+      "address": "10.10.45.212",
+      "ip": "10.10.45.212"
+    },
+    "user": {
+      "name": "admin"
+    },
+    "wallix": {
+      "action": "add",
+      "object": "QA_PASSWORD_CHANGE_POLICY",
+      "type": "CredChgPolicy"
+    }
+  }
+}

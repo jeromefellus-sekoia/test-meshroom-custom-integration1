@@ -1,0 +1,42 @@
+{
+  "input": {
+    "message": "%ASA-4-722037: Group <GroupPolicy_CLIENT_VPN> User <User_Acme> IP <92.131.212.102> SVC closing connection: Transport closing."
+  },
+  "expected": {
+    "message": "%ASA-4-722037: Group <GroupPolicy_CLIENT_VPN> User <User_Acme> IP <92.131.212.102> SVC closing connection: Transport closing.",
+    "event": {
+      "category": [
+        "network"
+      ],
+      "code": "722037",
+      "reason": "Transport closing",
+      "type": [
+        "connection"
+      ]
+    },
+    "action": {
+      "name": "closing connection",
+      "target": "network-traffic"
+    },
+    "observer": {
+      "product": "Adaptive Security Appliance",
+      "vendor": "Cisco"
+    },
+    "related": {
+      "ip": [
+        "92.131.212.102"
+      ],
+      "user": [
+        "User_Acme"
+      ]
+    },
+    "source": {
+      "address": "92.131.212.102",
+      "ip": "92.131.212.102"
+    },
+    "user": {
+      "domain": "GroupPolicy_CLIENT_VPN",
+      "name": "User_Acme"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+description: Broadcom Cloud Secure Web Gateway is a cloud-native security solution
+  providing advanced threat protection, content filtering, and data loss prevention,
+  ensuring secure internet access and compliance for organizations with flexible deployment
+  options and comprehensive web security features.
+name: broadcom_cloud_swg
+settings:
+- description: Username to do authentication on remote server
+  name: username
+  required: true
+- description: Password to do authentication on remote server
+  name: password
+  required: true
+  secret: true

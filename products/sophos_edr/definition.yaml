@@ -1,0 +1,9 @@
+description: 'Sophos EDR monitors, detects and mitigates threats on endpoints.
+
+  This EDR reduces the attack surface and prevents attacks from running with an anti-exploit,
+  an anti-ransomware and advanced control technology.'
+name: sophos_edr
+produces:
+  events:
+  - mode: pull
+vendor: Sophos

@@ -1,0 +1,2 @@
+description: This module exposes a trigger to detect new snort rules on a repository
+name: detection_rules

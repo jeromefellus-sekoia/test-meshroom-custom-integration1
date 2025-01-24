@@ -1,0 +1,40 @@
+automation_connector_uuid: 469807d0-4783-4136-8c48-2c5fc83526a0
+automation_module_uuid: 2dc2855e-3f9a-441c-af2a-30c64e0d0f4a
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/8461aabe-6eba-4044-ad7f-a0c39a2b2279
+intake_format_uuid: 8461aabe-6eba-4044-ad7f-a0c39a2b2279
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: connector_configuration
+  properties:
+  - description: The ID of the corresponding Tenant
+    name: tenant_id
+    required: true
+  - description: The account name to use
+    name: client_id
+    required: true
+  - description: The password associated with the account
+    name: client_secret
+    required: true
+    secret: true
+  - default: 5
+    description: The temporal shift, in the past, in minutes, the connector applies
+      when fetching the events (default to 5 minutes ago)
+    name: timedelta
+    type: integer
+  - default: 1
+    description: The number of hours from which events should be queried.
+    name: start_time
+    type: integer
+  - default: 60
+    description: Batch frequency in seconds
+    name: frequency
+    type: integer
+  - default: 1000
+    description: The size of chunks for the batch processing
+    name: chunk_size
+    type: integer
+  type: object
+target_product: o365_message_trace
+topic: events

@@ -1,0 +1,9 @@
+description: 'The Apache HTTP Server is a web server software.
+
+  Providing Apache logs to Sekoia.io will allow you to detect threats from the server
+  connections, thanks to daily contextualized and actionable cyber threat indicators.'
+name: apache_http_server
+produces:
+  events:
+  - {}
+vendor: Apache

@@ -1,0 +1,58 @@
+{
+  "input": {
+    "message": "{\"severity\":\"low\",\"type\":\"Event::Endpoint::Enc::Recovery::KeyReceived\",\"name\":\"A BitLocker recovery key has been received from: DESKTOP-1234.\",\"id\":\"c8e0b5c9-69d0-4885-8964-5cefaa8ef13e\",\"source_info\":{\"ip\":\"1.2.3.4\"},\"customer_id\":\"36d5cd97-169e-490b-a2c4-bcd9d5d2a54b\",\"endpoint_id\":\"92d4ef41-9c13-4041-bbed-952011796812\",\"endpoint_type\":\"computer\",\"group\":\"DENC\",\"datastream\":\"event\",\"end\":\"2022-04-27T13:22:08.749Z\",\"dhost\":\"DESKTOP-1234\",\"rt\":\"2022-04-27T13:22:13.565Z\",\"duid\":\"574fcff42ead810f5e43b0fc\",\"suser\":\"admin tech\"}"
+  },
+  "expected": {
+    "message": "{\"severity\":\"low\",\"type\":\"Event::Endpoint::Enc::Recovery::KeyReceived\",\"name\":\"A BitLocker recovery key has been received from: DESKTOP-1234.\",\"id\":\"c8e0b5c9-69d0-4885-8964-5cefaa8ef13e\",\"source_info\":{\"ip\":\"1.2.3.4\"},\"customer_id\":\"36d5cd97-169e-490b-a2c4-bcd9d5d2a54b\",\"endpoint_id\":\"92d4ef41-9c13-4041-bbed-952011796812\",\"endpoint_type\":\"computer\",\"group\":\"DENC\",\"datastream\":\"event\",\"end\":\"2022-04-27T13:22:08.749Z\",\"dhost\":\"DESKTOP-1234\",\"rt\":\"2022-04-27T13:22:13.565Z\",\"duid\":\"574fcff42ead810f5e43b0fc\",\"suser\":\"admin tech\"}",
+    "event": {
+      "category": [
+        "file",
+        "process"
+      ],
+      "code": "Event::Endpoint::Enc::Recovery::KeyReceived",
+      "end": "2022-04-27T13:22:08.749000Z",
+      "reason": "A BitLocker recovery key has been received from: DESKTOP-1234.",
+      "type": [
+        "info"
+      ]
+    },
+    "@timestamp": "2022-04-27T13:22:13.565000Z",
+    "host": {
+      "hostname": "DESKTOP-1234",
+      "name": "DESKTOP-1234"
+    },
+    "log": {
+      "level": "low"
+    },
+    "observer": {
+      "ip": "1.2.3.4"
+    },
+    "related": {
+      "hosts": [
+        "DESKTOP-1234"
+      ],
+      "ip": [
+        "1.2.3.4"
+      ],
+      "user": [
+        "admin tech"
+      ]
+    },
+    "sophos": {
+      "customer": {
+        "id": "36d5cd97-169e-490b-a2c4-bcd9d5d2a54b"
+      },
+      "endpoint": {
+        "id": "92d4ef41-9c13-4041-bbed-952011796812",
+        "type": "computer"
+      },
+      "event": {
+        "group": "DENC"
+      }
+    },
+    "user": {
+      "id": "574fcff42ead810f5e43b0fc",
+      "name": "admin tech"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/63974ce1-2f0a-44f7-a4cf-3e64787c1c39
+intake_format_uuid: 63974ce1-2f0a-44f7-a4cf-3e64787c1c39
+product: sekoia
+role: consumer
+target_product: microsoft_iis
+topic: events

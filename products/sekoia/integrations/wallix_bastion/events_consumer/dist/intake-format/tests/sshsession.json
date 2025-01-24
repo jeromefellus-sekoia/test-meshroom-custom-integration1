@@ -1,0 +1,40 @@
+{
+  "input": {
+    "message": "[SSH Session] session_id=\"182f9642c81320eb0050568e16d9\" client_ip=\"1.1.1.1\" target_ip=\"1.1.1.1\" user=\"username123@corp.net\" device=\"1.1.1.1\" service=\"SSH\" account=\"username123\" type=\"SESSION_DISCONNECTION\" duration=\"0:59:57\""
+  },
+  "expected": {
+    "message": "[SSH Session] session_id=\"182f9642c81320eb0050568e16d9\" client_ip=\"1.1.1.1\" target_ip=\"1.1.1.1\" user=\"username123@corp.net\" device=\"1.1.1.1\" service=\"SSH\" account=\"username123\" type=\"SESSION_DISCONNECTION\" duration=\"0:59:57\"",
+    "event": {
+      "action": "SESSION_DISCONNECTION",
+      "provider": "SSH Session"
+    },
+    "destination": {
+      "address": "1.1.1.1",
+      "ip": "1.1.1.1"
+    },
+    "host": {
+      "ip": "1.1.1.1"
+    },
+    "related": {
+      "ip": [
+        "1.1.1.1"
+      ],
+      "user": [
+        "username123@corp.net"
+      ]
+    },
+    "service": {
+      "name": "SSH"
+    },
+    "source": {
+      "address": "1.1.1.1",
+      "ip": "1.1.1.1"
+    },
+    "user": {
+      "name": "username123@corp.net"
+    },
+    "wallix": {
+      "type": "SESSION_DISCONNECTION"
+    }
+  }
+}

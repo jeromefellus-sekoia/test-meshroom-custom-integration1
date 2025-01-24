@@ -1,0 +1,6 @@
+description: Network packets inspected by Cloudflare Gateway
+name: cloudflare_gateway_network
+produces:
+  events:
+  - {}
+vendor: Cloudflare

@@ -1,0 +1,12 @@
+description: Bitsight connector for audit logs
+name: bitsight
+settings:
+- description: The list of company uuids
+  items: string
+  name: company_uuids
+  required: true
+  type: array
+- description: The API Token to authenticate calls to the Bitsight API
+  name: api_token
+  required: true
+  secret: true

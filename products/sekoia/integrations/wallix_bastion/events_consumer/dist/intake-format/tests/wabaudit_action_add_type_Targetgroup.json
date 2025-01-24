@@ -1,0 +1,36 @@
+{
+  "input": {
+    "message": "[wabaudit] action=\"add\" type=\"Targetgroup\" object=\"QA_DEVICE_GROUP_UNIX\" user=\"admin\" client_ip=\"10.10.45.212\" infos=\"Users [], Targets [__WIL__@am_il_domain@QA_DEVICE_TELNET:TELNET, __WAM__@am_il_domain@QA_DEVICE_SSH_SCP_DOWN:SSH, pubkey_account_without_password@local@QA_DEVICE_SSH_FORWARDING:SSH and 35 other(s)], Profiles_limit [], Timeframes [allthetime]\""
+  },
+  "expected": {
+    "message": "[wabaudit] action=\"add\" type=\"Targetgroup\" object=\"QA_DEVICE_GROUP_UNIX\" user=\"admin\" client_ip=\"10.10.45.212\" infos=\"Users [], Targets [__WIL__@am_il_domain@QA_DEVICE_TELNET:TELNET, __WAM__@am_il_domain@QA_DEVICE_SSH_SCP_DOWN:SSH, pubkey_account_without_password@local@QA_DEVICE_SSH_FORWARDING:SSH and 35 other(s)], Profiles_limit [], Timeframes [allthetime]\"",
+    "event": {
+      "action": "Targetgroup",
+      "provider": "wabengine",
+      "reason": "Users [], Targets [__WIL__@am_il_domain@QA_DEVICE_TELNET:TELNET, __WAM__@am_il_domain@QA_DEVICE_SSH_SCP_DOWN:SSH, pubkey_account_without_password@local@QA_DEVICE_SSH_FORWARDING:SSH and 35 other(s)], Profiles_limit [], Timeframes [allthetime]",
+      "type": [
+        "creation"
+      ]
+    },
+    "related": {
+      "ip": [
+        "10.10.45.212"
+      ],
+      "user": [
+        "admin"
+      ]
+    },
+    "source": {
+      "address": "10.10.45.212",
+      "ip": "10.10.45.212"
+    },
+    "user": {
+      "name": "admin"
+    },
+    "wallix": {
+      "action": "add",
+      "object": "QA_DEVICE_GROUP_UNIX",
+      "type": "Targetgroup"
+    }
+  }
+}

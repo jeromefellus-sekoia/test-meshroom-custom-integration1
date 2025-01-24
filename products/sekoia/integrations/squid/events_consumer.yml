@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/a0dbb8f3-ca1c-4c6b-aafa-595bd430c0cb
+intake_format_uuid: a0dbb8f3-ca1c-4c6b-aafa-595bd430c0cb
+product: sekoia
+role: consumer
+target_product: squid
+topic: events

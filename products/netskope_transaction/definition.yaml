@@ -1,0 +1,8 @@
+description: Netskope is enhancing the HTTP transaction events to provide more near-real
+  time delivery of these events  that can be consumed faster for in-depth analysis
+  of real-time traffic.
+name: netskope_transaction
+produces:
+  events:
+  - mode: pull
+vendor: Netskope

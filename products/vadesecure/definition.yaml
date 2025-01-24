@@ -1,0 +1,16 @@
+description: Vade Secure Module
+name: vadesecure
+settings:
+- description: OAuth2 authorization URL
+  name: oauth2_authorization_url
+  required: true
+- description: API Url of the VadeSecure platform (e.g. 'https://m365.eu.vadesecure.com')
+  name: api_host
+  required: true
+- description: OAuth2 client identifier
+  name: client_id
+  required: true
+- description: OAuth2 client secret
+  name: client_secret
+  required: true
+  secret: true

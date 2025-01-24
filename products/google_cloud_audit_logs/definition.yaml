@@ -1,0 +1,7 @@
+description: Google Cloud services write audit logs that record administrative activities
+  and accesses within your Google Cloud resources.
+name: google_cloud_audit_logs
+produces:
+  events:
+  - mode: pull
+vendor: Google Cloud

@@ -1,0 +1,24 @@
+description: Salesforce provides users comprehensive tools to manage customer data,
+  automate processes, analyze data and insights, and create personalized customer
+  experiences. Salesforce also offers a variety of solutions for customer service,
+  marketing automation, commerce, app development, and more
+name: salesforce
+settings:
+- default: production
+  description: 'Organization type. Might be one of the following: ''production'',
+    ''sandbox'', ''trial'', ''developer''. Default is ''production'''
+  name: org_type
+- description: Client id to interact with salesforce API
+  name: client_id
+  required: true
+- description: Client secret to interact with salesforce API
+  name: client_secret
+  required: true
+  secret: true
+- description: 'Rate limit for requests to salesforce. Value should have next format
+    {max_rate}/{time_period}. For example: 3/60. Sekoia will use default rate limits
+    if value is empty or invalid. More information you can find in docs: https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm'
+  name: rate_limit
+- description: Url of salesforce instance. Consists of https://<instance>.salesforce.com
+  name: base_url
+  required: true

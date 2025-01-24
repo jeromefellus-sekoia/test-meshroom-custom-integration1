@@ -1,0 +1,7 @@
+description: Varonis offers solutions to track and protect data. This intake ingest
+  alerts from the  Varonis Data Security platform.
+name: varonis_data_security
+produces:
+  events:
+  - {}
+vendor: Varonis

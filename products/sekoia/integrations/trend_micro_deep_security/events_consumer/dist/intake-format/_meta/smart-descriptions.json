@@ -1,0 +1,52 @@
+[
+  {
+    "value": "{event.reason}",
+    "conditions": [
+      {
+        "field": "event.reason"
+      }
+    ]
+  },
+  {
+    "value": "{observer.vendor} {observer.type} identified {event.reason}",
+    "conditions": [
+      {
+        "field": "observer.vendor"
+      },
+      {
+        "field": "observer.type"
+      },
+      {
+        "field": "event.reason"
+      }
+    ]
+  },
+  {
+    "value": "{process.name} running as {user.name} updated {file.path}",
+    "conditions": [
+      {
+        "field": "process.name"
+      },
+      {
+        "field": "user.name"
+      },
+      {
+        "field": "file.path"
+      }
+    ]
+  },
+  {
+    "value": "{trendmicro.LogInspectionDescription} identified for {event.reason}",
+    "conditions": [
+      {
+        "field": "trendmicro.LogInspectionDescription"
+      },
+      {
+        "field": "event.reason"
+      },
+      {
+        "field": "rule.name"
+      }
+    ]
+  }
+]

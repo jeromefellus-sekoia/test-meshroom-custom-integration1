@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/250e4095-fa08-4101-bb02-e72f870fcbd1
+intake_format_uuid: 250e4095-fa08-4101-bb02-e72f870fcbd1
+product: sekoia
+role: consumer
+target_product: sekoiaio_endpoint_agent
+topic: events

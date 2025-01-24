@@ -1,0 +1,30 @@
+{
+  "input": {
+    "message": "{\"WAFMatchedVar\":\"\",\"WAFProfile\":\"unknown\",\"WAFRuleID\":\"\",\"WAFRuleMessage\":\"\",\"WorkerCPUTime\":0,\"WorkerStatus\":\"unknown\",\"WorkerSubrequest\":false,\"WorkerSubrequestCount\":0,\"ZoneID\":545468107,\"ZoneName\":\"foo-bar-baz.xyz\"}\n\n"
+  },
+  "expected": {
+    "message": "{\"WAFMatchedVar\":\"\",\"WAFProfile\":\"unknown\",\"WAFRuleID\":\"\",\"WAFRuleMessage\":\"\",\"WorkerCPUTime\":0,\"WorkerStatus\":\"unknown\",\"WorkerSubrequest\":false,\"WorkerSubrequestCount\":0,\"ZoneID\":545468107,\"ZoneName\":\"foo-bar-baz.xyz\"}\n\n",
+    "event": {
+      "category": [
+        "web"
+      ],
+      "dataset": "http_requests",
+      "type": [
+        "access"
+      ]
+    },
+    "cloudflare": {
+      "WAFProfile": "unknown",
+      "WorkerCPUTime": 0,
+      "WorkerStatus": "unknown",
+      "WorkerSubrequest": false,
+      "WorkerSubrequestCount": 0,
+      "ZoneID": 545468107,
+      "ZoneName": "foo-bar-baz.xyz"
+    },
+    "observer": {
+      "type": "proxy",
+      "vendor": "Cloudflare"
+    }
+  }
+}

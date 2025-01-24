@@ -1,0 +1,7 @@
+description: Proofpoint Targeted Attack Protection (TAP) helps detect, mitigate, and
+  block advanced threats that target people through email.
+name: proofpoint_tap
+produces:
+  events:
+  - mode: pull
+vendor: ProofPoint

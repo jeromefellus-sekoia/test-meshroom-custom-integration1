@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/80b8382e-0667-4469-bbc9-74be1e0ca1c1
+intake_format_uuid: 80b8382e-0667-4469-bbc9-74be1e0ca1c1
+product: sekoia
+role: consumer
+target_product: microsoft_always_on_vpn
+topic: events

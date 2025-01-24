@@ -1,0 +1,6 @@
+automation_action_uuid: 9ba29226-5292-45d2-9b10-e0d772babee1
+automation_module_uuid: 9ba29226-5292-45d2-9b10-e0d772babee1
+product: sekoia
+role: trigger
+target_product: myedr
+topic: search_threat

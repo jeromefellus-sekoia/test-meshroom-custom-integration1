@@ -1,0 +1,8 @@
+description: The Lacework Cloud Security provides continuous cloud security monitoring
+  and automated threat detection, safeguarding cloud environments with real-time insights
+  and compliance enforcement.
+name: lacework_cloud_security
+produces:
+  events:
+  - mode: pull
+vendor: Lacework

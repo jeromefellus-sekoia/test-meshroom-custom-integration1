@@ -1,0 +1,7 @@
+description: Vade for M365 offers all protections from Vade to our Microsoft 365 Email
+  service
+name: vade_m365
+produces:
+  events:
+  - mode: pull
+vendor: Vade

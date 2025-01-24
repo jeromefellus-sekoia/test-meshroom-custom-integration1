@@ -1,0 +1,7 @@
+description: Zscaler Internet Access (ZIA) is a secure gateway as a Service, a 100%
+  cloud solution
+name: zscaler_zia
+produces:
+  events:
+  - {}
+vendor: Zscaler

@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/bd9d0f51-114e-499a-bb7a-4f2d0a518b04
+intake_format_uuid: bd9d0f51-114e-499a-bb7a-4f2d0a518b04
+product: sekoia
+role: consumer
+target_product: cloudflare_dns_logs
+topic: events

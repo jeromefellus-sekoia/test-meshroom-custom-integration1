@@ -1,0 +1,35 @@
+{
+  "input": {
+    "message": "[wabaudit] action=\"edit\" type=\"X509 Parameters\" user=\"admin\" client_ip=\"192.168.0.12\" infos=\"CRL [file updated]\""
+  },
+  "expected": {
+    "message": "[wabaudit] action=\"edit\" type=\"X509 Parameters\" user=\"admin\" client_ip=\"192.168.0.12\" infos=\"CRL [file updated]\"",
+    "event": {
+      "action": "X509 Parameters",
+      "provider": "wabengine",
+      "reason": "CRL [file updated]",
+      "type": [
+        "change"
+      ]
+    },
+    "related": {
+      "ip": [
+        "192.168.0.12"
+      ],
+      "user": [
+        "admin"
+      ]
+    },
+    "source": {
+      "address": "192.168.0.12",
+      "ip": "192.168.0.12"
+    },
+    "user": {
+      "name": "admin"
+    },
+    "wallix": {
+      "action": "edit",
+      "type": "X509 Parameters"
+    }
+  }
+}

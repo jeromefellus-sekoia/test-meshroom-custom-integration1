@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/466aeca2-e112-4ccc-a109-c6d85b91bbcf
+intake_format_uuid: 466aeca2-e112-4ccc-a109-c6d85b91bbcf
+product: sekoia
+role: consumer
+target_product: cisco_secure_firewall
+topic: events

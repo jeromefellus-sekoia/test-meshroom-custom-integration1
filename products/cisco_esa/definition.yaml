@@ -1,0 +1,7 @@
+description: Cisco Email Security Appliance (ESA) is a network appliance that provides
+  protection against spam, malware, viruses, and other email threats.
+name: cisco_esa
+produces:
+  events:
+  - {}
+vendor: Cisco

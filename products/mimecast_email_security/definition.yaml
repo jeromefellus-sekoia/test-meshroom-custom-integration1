@@ -1,0 +1,6 @@
+description: A secure email gateway to block spam, viruses, and malware.
+name: mimecast_email_security
+produces:
+  events:
+  - mode: pull
+vendor: Mimecast

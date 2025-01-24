@@ -1,0 +1,36 @@
+{
+  "input": {
+    "message": "[wabaudit] action=\"add\" type=\"Ldapdomain\" object=\"QA_DOMAIN_1\" user=\"admin\" client_ip=\"10.10.45.212\" infos=\"description [], ldapDomain [domain1.qa], defaultLanguage [en], defaultEmailDomain [wallix], groupAttribute [memberOf], snAttribute [displayName], emailAttribute [mail], languageAttribute [preferredLanguage], isDefaultDomain [True]\""
+  },
+  "expected": {
+    "message": "[wabaudit] action=\"add\" type=\"Ldapdomain\" object=\"QA_DOMAIN_1\" user=\"admin\" client_ip=\"10.10.45.212\" infos=\"description [], ldapDomain [domain1.qa], defaultLanguage [en], defaultEmailDomain [wallix], groupAttribute [memberOf], snAttribute [displayName], emailAttribute [mail], languageAttribute [preferredLanguage], isDefaultDomain [True]\"",
+    "event": {
+      "action": "Ldapdomain",
+      "provider": "wabengine",
+      "reason": "description [], ldapDomain [domain1.qa], defaultLanguage [en], defaultEmailDomain [wallix], groupAttribute [memberOf], snAttribute [displayName], emailAttribute [mail], languageAttribute [preferredLanguage], isDefaultDomain [True]",
+      "type": [
+        "creation"
+      ]
+    },
+    "related": {
+      "ip": [
+        "10.10.45.212"
+      ],
+      "user": [
+        "admin"
+      ]
+    },
+    "source": {
+      "address": "10.10.45.212",
+      "ip": "10.10.45.212"
+    },
+    "user": {
+      "name": "admin"
+    },
+    "wallix": {
+      "action": "add",
+      "object": "QA_DOMAIN_1",
+      "type": "Ldapdomain"
+    }
+  }
+}

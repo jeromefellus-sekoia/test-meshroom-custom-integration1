@@ -1,0 +1,8 @@
+description: The Google Report is a Google service that provides detailed activity
+  reports for Google Workspace (formerly G Suite) accounts. It offers access to audit
+  logs for various services like Gmail, Drive, Google Meet, Google Calendar, and more.
+name: google_report
+produces:
+  events:
+  - mode: pull
+vendor: Google Cloud

@@ -1,0 +1,6 @@
+description: Cisco NX-OS is a network operating system for Cisco Nexus-series switches.
+name: cisco_nx_os
+produces:
+  events:
+  - {}
+vendor: Cisco

@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/79029ef9-e5d3-44f3-b70f-fd3b54ba1fe4
+intake_format_uuid: 79029ef9-e5d3-44f3-b70f-fd3b54ba1fe4
+product: sekoia
+role: consumer
+target_product: stormshield_sns
+topic: events

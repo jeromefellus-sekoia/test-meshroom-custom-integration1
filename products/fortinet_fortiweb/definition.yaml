@@ -1,0 +1,6 @@
+description: FortiWeb is an Web Application Firewall solution.
+name: fortinet_fortiweb
+produces:
+  events:
+  - {}
+vendor: Fortinet

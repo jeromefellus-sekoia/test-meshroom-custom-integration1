@@ -1,0 +1,5 @@
+dst_instance: myedr
+kind: trigger
+mode: push
+src_instance: mysekoia
+topic: search_threat

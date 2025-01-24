@@ -1,0 +1,36 @@
+{
+  "input": {
+    "message": "[wabaudit] action=\"edit\" type=\"Notification\" object=\"notification_154955216694\" user=\"QA_ADMIN\" client_ip=\"10.10.45.212\" infos=\"flag ['16' to '0']\""
+  },
+  "expected": {
+    "message": "[wabaudit] action=\"edit\" type=\"Notification\" object=\"notification_154955216694\" user=\"QA_ADMIN\" client_ip=\"10.10.45.212\" infos=\"flag ['16' to '0']\"",
+    "event": {
+      "action": "Notification",
+      "provider": "wabengine",
+      "reason": "flag ['16' to '0']",
+      "type": [
+        "change"
+      ]
+    },
+    "related": {
+      "ip": [
+        "10.10.45.212"
+      ],
+      "user": [
+        "QA_ADMIN"
+      ]
+    },
+    "source": {
+      "address": "10.10.45.212",
+      "ip": "10.10.45.212"
+    },
+    "user": {
+      "name": "QA_ADMIN"
+    },
+    "wallix": {
+      "action": "edit",
+      "object": "notification_154955216694",
+      "type": "Notification"
+    }
+  }
+}

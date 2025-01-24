@@ -1,0 +1,7 @@
+description: Cato Networks SASE Cloud provides zero trust network access to on-premises
+  and cloud applications.
+name: cato_sase
+produces:
+  events:
+  - mode: pull
+vendor: CatoNetworks

@@ -1,0 +1,8 @@
+description: ESET Protect is a cybersecurity platform offering advanced threat detection,
+  endpoint protection, and management tools for businesses, ensuring robust defense
+  against malware and cyber threats.
+name: eset_protect
+produces:
+  events:
+  - {}
+vendor: Eset

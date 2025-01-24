@@ -1,0 +1,20 @@
+automation_connector_uuid: c1f7f0b8-0f71-480a-a67f-0053af356c48
+automation_module_uuid: 8aa9f86c-f360-4ae7-84f5-b61c6917cf01
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/033cd098-b21b-4c9b-85c4-c8174c307e48
+intake_format_uuid: 033cd098-b21b-4c9b-85c4-c8174c307e48
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: module_configuration
+  properties:
+  - description: Client identifier
+    name: client_id
+    required: true
+  - description: API secret to authenticate
+    name: secret
+    required: true
+    secret: true
+  type: object
+target_product: withsecure_elements
+topic: events

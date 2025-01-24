@@ -1,0 +1,42 @@
+automation_connector_uuid: 5803f97d-b324-4452-b861-0253b15de650
+automation_module_uuid: 5803f97d-b324-4452-b861-0253b15de650
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/5803f97d-b324-4452-b861-0253b15de650
+intake_format_uuid: 5803f97d-b324-4452-b861-0253b15de650
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: module_configuration
+  properties:
+  - description: The KeyId of your API Key
+    name: key_id
+    required: true
+  - description: The secret of your API Key
+    name: secret
+    required: true
+    secret: true
+  - description: 'The account of your API Key (e.g: `YourLaceworkTenant.lacework.net`)'
+    name: account
+    required: true
+  type: object
+- name: connector_configuration
+  properties:
+  - default: 60
+    description: Batch frequency in seconds
+    name: frequency
+    required: true
+    type: integer
+  - default: 1000
+    description: The size of chunks for the batch processing
+    name: chunk_size
+    type: integer
+  - description: '[Filter Expression](https://docs.lacework.net/console/filter-alerts)
+      that filters the results'
+    name: filter
+  - default: 480
+    description: The number of requests allowed to the API in one hour for the token
+    name: ratelimit_per_hour
+    type: integer
+  type: object
+target_product: lacework_cloud_security
+topic: events

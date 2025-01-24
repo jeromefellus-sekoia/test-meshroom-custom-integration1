@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/b1545bb3-6f55-4ba4-ac80-d649040a127c
+intake_format_uuid: b1545bb3-6f55-4ba4-ac80-d649040a127c
+product: sekoia
+role: consumer
+target_product: juniper_switches
+topic: events

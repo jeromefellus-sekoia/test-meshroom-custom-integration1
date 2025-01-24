@@ -1,0 +1,5 @@
+intake_format_uuid: 074eb4a8-91c1-426e-98c0-abac2b1e18ae
+product: sekoia
+role: consumer
+target_product: myedr
+topic: events

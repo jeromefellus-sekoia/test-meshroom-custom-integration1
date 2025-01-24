@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/331fa58d-8cf9-454a-a87f-48a3dc07d4d3
+intake_format_uuid: 331fa58d-8cf9-454a-a87f-48a3dc07d4d3
+product: sekoia
+role: consumer
+target_product: suricata
+topic: events

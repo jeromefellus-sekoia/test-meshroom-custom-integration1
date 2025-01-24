@@ -1,0 +1,7 @@
+description: Sekoia.io forwarder logs collect all statictics coming from Sekoia forwarder
+  instances
+name: sekoiaio_forwarder_logs
+produces:
+  events:
+  - {}
+vendor: Sekoia.io

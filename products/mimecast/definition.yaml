@@ -1,0 +1,11 @@
+description: Mimecast offers cloud-based email security, archiving, and continuity
+  solutions to protect against cyber threats and ensure compliance.
+name: mimecast
+settings:
+- description: Client ID
+  name: client_id
+  required: true
+- description: Client Secret
+  name: client_secret
+  required: true
+  secret: true

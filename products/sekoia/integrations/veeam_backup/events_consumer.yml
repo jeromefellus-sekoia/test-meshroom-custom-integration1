@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/dbebefdd-dd2e-48a9-89e6-ee5a00ee0956
+intake_format_uuid: dbebefdd-dd2e-48a9-89e6-ee5a00ee0956
+product: sekoia
+role: consumer
+target_product: veeam_backup
+topic: events

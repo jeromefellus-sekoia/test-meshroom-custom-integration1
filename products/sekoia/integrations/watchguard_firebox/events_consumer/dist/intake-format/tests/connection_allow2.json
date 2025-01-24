@@ -1,0 +1,68 @@
+{
+  "input": {
+    "message": "LEEF:1.0|WatchGuard|XTM|12.8.2.B666661|30000148|serial=000000000000\tpolicy=Any From Firebox-00\tdisp=Allow\tin_if=Firebox\tout_if=Lab\tsrc=192.168.91.253\tsrcPort=35979\tdst=192.168.91.37\tdstPort=24594\tip_len=58\tip_TTL=64\tproto=udp"
+  },
+  "expected": {
+    "message": "LEEF:1.0|WatchGuard|XTM|12.8.2.B666661|30000148|serial=000000000000\tpolicy=Any From Firebox-00\tdisp=Allow\tin_if=Firebox\tout_if=Lab\tsrc=192.168.91.253\tsrcPort=35979\tdst=192.168.91.37\tdstPort=24594\tip_len=58\tip_TTL=64\tproto=udp",
+    "event": {
+      "action": "Allow",
+      "category": [
+        "network"
+      ],
+      "code": "30000148",
+      "type": [
+        "allowed",
+        "connection"
+      ]
+    },
+    "destination": {
+      "address": "192.168.91.37",
+      "ip": "192.168.91.37",
+      "port": 24594
+    },
+    "network": {
+      "transport": "udp"
+    },
+    "observer": {
+      "egress": {
+        "interface": {
+          "name": "Lab"
+        }
+      },
+      "ingress": {
+        "interface": {
+          "name": "Firebox"
+        }
+      },
+      "product": "XTM",
+      "serial_number": "000000000000",
+      "type": "firewall",
+      "vendor": "WatchGuard",
+      "version": "12.8.2.B666661"
+    },
+    "related": {
+      "ip": [
+        "192.168.91.253",
+        "192.168.91.37"
+      ]
+    },
+    "rule": {
+      "ruleset": "Any From Firebox-00"
+    },
+    "source": {
+      "address": "192.168.91.253",
+      "ip": "192.168.91.253",
+      "port": 35979
+    },
+    "watchguard": {
+      "firebox": {
+        "network": {
+          "ip": {
+            "len": 58,
+            "ttl": 64
+          }
+        }
+      }
+    }
+  }
+}

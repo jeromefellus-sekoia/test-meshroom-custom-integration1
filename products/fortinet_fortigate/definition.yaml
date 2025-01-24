@@ -1,0 +1,10 @@
+description: 'The range of FortiGate firewalls is a complete appliance solution whose
+  security functions are highly developed.
+
+  Your firewall logs, especially the allowed events, can be useful in discovering
+  potential network security threats.'
+name: fortinet_fortigate
+produces:
+  events:
+  - {}
+vendor: Fortinet

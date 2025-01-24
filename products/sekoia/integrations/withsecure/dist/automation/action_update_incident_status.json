@@ -1,0 +1,60 @@
+{
+  "name": "Update status on Incident",
+  "description": "Update status on Incident.",
+  "uuid": "0410768f-8d21-4aac-94d7-9ef62a8d7cfa",
+  "docker_parameters": "update_incident_status",
+  "arguments": {
+    "title": "Incident",
+    "type": "object",
+    "properties": {
+      "target": {
+        "title": "Incident ID",
+        "description": "Incident identifier to update.",
+        "type": "string"
+      },
+      "status": {
+        "title": "Status",
+        "description": "Status.",
+        "type": "string",
+        "enum": [
+          "new",
+          "acknowledged",
+          "inProgress",
+          "monitoring",
+          "closed"
+        ]
+      },
+      "resolution": {
+        "title": "Resolution",
+        "description": "Resolution.",
+        "type": "string",
+        "enum": [
+          "unconfirmed",
+          "confirmed",
+          "falsePositive"
+        ]
+      }
+    },
+    "required": [
+      "target",
+      "status"
+    ]
+  },
+  "results": {
+    "title": "UpdateStatusIncident",
+    "type": "object",
+    "properties": {
+      "multistatus": {
+        "title": "Multistatus",
+        "type": "string"
+      },
+      "transactionId": {
+        "title": "transactionId",
+        "type": "string"
+      }
+    },
+    "required": [
+      "multistatus"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/f0a10c21-37d1-419f-8671-77903dc8de69
+intake_format_uuid: f0a10c21-37d1-419f-8671-77903dc8de69
+product: sekoia
+role: consumer
+target_product: checkpoint_firewall
+topic: events

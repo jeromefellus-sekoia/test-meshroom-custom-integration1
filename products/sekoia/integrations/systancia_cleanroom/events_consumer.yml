@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/dcb14795-a6f0-4ebb-a73d-6eb8b982afcd
+intake_format_uuid: dcb14795-a6f0-4ebb-a73d-6eb8b982afcd
+product: sekoia
+role: consumer
+target_product: systancia_cleanroom
+topic: events

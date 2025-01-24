@@ -1,0 +1,8 @@
+description: Trellix has been involved in the detection and prevention of major cybersecurity
+  attacks. It provides hardware, software, and services to investigate cybersecurity
+  attacks, protect against malicious software, and analyze IT security risks.
+name: trellix_edr
+produces:
+  events:
+  - mode: pull
+vendor: Trellix

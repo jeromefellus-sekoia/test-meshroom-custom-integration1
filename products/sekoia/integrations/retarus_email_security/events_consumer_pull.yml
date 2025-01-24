@@ -1,0 +1,20 @@
+automation_connector_uuid: f7f7cb83-40d3-4861-8e93-058a1e771777
+automation_module_uuid: a3b18f0e-ffd2-4e3f-b737-f65c0aac8d0d
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/46fe3905-9e38-4fb2-be09-44d31626b694
+intake_format_uuid: 46fe3905-9e38-4fb2-be09-44d31626b694
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: connector_configuration
+  properties:
+  - default: wss://events.retarus.com/email/siem/v1/websocket?channel=sekoiaio
+    description: Retarus websocket URL
+    name: ws_url
+    required: true
+  - description: Retarus websocket auth key
+    name: ws_key
+    required: true
+  type: object
+target_product: retarus_email_security
+topic: events

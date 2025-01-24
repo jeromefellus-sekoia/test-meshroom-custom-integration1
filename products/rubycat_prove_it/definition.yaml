@@ -1,0 +1,11 @@
+description: 'PROVE IT is an administration bastion that traces sensitive access to
+  your IT.
+
+  Security events produced by the authentication on your services are a key asset
+  in your defensive arsenal. They expose who, when and how connection were attempted
+  and established.'
+name: rubycat_prove_it
+produces:
+  events:
+  - {}
+vendor: Rubycat

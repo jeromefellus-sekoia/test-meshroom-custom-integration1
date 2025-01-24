@@ -1,0 +1,8 @@
+description: "Salesforce provides a possibility to monitor events. The event monitoring\
+  \ product gathers information about your Salesforce org\u2019s operational events,\
+  \ which you can use to analyze usage trends and user behavior."
+name: salesforce_events
+produces:
+  events:
+  - mode: pull
+vendor: Salesforce

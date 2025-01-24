@@ -1,0 +1,7 @@
+description: Imperva Web Application Firewall helps you to protect your web applications
+  and your APIs.
+name: imperva_waf
+produces:
+  events:
+  - mode: pull
+vendor: Imperva

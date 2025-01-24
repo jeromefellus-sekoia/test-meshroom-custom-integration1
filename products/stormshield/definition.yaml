@@ -1,0 +1,10 @@
+description: Stormshield Network Security is a range of network security appliances.
+name: stormshield
+settings:
+- description: URL of the Stormshield instance
+  name: url
+  required: true
+- description: Authentication token for the API
+  name: api_token
+  required: true
+  secret: true

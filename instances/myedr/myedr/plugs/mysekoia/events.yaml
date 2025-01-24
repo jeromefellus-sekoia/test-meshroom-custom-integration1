@@ -1,0 +1,4 @@
+dst_instance: mysekoia
+mode: push
+src_instance: myedr
+topic: events

@@ -1,0 +1,9 @@
+description: Bitdefender GravityZone is an enterprise-level cybersecurity solution
+  offering advanced threat prevention, detection, and response for endpoints, networks,
+  and cloud environments. It features centralized management for streamlined security
+  oversight.
+name: gravityzone
+produces:
+  events:
+  - {}
+vendor: Bitdefender

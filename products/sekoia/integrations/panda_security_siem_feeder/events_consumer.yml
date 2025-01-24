@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/da3555f9-8213-41b8-8659-4cb814431e29
+intake_format_uuid: da3555f9-8213-41b8-8659-4cb814431e29
+product: sekoia
+role: consumer
+target_product: panda_security_siem_feeder
+topic: events

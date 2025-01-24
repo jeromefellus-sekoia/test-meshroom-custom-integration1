@@ -1,0 +1,20 @@
+description: Imperva Module
+name: imperva
+settings:
+- description: Imperva API base URL
+  name: base_url
+  required: true
+- description: Imperva API ID
+  name: api_id
+  required: true
+- description: Imperva API key
+  name: api_key
+  required: true
+- description: Encryption keys
+  name: keys
+  properties:
+  - name: <public key id>
+    properties:
+    - name: private
+    type: object
+  type: object

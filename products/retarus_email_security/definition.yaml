@@ -1,0 +1,6 @@
+description: Protection solution for user and technical messaging.
+name: retarus_email_security
+produces:
+  events:
+  - mode: pull
+vendor: Retarus

@@ -1,0 +1,39 @@
+automation_connector_uuid: 778ae6f9-61d1-4370-8842-526c89102f19
+automation_module_uuid: 0637f7c2-d68b-49cc-a1fc-ab7d0836e7ee
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/98fa7079-41ae-4033-a93f-bbd70d114188
+intake_format_uuid: 98fa7079-41ae-4033-a93f-bbd70d114188
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: module_configuration
+  properties:
+  - description: The url of the Darktrace appliance. (e.g. https://example.darktrace.com
+      or https://192.168.0.1)
+    name: api_url
+    required: true
+  - description: The public key to the Darktrace API
+    name: public_key
+    required: true
+  - description: The private key to the Darktrace API
+    name: private_key
+    required: true
+  type: object
+- name: connector_configuration
+  properties:
+  - default: 60
+    description: Batch frequency in seconds
+    name: frequency
+    required: true
+    type: integer
+  - default: true
+    description: Is the server certificate verified
+    name: verify_certificate
+    type: boolean
+  - default: 10
+    description: The number of requests allowed to the API in one minute
+    name: ratelimit_per_minute
+    type: integer
+  type: object
+target_product: darktrace_threat_visualizer
+topic: events

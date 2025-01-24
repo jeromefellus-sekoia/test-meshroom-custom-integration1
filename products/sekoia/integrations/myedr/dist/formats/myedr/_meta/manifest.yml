@@ -1,0 +1,6 @@
+uuid: "074eb4a8-91c1-426e-98c0-abac2b1e18ae"
+name: "myedr"
+slug: "myedr"
+description: "An example intake format to show how Sekoia.io can consume events from 3rd-parties with custom parsing and ECS field mapping"
+data_sources:
+  DNS records: fake DNS infos

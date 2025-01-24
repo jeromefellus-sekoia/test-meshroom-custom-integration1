@@ -1,0 +1,7 @@
+description: Sophos Threat Analysis Center operates globally, continuously monitoring
+  and analyzing emerging threats, malware, vulnerabilities, and other security risks.
+name: sophos_analysis_threat_center
+produces:
+  events:
+  - mode: pull
+vendor: Sophos

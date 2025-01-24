@@ -1,0 +1,37 @@
+{
+  "input": {
+    "message": "{\"id\": \"zekfnzejnf576rge8768\", \"date\": \"2021-11-18T15:59:39.368Z\", \"reason\": \"\", \"actions\": [{\"action\": \"DELETE\"}, {\"action\": \"FAILED\"}], \"nb_messages_remediated\": 76, \"nb_messages_remediated_read\": 0, \"nb_messages_remediated_unread\": 76}"
+  },
+  "expected": {
+    "message": "{\"id\": \"zekfnzejnf576rge8768\", \"date\": \"2021-11-18T15:59:39.368Z\", \"reason\": \"\", \"actions\": [{\"action\": \"DELETE\"}, {\"action\": \"FAILED\"}], \"nb_messages_remediated\": 76, \"nb_messages_remediated_read\": 0, \"nb_messages_remediated_unread\": 76}",
+    "event": {
+      "action": "delete",
+      "category": [
+        "email"
+      ],
+      "type": [
+        "info"
+      ]
+    },
+    "vadesecure": {
+      "campaign": {
+        "actions": [
+          {
+            "action": "DELETE"
+          },
+          {
+            "action": "FAILED"
+          }
+        ],
+        "actions_labels": [
+          "DELETE",
+          "FAILED"
+        ],
+        "id": "zekfnzejnf576rge8768",
+        "nb_messages_remediated": 76,
+        "nb_messages_remediated_read": 0,
+        "nb_messages_remediated_unread": 76
+      }
+    }
+  }
+}

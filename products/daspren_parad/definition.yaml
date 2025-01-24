@@ -1,0 +1,7 @@
+description: This format provides parsing for an intake ingesting logs from Parad,
+  a data protection solution from Daspren.
+name: daspren_parad
+produces:
+  events:
+  - {}
+vendor: Daspren

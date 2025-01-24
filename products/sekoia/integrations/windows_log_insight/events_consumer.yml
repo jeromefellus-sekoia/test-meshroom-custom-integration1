@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/ee54dd8e-4bd4-4fe8-9d9d-1a018cd8c4bb
+intake_format_uuid: ee54dd8e-4bd4-4fe8-9d9d-1a018cd8c4bb
+product: sekoia
+role: consumer
+target_product: windows_log_insight
+topic: events

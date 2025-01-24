@@ -1,0 +1,37 @@
+automation_connector_uuid: 607322b7-c13b-4727-b7ca-fe58bd30b4a9
+automation_module_uuid: 7282a633-0fc2-4b27-a185-3c94f5a3a36f
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/40deb162-6bb1-4635-9c99-5c2de7e1d340
+intake_format_uuid: 40deb162-6bb1-4635-9c99-5c2de7e1d340
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: module_configuration
+  properties:
+  - description: The identifier of the access key
+    name: aws_access_key
+    required: true
+  - description: The secret associated to the access key
+    name: aws_secret_access_key
+    required: true
+    secret: true
+  - description: The area hosting the AWS resources
+    name: aws_region_name
+    required: true
+  type: object
+- name: connector_configuration
+  properties:
+  - default: 60
+    description: Batch frequency in seconds
+    name: frequency
+    type: integer
+  - description: The name of the SQS queue that received the notifications of the
+      creation of S3 objects
+    name: queue_name
+  - default: 1000
+    description: The size of chunks for the batch processing
+    name: chunk_size
+    type: integer
+  type: object
+target_product: sentinelone_cloud_funnel_2_0
+topic: events

@@ -1,0 +1,35 @@
+{
+  "input": {
+    "message": "[wabaudit] action=\"edit\" type=\"Service\" object=\"device_154954931097:ssh\" user=\"QA_ADMIN\" client_ip=\"10.10.45.212\" infos=\"\""
+  },
+  "expected": {
+    "message": "[wabaudit] action=\"edit\" type=\"Service\" object=\"device_154954931097:ssh\" user=\"QA_ADMIN\" client_ip=\"10.10.45.212\" infos=\"\"",
+    "event": {
+      "action": "Service",
+      "provider": "wabengine",
+      "type": [
+        "change"
+      ]
+    },
+    "related": {
+      "ip": [
+        "10.10.45.212"
+      ],
+      "user": [
+        "QA_ADMIN"
+      ]
+    },
+    "source": {
+      "address": "10.10.45.212",
+      "ip": "10.10.45.212"
+    },
+    "user": {
+      "name": "QA_ADMIN"
+    },
+    "wallix": {
+      "action": "edit",
+      "object": "device_154954931097:ssh",
+      "type": "Service"
+    }
+  }
+}
