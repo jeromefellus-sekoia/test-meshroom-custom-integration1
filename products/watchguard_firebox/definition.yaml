@@ -1,0 +1,7 @@
+description: WatchGuard Firebox is a serie of high-performance firewalls to protect
+  computer networks.
+name: watchguard_firebox
+produces:
+  events:
+  - {}
+vendor: WatchGuard

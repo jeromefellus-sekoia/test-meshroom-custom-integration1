@@ -1,0 +1,37 @@
+{
+  "input": {
+    "message": "%ASA-6-725006: Device failed SSL handshake with client WAN:195.101.173.60/49699"
+  },
+  "expected": {
+    "message": "%ASA-6-725006: Device failed SSL handshake with client WAN:195.101.173.60/49699",
+    "event": {
+      "category": [
+        "network"
+      ],
+      "code": "725006"
+    },
+    "action": {
+      "name": "device failed ssl handshake",
+      "target": "network-traffic"
+    },
+    "observer": {
+      "ingress": {
+        "interface": {
+          "name": "WAN"
+        }
+      },
+      "product": "Adaptive Security Appliance",
+      "vendor": "Cisco"
+    },
+    "related": {
+      "ip": [
+        "195.101.173.60"
+      ]
+    },
+    "source": {
+      "address": "195.101.173.60",
+      "ip": "195.101.173.60",
+      "port": 49699
+    }
+  }
+}

@@ -1,0 +1,7 @@
+description: Elastic Winlogbeat is an open-source log collector that ships Windows
+  Event Logs as JSON events.
+name: winlogbeat
+produces:
+  events:
+  - {}
+vendor: Beats

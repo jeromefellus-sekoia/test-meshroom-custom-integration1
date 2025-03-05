@@ -1,0 +1,32 @@
+automation_connector_uuid: 5de877fd-effb-5ebc-9358-8df26c06a140
+automation_module_uuid: fb8568bd-8b80-4c84-bde4-2d24275ce34f
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/a1dbed03-cd69-4a51-8ae5-aa67d2f29fcb
+intake_format_uuid: a1dbed03-cd69-4a51-8ae5-aa67d2f29fcb
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: module_configuration
+  properties:
+  - default: https://api.jumpcloud.com/
+    description: Jumpcloud Directory Insights API Base URL
+    name: base_url
+  - description: The API key to authenticate calls to the Jumpcloud Directory Insights
+      API
+    name: apikey
+    required: true
+  type: object
+- name: connector_configuration
+  properties:
+  - default: 1000
+    name: chunk_size
+    type: integer
+  - default: 60
+    name: frequency
+    type: integer
+  - default: all
+    description: Comma separated list of Jumpcloud services logs to collect
+    name: service
+  type: object
+target_product: jumpcloud_directory_insights
+topic: events

@@ -1,0 +1,7 @@
+description: VMWare vCenter is a centralized management software. It allows to manage
+  virtual machines and ESXi hosts from in a centralized interface.
+name: vmware_vcenter
+produces:
+  events:
+  - {}
+vendor: VMWare

@@ -1,0 +1,9 @@
+description: 'TEHTRIS EDR is a security product to monitor, detects and mitigates
+  threats on endpoints. It reduces the attack surface and prevent attacks.
+
+  Combined with Tehtris EPP, it detects malwares and prevent exploits on your devices.'
+name: tehtris_edr
+produces:
+  events:
+  - mode: pull
+vendor: TEHTRIS

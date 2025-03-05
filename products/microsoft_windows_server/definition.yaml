@@ -1,0 +1,12 @@
+description: Microsoft Windows Server is an operating system designed for server-based
+  computing, offering robust server management, data storage, and networking capabilities
+  for businesses and enterprises, facilitating diverse workloads and IT operations.
+name: microsoft_windows_server
+settings:
+- description: Username to do authentication on remote server
+  name: username
+  required: true
+- description: Password to do authentication on remote server
+  name: password
+  required: true
+  secret: true

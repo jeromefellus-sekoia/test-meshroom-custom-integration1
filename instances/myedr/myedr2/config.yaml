@@ -1,0 +1,4 @@
+name: myedr2
+product: myedr
+settings:
+  API_URL: https://myedr.com/api

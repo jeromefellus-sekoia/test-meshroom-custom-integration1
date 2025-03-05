@@ -1,0 +1,7 @@
+description: FortiProxy is a secure web proxy that protects employees against internet-born
+  attacks.
+name: fortinet_fortiproxy
+produces:
+  events:
+  - {}
+vendor: Fortinet

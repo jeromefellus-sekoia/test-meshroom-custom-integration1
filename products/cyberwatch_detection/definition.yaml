@@ -1,0 +1,6 @@
+description: Cyberwatch is a vulnerability detection and monitoring solution.
+name: cyberwatch_detection
+produces:
+  events:
+  - {}
+vendor: Cyberwatch

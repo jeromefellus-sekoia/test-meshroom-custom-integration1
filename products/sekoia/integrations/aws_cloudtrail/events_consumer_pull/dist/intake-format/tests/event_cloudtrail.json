@@ -1,0 +1,86 @@
+{
+  "input": {
+    "message": "{\"awsRegion\":\"eu-west-3\",\"eventID\":\"6ffb6978-7b42-47d1-9aa1-1838ec08b514\",\"eventName\":\"LookupEvents\",\"eventSource\":\"cloudtrail.amazonaws.com\",\"eventTime\":\"2020-08-12T12:26:51Z\",\"eventType\":\"AwsApiCall\",\"eventVersion\":\"1.05\",\"readOnly\":true,\"recipientAccountId\":\"1111111111\",\"requestID\":\"5b8387cf-59e8-4e6e-ba6d-5fe417820c13\",\"requestParameters\":{\"eventCategory\":\"insight\",\"maxResults\":50},\"responseElements\":null,\"sourceIPAddress\":\"1.2.3.4\",\"userAgent\":\"console.amazonaws.com\",\"userIdentity\":{\"accessKeyId\":\"ASIA1111111111111\",\"accountId\":\"1111111111\",\"arn\":\"arn:aws:iam::1111111111:root\",\"principalId\":\"1111111111\",\"sessionContext\":{\"attributes\":{\"creationDate\":\"2020-08-12T07:04:40Z\",\"mfaAuthenticated\":\"false\"},\"sessionIssuer\":{},\"webIdFederationData\":{}},\"type\":\"Root\"}}"
+  },
+  "expected": {
+    "message": "{\"awsRegion\":\"eu-west-3\",\"eventID\":\"6ffb6978-7b42-47d1-9aa1-1838ec08b514\",\"eventName\":\"LookupEvents\",\"eventSource\":\"cloudtrail.amazonaws.com\",\"eventTime\":\"2020-08-12T12:26:51Z\",\"eventType\":\"AwsApiCall\",\"eventVersion\":\"1.05\",\"readOnly\":true,\"recipientAccountId\":\"1111111111\",\"requestID\":\"5b8387cf-59e8-4e6e-ba6d-5fe417820c13\",\"requestParameters\":{\"eventCategory\":\"insight\",\"maxResults\":50},\"responseElements\":null,\"sourceIPAddress\":\"1.2.3.4\",\"userAgent\":\"console.amazonaws.com\",\"userIdentity\":{\"accessKeyId\":\"ASIA1111111111111\",\"accountId\":\"1111111111\",\"arn\":\"arn:aws:iam::1111111111:root\",\"principalId\":\"1111111111\",\"sessionContext\":{\"attributes\":{\"creationDate\":\"2020-08-12T07:04:40Z\",\"mfaAuthenticated\":\"false\"},\"sessionIssuer\":{},\"webIdFederationData\":{}},\"type\":\"Root\"}}",
+    "event": {
+      "action": "LookupEvents",
+      "category": [
+        "network"
+      ],
+      "outcome": "success",
+      "provider": "cloudtrail.amazonaws.com",
+      "type": [
+        "access"
+      ]
+    },
+    "@timestamp": "2020-08-12T12:26:51Z",
+    "action": {
+      "name": "LookupEvents",
+      "outcome": "success",
+      "properties": {
+        "recipientAccountId": "1111111111",
+        "userIdentity": {
+          "accountId": "1111111111",
+          "arn": "arn:aws:iam::1111111111:root",
+          "principalId": "1111111111",
+          "sessionContext": {
+            "attributes": {
+              "mfaAuthenticated": "false"
+            }
+          },
+          "type": "Root"
+        }
+      },
+      "target": "network-traffic",
+      "type": "AwsApiCall"
+    },
+    "aws": {
+      "cloudtrail": {
+        "flattened": {
+          "request_parameters": "{\"eventCategory\":\"insight\",\"maxResults\":50}"
+        },
+        "user_identity": {
+          "accessKeyId": "ASIA1111111111111",
+          "accountId": "1111111111",
+          "arn": "arn:aws:iam::1111111111:root",
+          "principalId": "1111111111",
+          "type": "Root"
+        }
+      }
+    },
+    "cloud": {
+      "account": {
+        "id": "1111111111"
+      },
+      "provider": "aws",
+      "region": "eu-west-3",
+      "service": {
+        "name": "cloudtrail"
+      }
+    },
+    "related": {
+      "ip": [
+        "1.2.3.4"
+      ]
+    },
+    "source": {
+      "address": "1.2.3.4",
+      "ip": "1.2.3.4"
+    },
+    "user": {
+      "id": "1111111111"
+    },
+    "user_agent": {
+      "device": {
+        "name": "Other"
+      },
+      "name": "Other",
+      "original": "console.amazonaws.com",
+      "os": {
+        "name": "Other"
+      }
+    }
+  }
+}

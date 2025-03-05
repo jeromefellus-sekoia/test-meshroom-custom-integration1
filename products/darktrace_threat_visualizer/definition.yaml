@@ -1,0 +1,6 @@
+description: Darktrace monitors all people and digital assets across your entire ecosystem.
+name: darktrace_threat_visualizer
+produces:
+  events:
+  - mode: pull
+vendor: Darktrace

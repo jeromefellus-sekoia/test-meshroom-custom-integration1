@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/2f28e4f9-a4f3-40a6-9909-b69f3df32535
+intake_format_uuid: 2f28e4f9-a4f3-40a6-9909-b69f3df32535
+product: sekoia
+role: consumer
+target_product: aioniq_v103
+topic: events

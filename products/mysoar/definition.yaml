@@ -1,0 +1,11 @@
+name: mysoar
+produces:
+  carots:
+  - {}
+settings:
+- name: firstname
+tags:
+- SOAR
+triggers:
+  playbook-action:
+  - {}

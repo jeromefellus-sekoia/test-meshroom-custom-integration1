@@ -1,0 +1,7 @@
+description: Fastly Next-Gen WAF audit logs tracks activities related to your corp
+  and your sites like user creation, rule creation, site configuration changes.
+name: fastly_waf_auditlogs
+produces:
+  events:
+  - mode: pull
+vendor: Fastly

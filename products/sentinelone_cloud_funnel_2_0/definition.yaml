@@ -1,0 +1,7 @@
+description: Cloud Funnel 2.0 is a module of SentinelOne (an Endpoint Detection and
+  Response solution) to collect telemetry from Deep Visibility
+name: sentinelone_cloud_funnel_2_0
+produces:
+  events:
+  - mode: pull
+vendor: SentinelOne EDR

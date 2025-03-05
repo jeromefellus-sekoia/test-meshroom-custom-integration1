@@ -1,0 +1,44 @@
+automation_connector_uuid: 7537aa6a-7411-4feb-a6c8-f02d55077db9
+automation_module_uuid: ba910388-ba3b-405a-8cb5-cb5953796470
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/23d06c74-9311-4d56-b2ac-5d70c0b322fc
+intake_format_uuid: 23d06c74-9311-4d56-b2ac-5d70c0b322fc
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: module_configuration
+  properties:
+  - description: Tenant ID or Directory ID
+    name: tenant_id
+    required: true
+  - description: Client ID or Application ID
+    name: client_id
+    required: true
+  - description: Client secret or password
+    name: client_secret
+    required: true
+    secret: true
+  - description: Subscription ID of the Microsoft Sentinel instance
+    name: subscription_id
+    required: true
+  - description: Resource group of the Microsoft Sentinel instance
+    name: resource_group
+    required: true
+  - description: Workspace name of the Microsoft Sentinel instance
+    name: workspace_name
+    required: true
+  type: object
+- name: connector_configuration
+  properties:
+  - default: 60
+    description: Batch frequency in seconds
+    name: frequency
+    required: true
+    type: integer
+  - default: 1000
+    description: The max size of chunks for the batch processing
+    name: chunk_size
+    type: integer
+  type: object
+target_product: microsoft_sentinel
+topic: events

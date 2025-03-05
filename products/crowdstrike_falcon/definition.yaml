@@ -1,0 +1,20 @@
+description: CrowdStrike Falcon is a cloud-native cybersecurity platform known for
+  its advanced threat detection, endpoint protection, and real-time response capabilities.
+  It leverages AI and machine learning to protect against malware and sophisticated
+  cyberattacks.
+name: crowdstrike_falcon
+produces:
+  events:
+  - mode: pull
+settings:
+- description: Client Identifier
+  name: client_id
+  required: true
+- description: Client Secret
+  name: client_secret
+  required: true
+  secret: true
+- default: https://api.eu-1.crowdstrike.com
+  description: Base URL of the API
+  name: base_url
+  required: true

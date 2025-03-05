@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/60af2bd6-7ef0-48a7-a6db-90fcdd7236f1
+intake_format_uuid: 60af2bd6-7ef0-48a7-a6db-90fcdd7236f1
+product: sekoia
+role: consumer
+target_product: fortinet_fortimail
+topic: events

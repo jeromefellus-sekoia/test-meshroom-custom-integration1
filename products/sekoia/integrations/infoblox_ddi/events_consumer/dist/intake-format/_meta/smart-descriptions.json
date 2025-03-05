@@ -1,0 +1,47 @@
+[
+  {
+    "value": "{source.ip} queried the resolution of {dns.question.name}",
+    "conditions": [
+      {
+        "field": "source.ip"
+      },
+      {
+        "field": "dns.question.name"
+      }
+    ],
+    "relationships": [
+      {
+        "source": "source.ip",
+        "target": "dns.question.name",
+        "type": "request resolution of"
+      }
+    ]
+  },
+  {
+    "value": "{source.ip} perform {event.action}",
+    "conditions": [
+      {
+        "field": "source.ip"
+      },
+      {
+        "field": "event.action"
+      }
+    ]
+  },
+  {
+    "value": "Query from {source.ip}",
+    "conditions": [
+      {
+        "field": "source.ip"
+      }
+    ]
+  },
+  {
+    "value": "Query to {destination.ip}",
+    "conditions": [
+      {
+        "field": "destination.ip"
+      }
+    ]
+  }
+]

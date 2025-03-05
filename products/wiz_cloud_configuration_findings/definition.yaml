@@ -1,0 +1,7 @@
+description: Wiz cloud configuration findings are generated when a cloud resource
+  fails to comply with a specific cloud configuration rule.
+name: wiz_cloud_configuration_findings
+produces:
+  events:
+  - mode: pull
+vendor: Wiz

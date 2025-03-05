@@ -1,0 +1,53 @@
+{
+  "input": {
+    "message": "{\"severity\":\"low\",\"type\":\"Event::Endpoint::Application::Blocked\",\"endpoint_type\":\"computer\",\"endpoint_id\":\"5da7691b-cc01-4330-bb8b-358362c3a5f1\",\"source_info\":{\"ip\":\"1.2.3.4\"},\"customer_id\":\"36d5cd97-169e-490b-a2c4-bcd9d5d2a54b\",\"name\":\"Controlled application blocked: Google Software Reporter Tool (Security tool)\",\"id\":\"bc60c18b-dc21-43a3-bfd5-f28963f288e2\",\"group\":\"APPLICATION_CONTROL\",\"datastream\":\"event\",\"end\":\"2022-04-25T03:15:31.760Z\",\"suser\":\"n/a\",\"rt\":\"2022-04-25T03:15:31.777Z\",\"dhost\":\"DOMAIN-1234\"}"
+  },
+  "expected": {
+    "message": "{\"severity\":\"low\",\"type\":\"Event::Endpoint::Application::Blocked\",\"endpoint_type\":\"computer\",\"endpoint_id\":\"5da7691b-cc01-4330-bb8b-358362c3a5f1\",\"source_info\":{\"ip\":\"1.2.3.4\"},\"customer_id\":\"36d5cd97-169e-490b-a2c4-bcd9d5d2a54b\",\"name\":\"Controlled application blocked: Google Software Reporter Tool (Security tool)\",\"id\":\"bc60c18b-dc21-43a3-bfd5-f28963f288e2\",\"group\":\"APPLICATION_CONTROL\",\"datastream\":\"event\",\"end\":\"2022-04-25T03:15:31.760Z\",\"suser\":\"n/a\",\"rt\":\"2022-04-25T03:15:31.777Z\",\"dhost\":\"DOMAIN-1234\"}",
+    "event": {
+      "category": [
+        "file"
+      ],
+      "code": "Event::Endpoint::Application::Blocked",
+      "end": "2022-04-25T03:15:31.760000Z",
+      "reason": "Controlled application blocked: Google Software Reporter Tool (Security tool)",
+      "type": [
+        "denied"
+      ]
+    },
+    "@timestamp": "2022-04-25T03:15:31.777000Z",
+    "host": {
+      "hostname": "DOMAIN-1234",
+      "name": "DOMAIN-1234"
+    },
+    "log": {
+      "level": "low"
+    },
+    "observer": {
+      "ip": "1.2.3.4"
+    },
+    "process": {
+      "title": "Google Software Reporter Tool (Security tool)"
+    },
+    "related": {
+      "hosts": [
+        "DOMAIN-1234"
+      ],
+      "ip": [
+        "1.2.3.4"
+      ]
+    },
+    "sophos": {
+      "customer": {
+        "id": "36d5cd97-169e-490b-a2c4-bcd9d5d2a54b"
+      },
+      "endpoint": {
+        "id": "5da7691b-cc01-4330-bb8b-358362c3a5f1",
+        "type": "computer"
+      },
+      "event": {
+        "group": "APPLICATION_CONTROL"
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+automation_connector_uuid: 44c665c2-f0f9-4069-86de-22c06bc8146a
+automation_module_uuid: eaa52274-2664-47fa-978e-af87a4222cba
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/e0eaf2f1-02d0-4d1a-be89-f2b8be4baf4e
+intake_format_uuid: e0eaf2f1-02d0-4d1a-be89-f2b8be4baf4e
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: connector_configuration
+  properties:
+  - default: wss://logstream.proofpoint.com/
+    description: API Url of the ProofPoint PoD
+    name: api_host
+    required: true
+  - description: The APIKey that authenticate the request
+    name: api_key
+    required: true
+  - description: The cluster ID
+    name: cluster_id
+    required: true
+  - description: The type of messages to collect
+    name: type
+    required: true
+  - description: The starting time (up to 30 days ago) to collect log data, as ISO8601
+      format
+    name: since_time
+  - default: 10000
+    description: The max size of chunks for the batch processing
+    name: chunk_size
+    type: integer
+  type: object
+target_product: proofpoint_pod
+topic: events

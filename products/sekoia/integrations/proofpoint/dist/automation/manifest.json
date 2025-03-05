@@ -1,0 +1,15 @@
+{
+  "configuration": {
+    "title": "Proofpoint",
+    "type": "object",
+    "properties": {}
+  },
+  "description": "ProofPoint is a cybersecurity company providing products for email security, data loss prevention, electronic discovery, and email archiving",
+  "name": "Proofpoint",
+  "uuid": "eaa52274-2664-47fa-978e-af87a4222cba",
+  "slug": "proofpoint",
+  "version": "1.16.0",
+  "categories": [
+    "Email"
+  ]
+}

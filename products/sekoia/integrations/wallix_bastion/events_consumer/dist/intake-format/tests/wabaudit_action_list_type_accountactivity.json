@@ -1,0 +1,35 @@
+{
+  "input": {
+    "message": "[wabaudit] action=\"list\" type=\"accountactivity\" object=\"168c1c48f141e911005056b60af6\" user=\"admin\" client_ip=\"10.10.43.84\" infos=\"\""
+  },
+  "expected": {
+    "message": "[wabaudit] action=\"list\" type=\"accountactivity\" object=\"168c1c48f141e911005056b60af6\" user=\"admin\" client_ip=\"10.10.43.84\" infos=\"\"",
+    "event": {
+      "action": "accountactivity",
+      "provider": "wabengine",
+      "type": [
+        "access"
+      ]
+    },
+    "related": {
+      "ip": [
+        "10.10.43.84"
+      ],
+      "user": [
+        "admin"
+      ]
+    },
+    "source": {
+      "address": "10.10.43.84",
+      "ip": "10.10.43.84"
+    },
+    "user": {
+      "name": "admin"
+    },
+    "wallix": {
+      "action": "list",
+      "object": "168c1c48f141e911005056b60af6",
+      "type": "accountactivity"
+    }
+  }
+}

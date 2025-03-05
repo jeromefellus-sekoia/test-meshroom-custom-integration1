@@ -1,0 +1,93 @@
+{
+  "input": {
+    "message": "{\"awsRegion\":\"us-east-1\",\"eventID\":\"76a4c7d1-1f00-4ceb-b7ad-3d355a3515cd\",\"eventName\":\"CreateUser\",\"eventSource\":\"iam.amazonaws.com\",\"eventTime\":\"2020-08-12T12:16:24Z\",\"eventType\":\"AwsApiCall\",\"eventVersion\":\"1.05\",\"recipientAccountId\":\"1111111111\",\"requestID\":\"4ba495c6-03b8-4eb9-a812-95f89835f68c\",\"requestParameters\":{\"userName\":\"user\"},\"responseElements\":{\"user\":{\"arn\":\"arn:aws:iam::1111111111:user/user\",\"createDate\":\"Aug 12, 2020 12:16:24 PM\",\"path\":\"/\",\"userId\":\"AIDA11111111111111\",\"userName\":\"user\"}},\"sourceIPAddress\":\"1.2.3.4\",\"userAgent\":\"aws-cli/1.18.87 Python/3.7.3 Linux/4.19.0-6-amd64 botocore/1.17.30\",\"userIdentity\":{\"accessKeyId\":\"AKIA11111111111111\",\"accountId\":\"1111111111\",\"arn\":\"arn:aws:iam::1111111111:root\",\"principalId\":\"1111111111\",\"type\":\"Root\"}}"
+  },
+  "expected": {
+    "message": "{\"awsRegion\":\"us-east-1\",\"eventID\":\"76a4c7d1-1f00-4ceb-b7ad-3d355a3515cd\",\"eventName\":\"CreateUser\",\"eventSource\":\"iam.amazonaws.com\",\"eventTime\":\"2020-08-12T12:16:24Z\",\"eventType\":\"AwsApiCall\",\"eventVersion\":\"1.05\",\"recipientAccountId\":\"1111111111\",\"requestID\":\"4ba495c6-03b8-4eb9-a812-95f89835f68c\",\"requestParameters\":{\"userName\":\"user\"},\"responseElements\":{\"user\":{\"arn\":\"arn:aws:iam::1111111111:user/user\",\"createDate\":\"Aug 12, 2020 12:16:24 PM\",\"path\":\"/\",\"userId\":\"AIDA11111111111111\",\"userName\":\"user\"}},\"sourceIPAddress\":\"1.2.3.4\",\"userAgent\":\"aws-cli/1.18.87 Python/3.7.3 Linux/4.19.0-6-amd64 botocore/1.17.30\",\"userIdentity\":{\"accessKeyId\":\"AKIA11111111111111\",\"accountId\":\"1111111111\",\"arn\":\"arn:aws:iam::1111111111:root\",\"principalId\":\"1111111111\",\"type\":\"Root\"}}",
+    "event": {
+      "action": "CreateUser",
+      "category": [
+        "network"
+      ],
+      "outcome": "success",
+      "provider": "iam.amazonaws.com",
+      "type": [
+        "access"
+      ]
+    },
+    "@timestamp": "2020-08-12T12:16:24Z",
+    "action": {
+      "name": "CreateUser",
+      "outcome": "success",
+      "properties": {
+        "recipientAccountId": "1111111111",
+        "userIdentity": {
+          "accountId": "1111111111",
+          "arn": "arn:aws:iam::1111111111:root",
+          "principalId": "1111111111",
+          "type": "Root"
+        }
+      },
+      "target": "network-traffic",
+      "type": "AwsApiCall"
+    },
+    "aws": {
+      "cloudtrail": {
+        "flattened": {
+          "request_parameters": "{\"userName\":\"user\"}",
+          "response_elements": "{\"user\":{\"arn\":\"arn:aws:iam::1111111111:user/user\",\"createDate\":\"Aug 12, 2020 12:16:24 PM\",\"path\":\"/\",\"userId\":\"AIDA11111111111111\",\"userName\":\"user\"}}"
+        },
+        "response_elements": {
+          "user": {
+            "userName": "user"
+          }
+        },
+        "user_identity": {
+          "accessKeyId": "AKIA11111111111111",
+          "accountId": "1111111111",
+          "arn": "arn:aws:iam::1111111111:root",
+          "principalId": "1111111111",
+          "type": "Root"
+        }
+      }
+    },
+    "cloud": {
+      "account": {
+        "id": "1111111111"
+      },
+      "provider": "aws",
+      "region": "us-east-1",
+      "service": {
+        "name": "cloudtrail"
+      }
+    },
+    "related": {
+      "ip": [
+        "1.2.3.4"
+      ],
+      "user": [
+        "AIDA11111111111111"
+      ]
+    },
+    "source": {
+      "address": "1.2.3.4",
+      "ip": "1.2.3.4"
+    },
+    "user": {
+      "id": "1111111111",
+      "name": "AIDA11111111111111"
+    },
+    "user_agent": {
+      "device": {
+        "name": "Spider"
+      },
+      "name": "aws-cli",
+      "original": "aws-cli/1.18.87 Python/3.7.3 Linux/4.19.0-6-amd64 botocore/1.17.30",
+      "os": {
+        "name": "Linux",
+        "version": "4.19.0"
+      },
+      "version": "1.18.87"
+    }
+  }
+}

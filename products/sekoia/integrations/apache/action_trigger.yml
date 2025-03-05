@@ -1,0 +1,6 @@
+automation_action_uuid: b33ebc8c-4f81-43ce-b033-15130cec34d8
+automation_module_uuid: b33ebc8c-4f81-43ce-b033-15130cec34d8
+product: sekoia
+role: trigger
+target_product: apache
+topic: action

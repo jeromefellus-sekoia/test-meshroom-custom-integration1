@@ -1,0 +1,86 @@
+{
+  "input": {
+    "message": "Info: 1649097617.352 7 1.2.3.4 TCP_MISS/302 779 HEAD http://example.g1.com/release2/chrome_component/ncl4aq5sui3jzdal274hizxkxe_102.0.4984.0/jamhcnnkihinmdlkakkaopbjbbcngflc_102.0.4984.0_all_kqe423m2ktlxwrfccq656tbhhi.crx3 - DIRECT/example.g1.com text/html DEFAULT_CASE_12-DefaultGroup-Internal_network-NONE-NONE-NONE-DefaultGroup-NONE <\"IW_infr\",6.8,1,\"-\",-,-,-,-,\"-\",-,-,-,\"-\",-,-,\"-\",\"-\",-,-,\"IW_infr\",-,\"-\",\"Infrastructure and Content Delivery Networks\",\"-\",\"Unknown\",\"Unknown\",\"-\",\"-\",890.29,0,-,\"-\",\"-\",-,\"-\",-,-,\"-\",\"-\",-,-,\"-\",-> - -"
+  },
+  "expected": {
+    "message": "Info: 1649097617.352 7 1.2.3.4 TCP_MISS/302 779 HEAD http://example.g1.com/release2/chrome_component/ncl4aq5sui3jzdal274hizxkxe_102.0.4984.0/jamhcnnkihinmdlkakkaopbjbbcngflc_102.0.4984.0_all_kqe423m2ktlxwrfccq656tbhhi.crx3 - DIRECT/example.g1.com text/html DEFAULT_CASE_12-DefaultGroup-Internal_network-NONE-NONE-NONE-DefaultGroup-NONE <\"IW_infr\",6.8,1,\"-\",-,-,-,-,\"-\",-,-,-,\"-\",-,-,\"-\",\"-\",-,-,\"IW_infr\",-,\"-\",\"Infrastructure and Content Delivery Networks\",\"-\",\"Unknown\",\"Unknown\",\"-\",\"-\",890.29,0,-,\"-\",\"-\",-,\"-\",-,-,\"-\",\"-\",-,-,\"-\",-> - -",
+    "event": {
+      "category": [
+        "network",
+        "web"
+      ],
+      "duration": 7,
+      "start": "2022-04-04T18:40:17.352000Z"
+    },
+    "@timestamp": "2022-04-04T18:40:17.352000Z",
+    "cisco_wsa": {
+      "cache_status": "miss",
+      "hierarchy_code": "DIRECT",
+      "rule": {
+        "policy": {
+          "data_security": "NONE",
+          "external_dlp": "NONE",
+          "name": "DefaultGroup",
+          "outbound_malware_scanning": "NONE",
+          "routing": "DefaultGroup"
+        }
+      },
+      "url": {
+        "category": "Infrastructure and Content Delivery Networks",
+        "category_code": "IW_infr"
+      }
+    },
+    "destination": {
+      "address": "example.g1.com",
+      "domain": "example.g1.com",
+      "registered_domain": "g1.com",
+      "subdomain": "example",
+      "top_level_domain": "com"
+    },
+    "http": {
+      "request": {
+        "method": "HEAD"
+      },
+      "response": {
+        "bytes": 779,
+        "mime_type": "text/html",
+        "status_code": 302
+      }
+    },
+    "network": {
+      "direction": "egress",
+      "transport": "tcp"
+    },
+    "observer": {
+      "product": "Cisco Web Security Appliances",
+      "type": "proxy",
+      "vendor": "Cisco"
+    },
+    "related": {
+      "hosts": [
+        "example.g1.com"
+      ],
+      "ip": [
+        "1.2.3.4"
+      ]
+    },
+    "rule": {
+      "id": "DEFAULT_CASE_12",
+      "ruleset": "Internal network"
+    },
+    "source": {
+      "address": "1.2.3.4",
+      "ip": "1.2.3.4"
+    },
+    "url": {
+      "domain": "example.g1.com",
+      "original": "http://example.g1.com/release2/chrome_component/ncl4aq5sui3jzdal274hizxkxe_102.0.4984.0/jamhcnnkihinmdlkakkaopbjbbcngflc_102.0.4984.0_all_kqe423m2ktlxwrfccq656tbhhi.crx3",
+      "path": "/release2/chrome_component/ncl4aq5sui3jzdal274hizxkxe_102.0.4984.0/jamhcnnkihinmdlkakkaopbjbbcngflc_102.0.4984.0_all_kqe423m2ktlxwrfccq656tbhhi.crx3",
+      "port": 80,
+      "registered_domain": "g1.com",
+      "scheme": "http",
+      "subdomain": "example",
+      "top_level_domain": "com"
+    }
+  }
+}

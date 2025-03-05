@@ -1,0 +1,10 @@
+description: MISP is a opensource platform to gather, store, share and correlate threat
+  intelligence like cyber security indicators
+name: misp
+settings:
+- description: MISP server url
+  name: misp_url
+  required: true
+- description: MISP API key
+  name: misp_api_key
+  required: true

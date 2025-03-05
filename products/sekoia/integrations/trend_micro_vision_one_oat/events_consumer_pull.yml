@@ -1,0 +1,27 @@
+automation_connector_uuid: 3b5a417e-e86f-4fce-ac10-4c1d76d91b46
+automation_module_uuid: 1b02d442-b804-4987-afe7-6a4be6ef35e6
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/2345b987-a94a-4363-b7bc-a6e4a9efd98a
+intake_format_uuid: 2345b987-a94a-4363-b7bc-a6e4a9efd98a
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: connector_configuration
+  properties:
+  - default: https://api.xdr.trendmicro.com
+    description: Base URL
+    name: base_url
+    required: true
+  - description: Trend Micro api_key
+    name: api_key
+    required: true
+  - default: 60
+    description: Batch frequency in seconds
+    name: frequency
+    required: true
+    type: integer
+  - description: Filter for retrieving a subset (see https://automation.trendmicro.com/xdr/api-v3/#tag/Observed-Attack-Techniques/paths/~1v3.0~1oat~1detections/get)
+    name: filter
+  type: object
+target_product: trend_micro_vision_one_oat
+topic: events

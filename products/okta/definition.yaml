@@ -1,0 +1,10 @@
+description: Okta is an entreprise-grade, identity management service compatible with
+  cloud apps as well as many on-premises applications
+name: okta
+settings:
+- description: The url to your Okta tenant
+  name: base_url
+  required: true
+- description: The APIkey to authenticate call to the API
+  name: apikey
+  required: true

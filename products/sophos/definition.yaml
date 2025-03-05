@@ -1,0 +1,24 @@
+description: Sophos is a cybersecurity company that provides a range of security solutions,
+  including endpoint protection, firewall, and encryption services. It focuses on
+  delivering advanced threat protection to businesses through simplified and integrated
+  security management.
+name: sophos
+produces:
+  events:
+  - {}
+settings:
+- default: https://id.sophos.com/api/v2/oauth2/token
+  description: OAuth2 authorization URL
+  name: oauth2_authorization_url
+  required: true
+- default: https://api.central.sophos.com
+  description: API Url of the Sophos Central API (e.g. 'https://api-{dataRegion}.central.sophos.com')
+  name: api_host
+  required: true
+- description: OAuth2 client identifier
+  name: client_id
+  required: true
+- description: OAuth2 client secret
+  name: client_secret
+  required: true
+  secret: true

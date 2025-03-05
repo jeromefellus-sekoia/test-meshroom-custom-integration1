@@ -1,0 +1,6 @@
+description: HTTP requests inspected by Cloudflare Gateway
+name: cloudflare_gateway_http
+produces:
+  events:
+  - {}
+vendor: Cloudflare

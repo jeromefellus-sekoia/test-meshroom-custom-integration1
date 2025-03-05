@@ -1,0 +1,8 @@
+description: SonicWall Secure Mobile Access offers secure and seamless remote access
+  to corporate resources, applications, and data, enhancing workforce mobility while
+  maintaining robust security and compliance measures.
+name: sonicwall_sma
+produces:
+  events:
+  - {}
+vendor: SonicWall

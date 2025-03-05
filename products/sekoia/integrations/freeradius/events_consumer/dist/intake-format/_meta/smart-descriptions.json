@@ -1,0 +1,132 @@
+[
+  {
+    "value": "The user {user.name} logged in from {network.name} with ip {source.ip} and port {source.port}",
+    "conditions": [
+      {
+        "field": "user.name"
+      },
+      {
+        "field": "source.ip"
+      },
+      {
+        "field": "source.port"
+      },
+      {
+        "field": "network.name"
+      },
+      {
+        "field": "freeradius.outcome",
+        "value": "Login OK"
+      }
+    ]
+  },
+  {
+    "value": "The user {user.name} logged in from {network.name} with mac {source.mac} and port {source.port}",
+    "conditions": [
+      {
+        "field": "user.name"
+      },
+      {
+        "field": "source.mac"
+      },
+      {
+        "field": "source.port"
+      },
+      {
+        "field": "network.name"
+      },
+      {
+        "field": "freeradius.outcome",
+        "value": "Login OK"
+      }
+    ]
+  },
+  {
+    "value": "The host {source.domain} logged in from {network.name} with mac {source.mac} and port {source.port}",
+    "conditions": [
+      {
+        "field": "source.domain"
+      },
+      {
+        "field": "source.mac"
+      },
+      {
+        "field": "source.port"
+      },
+      {
+        "field": "network.name"
+      },
+      {
+        "field": "freeradius.outcome",
+        "value": "Login OK"
+      }
+    ]
+  },
+  {
+    "value": "The user {user.name} successfully logged in",
+    "conditions": [
+      {
+        "field": "user.name"
+      },
+      {
+        "field": "freeradius.outcome",
+        "value": "Login OK"
+      }
+    ]
+  },
+  {
+    "value": "The user {user.name} tried to log in with status {freeradius.outcome}: {event.reason}",
+    "conditions": [
+      {
+        "field": "user.name"
+      },
+      {
+        "field": "event.reason"
+      }
+    ]
+  },
+  {
+    "value": "The host {source.domain} successfully logged in",
+    "conditions": [
+      {
+        "field": "source.domain"
+      },
+      {
+        "field": "freeradius.outcome",
+        "value": "Login OK"
+      }
+    ]
+  },
+  {
+    "value": "The host {source.domain} tried to log in with status {freeradius.outcome}: {event.reason}",
+    "conditions": [
+      {
+        "field": "source.domain"
+      },
+      {
+        "field": "event.reason"
+      }
+    ]
+  },
+  {
+    "value": "Ignoring request to auth address * port {destination.port} bound to server {host.name} from unknown client {source.ip} port {source.port} proto udp",
+    "conditions": [
+      {
+        "field": "freeradius.outcome",
+        "value": "Ignoring request to auth address"
+      },
+      {
+        "field": "destination.port"
+      },
+      {
+        "field": "host.name"
+      },
+      {
+        "field": "source.ip"
+      },
+      {
+        "field": "source.port"
+      }
+    ]
+  }
+]

@@ -1,0 +1,8 @@
+description: HAProxy is a high-performance, open-source load balancer and reverse
+  proxy used to distribute network traffic efficiently across multiple servers. It
+  enhances the reliability and scalability of web applications by providing features
+  like SSL termination, health checks, and session persistence.
+name: haproxy
+produces:
+  events:
+  - {}

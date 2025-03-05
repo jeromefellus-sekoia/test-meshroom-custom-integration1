@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/d6f69e04-6ab7-40c0-9723-84060aeb5529
+intake_format_uuid: d6f69e04-6ab7-40c0-9723-84060aeb5529
+product: sekoia
+role: consumer
+target_product: rubycat_prove_it
+topic: events

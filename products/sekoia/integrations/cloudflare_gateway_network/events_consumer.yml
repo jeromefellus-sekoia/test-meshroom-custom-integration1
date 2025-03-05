@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/d14567dd-56b1-42f8-aa64-fb65d4b0a4cf
+intake_format_uuid: d14567dd-56b1-42f8-aa64-fb65d4b0a4cf
+product: sekoia
+role: consumer
+target_product: cloudflare_gateway_network
+topic: events

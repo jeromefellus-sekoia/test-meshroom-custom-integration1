@@ -1,0 +1,7 @@
+description: Onyphe is a Cyber Defense Search Engine for open-source and cyber threat
+  intelligence data collected by crawling various sources available on the Internet
+  or by listening to Internet background noise
+name: onyphe
+settings:
+- description: APIKEY for Onyphe
+  name: apikey

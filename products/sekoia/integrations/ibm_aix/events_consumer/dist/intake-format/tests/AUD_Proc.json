@@ -1,0 +1,31 @@
+{
+  "input": {
+    "message": "AUD_Proc cron root root OK 25 sep 2022 23:10:00.924334 No associated roles pid: 0 cmd: 5"
+  },
+  "expected": {
+    "message": "AUD_Proc cron root root OK 25 sep 2022 23:10:00.924334 No associated roles pid: 0 cmd: 5",
+    "event": {
+      "action": "AUD_Proc",
+      "category": [
+        "process"
+      ]
+    },
+    "action": {
+      "status": "OK",
+      "target": "process"
+    },
+    "group": {
+      "name": "root"
+    },
+    "observer": {
+      "vendor": "IBM"
+    },
+    "process": {
+      "name": "cron",
+      "pid": 0,
+      "user": {
+        "name": "root"
+      }
+    }
+  }
+}

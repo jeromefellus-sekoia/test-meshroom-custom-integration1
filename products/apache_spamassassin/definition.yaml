@@ -1,0 +1,9 @@
+description: 'Apache SpamAssassin is a computer program used for e-mail spam filtering.
+
+  Many intrusions start by a spam campaign, this intake leverages their detections
+  to offer a complete view of the attacker path on your system.'
+name: apache_spamassassin
+produces:
+  events:
+  - {}
+vendor: Apache Spamassassin

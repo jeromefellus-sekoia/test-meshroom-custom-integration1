@@ -1,0 +1,8 @@
+description: BeyondTrust Privileged Remote Access enables secure, controlled remote
+  access to critical systems for employees and vendors, focusing on protecting privileged
+  credentials and sessions.
+name: beyondtrust_pra
+produces:
+  events:
+  - mode: pull
+vendor: BeyondTrust

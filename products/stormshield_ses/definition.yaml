@@ -1,0 +1,11 @@
+description: Stormshield SES is designed to protect endpoints such as desktops, laptops,
+  and servers against a variety of threats and cyberattacks.
+name: stormshield_ses
+settings:
+- description: URL of the Stormshield instance
+  name: url
+  required: true
+- description: Authentication token for the API
+  name: api_token
+  required: true
+  secret: true

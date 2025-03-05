@@ -1,0 +1,9 @@
+description: 'Cybereason detect and prevent attack targeting endpoints.
+
+  All detections are gathered in MalOps. This format ingests new detections with suspicions
+  and evidences in JSON representation.'
+name: cybereason_malop_json
+produces:
+  events:
+  - mode: pull
+vendor: Cybereason

@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/3cedbe29-02f8-42bf-9ec2-0158186c2827
+intake_format_uuid: 3cedbe29-02f8-42bf-9ec2-0158186c2827
+product: sekoia
+role: consumer
+target_product: pradeo_mtd
+topic: events

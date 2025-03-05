@@ -1,0 +1,7 @@
+description: "Jiz\xF4 AI / Sesame it NDR is a network observability platform that\
+  \ enables decision-makers to anticipate, identify and block cyber-attacks."
+name: sesameit_jizo
+produces:
+  events:
+  - {}
+vendor: Jizo AI / Sesame IT

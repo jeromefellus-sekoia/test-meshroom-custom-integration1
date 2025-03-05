@@ -1,0 +1,7 @@
+description: Stormshield SES is designed to protect endpoints such as desktops, laptops,
+  and servers against a variety of threats and cyberattacks.
+name: stormshield_endpoint_security
+produces:
+  events:
+  - {}
+vendor: Stormshield

@@ -1,0 +1,8 @@
+description: ISC DHCP is a widely-used open-source software suite developed by the
+  Internet Systems Consortium for managing and automating IP address allocation through
+  the Dynamic Host Configuration Protocol (DHCP). It facilitates network management
+  by assigning IP addresses and configurations to devices on a network.
+name: dhcpd
+produces:
+  events:
+  - {}

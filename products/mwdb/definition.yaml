@@ -1,0 +1,7 @@
+description: MWDB is a malware repository for automated malware collection and analysis
+  systems hosted by CERT.pl
+name: mwdb
+settings:
+- description: API key
+  name: api_key
+  required: true

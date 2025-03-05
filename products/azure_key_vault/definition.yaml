@@ -1,0 +1,8 @@
+description: Azure Key Vault is a cloud service that securely stores and manages sensitive
+  information such as passwords,  encryption keys, and certificates. It helps safeguard
+  cryptographic keys and secrets used by cloud applications  and services.
+name: azure_key_vault
+produces:
+  events:
+  - mode: pull
+vendor: Azure

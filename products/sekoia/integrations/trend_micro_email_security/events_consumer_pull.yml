@@ -1,0 +1,31 @@
+automation_connector_uuid: c8297677-7f44-41f9-993b-28e5ec823554
+automation_module_uuid: 1b02d442-b804-4987-afe7-6a4be6ef35e6
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/2e9d87ed-6606-445a-90d1-9c7695b28335
+intake_format_uuid: 2e9d87ed-6606-445a-90d1-9c7695b28335
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: connector_configuration
+  properties:
+  - description: API service URL
+    name: service_url
+    required: true
+  - description: Trend Micro username
+    name: username
+    required: true
+  - description: Trend Micro api_key
+    name: api_key
+    required: true
+  - default: 60
+    description: Batch frequency in seconds
+    name: frequency
+    required: true
+    type: integer
+  - default: 500
+    description: The size of chunks for the batch processing
+    name: batch_size
+    type: integer
+  type: object
+target_product: trend_micro_email_security
+topic: events

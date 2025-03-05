@@ -1,0 +1,69 @@
+{
+  "input": {
+    "message": "{\"customer\": \"CuNo\", \"metaData\": {}, \"host\": \"events.retarus.com\", \"ts\": \"2018-10-16 14:58:18 +0200\", \"version\": \"1.0\", \"sourceIp\": \"xxx.xxx.xxx.xxx\", \"sender\": \"xxxxxxx@retarus.com\", \"type\": \"CxO\", \"direction\": \"INBOUND\", \"recipient\": \"xxxxxxx@retarus.de\", \"mimeId\": \"<164D6G96.xxxxxxx@retarus.net>\", \"status\": \"DETECTED\", \"class\": \"THREAT\", \"rmxId\": \"20181016-145817-42ZFjPxxxxxx-0@mailin01\"}"
+  },
+  "expected": {
+    "message": "{\"customer\": \"CuNo\", \"metaData\": {}, \"host\": \"events.retarus.com\", \"ts\": \"2018-10-16 14:58:18 +0200\", \"version\": \"1.0\", \"sourceIp\": \"xxx.xxx.xxx.xxx\", \"sender\": \"xxxxxxx@retarus.com\", \"type\": \"CxO\", \"direction\": \"INBOUND\", \"recipient\": \"xxxxxxx@retarus.de\", \"mimeId\": \"<164D6G96.xxxxxxx@retarus.net>\", \"status\": \"DETECTED\", \"class\": \"THREAT\", \"rmxId\": \"20181016-145817-42ZFjPxxxxxx-0@mailin01\"}",
+    "event": {
+      "category": [
+        "malware"
+      ],
+      "kind": "alert",
+      "outcome": "failure",
+      "type": [
+        "info"
+      ]
+    },
+    "@timestamp": "2018-10-16T12:58:18Z",
+    "action": {
+      "name": "THREAT",
+      "outcome": "failure"
+    },
+    "destination": {
+      "address": "retarus.de",
+      "domain": "retarus.de",
+      "registered_domain": "retarus.de",
+      "top_level_domain": "de"
+    },
+    "email": {
+      "to": {
+        "address": [
+          "xxxxxxx@retarus.de"
+        ]
+      }
+    },
+    "observer": {
+      "hostname": "events.retarus.com",
+      "product": "Email Security",
+      "vendor": "Retarus",
+      "version": "1.0"
+    },
+    "organization": {
+      "id": "CuNo"
+    },
+    "related": {
+      "hosts": [
+        "events.retarus.com",
+        "retarus.com",
+        "retarus.de"
+      ]
+    },
+    "retarus": {
+      "class": "THREAT",
+      "email_direction": "INBOUND",
+      "message_id": "20181016-145817-42ZFjPxxxxxx-0@mailin01",
+      "mime_message_id": "<164D6G96.xxxxxxx@retarus.net>",
+      "recipient": "xxxxxxx@retarus.de",
+      "sender": "xxxxxxx@retarus.com",
+      "status": "DETECTED",
+      "timestamp": "2018-10-16 14:58:18 +0200",
+      "type": "CxO"
+    },
+    "source": {
+      "address": "retarus.com",
+      "domain": "retarus.com",
+      "registered_domain": "retarus.com",
+      "top_level_domain": "com"
+    }
+  }
+}

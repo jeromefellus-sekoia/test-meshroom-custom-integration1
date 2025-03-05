@@ -1,0 +1,7 @@
+description: Google Kubernetes Engine (GKE) is a managed, production-ready environment
+  for running containerized applications.
+name: google_kubernetes_engine
+produces:
+  events:
+  - mode: pull
+vendor: Google Cloud

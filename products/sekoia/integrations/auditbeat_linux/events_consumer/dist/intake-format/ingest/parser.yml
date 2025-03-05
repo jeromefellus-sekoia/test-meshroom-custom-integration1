@@ -1,0 +1,140 @@
+name: auditbeat
+pipeline:
+  - name: json_event
+    external:
+      name: json.parse-json
+  - name: main_stage
+  - name: authentication_related_fields
+    filter: '{{ "authentication" in json_event.message.event.category }}'
+
+stages:
+  main_stage:
+    actions:
+      - set:
+          agent.hostname: "{{json_event.message.beat.hostname}}"
+          agent: "{{json_event.message.agent}}"
+          as: "{{json_event.message.as}}"
+          auditbeat: "{{json_event.message}}"
+          auditd: "{{json_event.message.auditd}}"
+          auditd.user: "{{json_event.message.user}}"
+          client: "{{json_event.message.client}}"
+          cloud.image.id: "{{json_event.message.cloud.image.id}}"
+          cloud: "{{json_event.message.cloud}}"
+          code_signature: "{{json_event.message.code_signature}}"
+          container.image.name: "{{json_event.message.kubernetes.container.image}}"
+          container: "{{json_event.message.container}}"
+          data_stream: "{{json_event.message.data_stream}}"
+          destination: "{{json_event.message.destination}}"
+          dll: "{{json_event.message.dll}}"
+          dns: "{{json_event.message.dns}}"
+          docker: "{{json_event.message.docker}}"
+          ecs: "{{json_event.message.ecs}}"
+          error: "{{json_event.message.error}}"
+          error.message: "{{json_event.message.auditd.warnings}}"
+          fields: "{{json_event.message.fields}}"
+          file: "{{json_event.message.file}}"
+          geoip: "{{json_event.message.geoip}}"
+          geo: "{{json_event.message.geo}}"
+          group: "{{json_event.message.group}}"
+          hash: "{{json_event.message.hash}}"
+          host: "{{json_event.message.host}}"
+          host.name: "{{json_event.message.beat.name}}"
+          http: "{{json_event.message.http}}"
+          interface: "{{json_event.message.interface}}"
+          jolokia: "{{json_event.message.jolokia}}"
+          kubernetes: "{{json_event.message.kubernetes}}"
+          log.hostname: "{{json_event.message.host.name}}"
+          log: "{{json_event.message.log}}"
+          network: "{{json_event.message.network}}"
+          observer: "{{json_event.message.observer}}"
+          orchestrator: "{{json_event.message.orchestrator}}"
+          organization: "{{json_event.message.organization}}"
+          os: "{{json_event.message.os}}"
+          package: "{{json_event.message.package}}"
+          pe: "{{json_event.message.pe}}"
+          process: "{{json_event.message.process}}"
+          process.parent.pid: "{{json_event.message.process.ppid}}"
+          registry: "{{json_event.message.registry}}"
+          related: "{{json_event.message.related}}"
+          rule: "{{json_event.message.rule}}"
+          server: "{{json_event.message.server}}"
+          service: "{{json_event.message.service}}"
+          socket: "{{json_event.message.socket}}"
+          source: "{{json_event.message.source}}"
+          span: "{{json_event.message.span}}"
+          system: "{{json_event.message.system}}"
+          threat: "{{json_event.message.threat}}"
+          timeseries: "{{json_event.message.timeseries}}"
+          "@timestamp": "{{json_event.message['@timestamp']}}"
+          tls: "{{json_event.message.tls}}"
+          trace: "{{json_event.message.trace}}"
+          transaction: "{{json_event.message.transaction}}"
+          url: "{{json_event.message.url}}"
+          user_agent: "{{json_event.message.user_agent}}"
+          user: "{{json_event.message.user}}"
+          vlan: "{{json_event.message.vlan}}"
+          vulnerability: "{{json_event.message.vulnerability}}"
+          x509: "{{json_event.message.x509}}"
+
+      - set:
+          event.kind: "{{json_event.message.event.kind}}"
+          event.module: "{{json_event.message.event.module}}"
+          event.category: "{{json_event.message.event.category}}"
+          event.type: "{{json_event.message.event.type}}"
+          event.action: "{{json_event.message.event.action}}"
+
+      - set:
+          process.command_line: "{{json_event.message.process.args | join(' ')}}"
+        filter: "{{json_event.message.process.command_line == null and json_event.message.process.name != 'postgres'}}"
+
+      - set:
+          process.name: "{{json_event.message.auditd.summary.how | basename}}"
+        filter: "{{ json_event.message.process.name == null }}"
+
+  authentication_related_fields:
+    actions:
+      # the host is a server
+      - set:
+          client.ip: "{{json_event.message.source.ip}}"
+          client.geo.country_iso_code: "{{json_event.message.source.geo.country_iso_code}}"
+          sekoiaio.authentication.process.name: "{{final.process.name}}"
+          server: "{{json_event.message.host}}"
+          sekoiaio.server: "{{json_event.message.host}}"
+
+      - set:
+          sekoiaio.server.os.type: "linux"
+          host.os.type: "linux"
+        filter: "{{ json_event.message.host.os == null or json_event.message.host.os.type == null }}"
+
+      - set:
+          client: "{{final.host}}"
+          sekoiaio.client: "{{final.host}}"
+        filter: "{{ json_event.message.source == null  or json_event.message.source.ip == null }}"
+
+      - set:
+          action.outcome: "failure"
+        filter: '{{ "authentication_failure" in json_event.message.event.type }}'
+
+      - set:
+          action.outcome: "success"
+        filter: '{{ "authentication_success" in json_event.message.event.type }}'
+
+      - set:
+          user.target.name: "{{json_event.message.audit.summary.actor.secondary}}"
+        filter: '{{ "start" in json_event.message.event.type and event.action == "loggin-in" }}'
+      - set:
+          user.target.name: "{{json_event.message.user.name}}"
+        filter: '{{ "start" in json_event.message.event.type and event.action == "user_login" }}'
+
+      - set:
+          user.target.name: "{{json_event.message.user.effective.name}}"
+          client: "{{json_event.message.host}}"
+        filter: '{{ "start" in json_event.message.event.type and event.action == "changed-login-id-to" }}'
+
+      - translate:
+        dictionary:
+          success: "success"
+          fail: "failure"
+        mapping:
+          json_event.message.auditd.result: action.outcome
+        filter: '{{ json_event.message.auditd.result in ["success", "fail"]}}'

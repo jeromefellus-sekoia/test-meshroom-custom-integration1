@@ -1,0 +1,7 @@
+description: VMware ESXi is a hypervisor and an operation system. It serves virtual
+  computers while running directly on the server hardware
+name: vmware_esxi
+produces:
+  events:
+  - {}
+vendor: VMWare

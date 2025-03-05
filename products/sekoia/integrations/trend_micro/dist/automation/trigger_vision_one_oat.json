@@ -1,0 +1,61 @@
+{
+  "description": "Get last Observed Attack Techniques from the Trend Micro Vision One",
+  "docker_parameters": "trend_micro_vision_one_oat",
+  "name": "Fetch new logs",
+  "arguments": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "properties": {
+      "base_url": {
+        "description": "Base URL",
+        "type": "string",
+        "format": "uri",
+        "enum": [
+          "https://api.xdr.trendmicro.com",
+          "https://api.au.xdr.trendmicro.com",
+          "https://api.eu.xdr.trendmicro.com",
+          "https://api.in.xdr.trendmicro.com",
+          "https://api.xdr.trendmicro.co.jp",
+          "https://api.sg.xdr.trendmicro.com",
+          "https://api.mea.xdr.trendmicro.com",
+          "https://api.usgov.xdr.trendmicro.com"
+        ],
+        "default": "https://api.xdr.trendmicro.com"
+      },
+      "api_key": {
+        "description": "Trend Micro api_key",
+        "type": "string"
+      },
+      "frequency": {
+        "type": "integer",
+        "description": "Batch frequency in seconds",
+        "default": 60
+      },
+      "filter": {
+        "description": "Filter for retrieving a subset (see https://automation.trendmicro.com/xdr/api-v3/#tag/Observed-Attack-Techniques/paths/~1v3.0~1oat~1detections/get)",
+        "type": "string"
+      },
+      "intake_server": {
+        "description": "Server of the intake server (e.g. 'https://intake.sekoia.io')",
+        "default": "https://intake.sekoia.io",
+        "type": "string"
+      },
+      "intake_key": {
+        "description": "Intake key to use when sending events",
+        "type": "string"
+      }
+    },
+    "required": [
+      "frequency",
+      "intake_key",
+      "base_url",
+      "api_key"
+    ],
+    "secrets": [
+      "api_key"
+    ],
+    "title": "The configuration to fetch new logs",
+    "type": "object"
+  },
+  "results": {},
+  "uuid": "3b5a417e-e86f-4fce-ac10-4c1d76d91b46"
+}

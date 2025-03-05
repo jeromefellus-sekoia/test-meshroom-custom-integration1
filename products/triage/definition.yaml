@@ -1,0 +1,9 @@
+description: Triage is a malware analysis sandbox as a service, brought by Hatching
+name: triage
+settings:
+- description: API key
+  name: api_key
+  required: true
+- description: API endpoint (url)
+  name: api_url
+  required: true

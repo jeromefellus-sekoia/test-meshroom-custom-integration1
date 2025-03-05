@@ -1,0 +1,6 @@
+description: Github audit logs represents activities on your Github organization.
+name: github_audit_logs
+produces:
+  events:
+  - mode: pull
+vendor: Github

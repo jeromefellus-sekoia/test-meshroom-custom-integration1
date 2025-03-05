@@ -1,0 +1,7 @@
+description: Trellix ePO is a centralized security management platform to orchestrate
+  and manage all endpoints.
+name: trellix_epo
+produces:
+  events:
+  - mode: pull
+vendor: Trellix

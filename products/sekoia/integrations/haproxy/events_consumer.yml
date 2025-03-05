@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/ff1873e7-8757-4b1a-b0ca-b33f9b27f3d9
+intake_format_uuid: ff1873e7-8757-4b1a-b0ca-b33f9b27f3d9
+product: sekoia
+role: consumer
+target_product: haproxy
+topic: events

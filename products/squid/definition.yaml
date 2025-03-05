@@ -1,0 +1,7 @@
+description: Squid is an open-source caching and forwarding HTTP proxy server that
+  improves web performance and reduces bandwidth usage. It supports various protocols
+  and provides content filtering and access control capabilities.
+name: squid
+produces:
+  events:
+  - {}

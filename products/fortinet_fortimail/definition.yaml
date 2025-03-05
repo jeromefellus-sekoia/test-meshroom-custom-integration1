@@ -1,0 +1,6 @@
+description: FortiMail is an email security solution.
+name: fortinet_fortimail
+produces:
+  events:
+  - {}
+vendor: Fortinet

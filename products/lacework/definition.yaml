@@ -1,0 +1,15 @@
+description: Lacework is a cybersecurity company specializing in cloud security and
+  compliance, offering automated threat detection and response solutions for modern
+  cloud environments.
+name: lacework
+settings:
+- description: The KeyId of your API Key
+  name: key_id
+  required: true
+- description: The secret of your API Key
+  name: secret
+  required: true
+  secret: true
+- description: 'The account of your API Key (e.g: `YourLaceworkTenant.lacework.net`)'
+  name: account
+  required: true

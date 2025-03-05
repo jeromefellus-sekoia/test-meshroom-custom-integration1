@@ -1,0 +1,52 @@
+{
+  "input": {
+    "message": "%ASA-6-106100: access-list ACME_INFRA permitted udp ACME_INFRA/10.1.0.16(42592) -> ACME/10.1.1.76(161) hit-cnt 1 first hit [0x42666c4c, 0x05739900]"
+  },
+  "expected": {
+    "message": "%ASA-6-106100: access-list ACME_INFRA permitted udp ACME_INFRA/10.1.0.16(42592) -> ACME/10.1.1.76(161) hit-cnt 1 first hit [0x42666c4c, 0x05739900]",
+    "event": {
+      "category": [
+        "network"
+      ],
+      "code": "106100",
+      "reason": "ACME_INFRA"
+    },
+    "action": {
+      "name": "permitted",
+      "target": "network-traffic"
+    },
+    "destination": {
+      "address": "10.1.1.76",
+      "ip": "10.1.1.76",
+      "port": 161
+    },
+    "network": {
+      "transport": "udp"
+    },
+    "observer": {
+      "egress": {
+        "interface": {
+          "name": "ACME"
+        }
+      },
+      "ingress": {
+        "interface": {
+          "name": "ACME_INFRA"
+        }
+      },
+      "product": "Adaptive Security Appliance",
+      "vendor": "Cisco"
+    },
+    "related": {
+      "ip": [
+        "10.1.0.16",
+        "10.1.1.76"
+      ]
+    },
+    "source": {
+      "address": "10.1.0.16",
+      "ip": "10.1.0.16",
+      "port": 42592
+    }
+  }
+}

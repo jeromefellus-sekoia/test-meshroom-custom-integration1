@@ -1,0 +1,5 @@
+dst_instance: myedr
+mode: push
+src_instance: mysoar
+status: up
+topic: carots

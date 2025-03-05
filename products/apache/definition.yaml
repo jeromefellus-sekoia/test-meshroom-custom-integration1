@@ -1,0 +1,10 @@
+description: 'Apache Server is a widely-used open-source web server software that
+  helps deliver web content to users via the HTTP protocol.
+
+
+  It is known for its flexibility, robust community support, and ability to run on
+  various operating systems.'
+executes:
+  action:
+  - {}
+name: apache

@@ -1,0 +1,41 @@
+{
+  "input": {
+    "message": "FILE_Link dad root root OK 31 jul 2022 14:02:33.696402 No associated roles linkname /usr/bin/cdax/bsh filename /usr/bin/cdax/ksh93"
+  },
+  "expected": {
+    "message": "FILE_Link dad root root OK 31 jul 2022 14:02:33.696402 No associated roles linkname /usr/bin/cdax/bsh filename /usr/bin/cdax/ksh93",
+    "event": {
+      "action": "FILE_Link",
+      "category": [
+        "process"
+      ]
+    },
+    "action": {
+      "status": "OK",
+      "target": "process"
+    },
+    "file": {
+      "name": "/usr/bin/cdax/ksh93",
+      "target_path": "/usr/bin/cdax/bsh"
+    },
+    "group": {
+      "name": "root"
+    },
+    "observer": {
+      "vendor": "IBM"
+    },
+    "process": {
+      "user": {
+        "name": "root"
+      }
+    },
+    "related": {
+      "user": [
+        "dad"
+      ]
+    },
+    "user": {
+      "name": "dad"
+    }
+  }
+}

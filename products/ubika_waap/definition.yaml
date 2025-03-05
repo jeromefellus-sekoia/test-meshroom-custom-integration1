@@ -1,0 +1,7 @@
+description: Ubika WAAP Gateway detect and prevent threats against your web applications
+  and your APIs
+name: ubika_waap
+produces:
+  events:
+  - {}
+vendor: Ubika

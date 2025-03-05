@@ -1,0 +1,102 @@
+{
+  "input": {
+    "message": "date=\"2022-03-11T10:39:16.390Z\" hostname=\"mwgproxy\" username=\"\" source_ip=1.2.3.4 destination_ip=2.2.2.41 destination_host=\"www.forbiddensite.com\" http_status_code=403 media_type=\"\" source_bytes=131 destination_bytes=0 http_request_first_line=\"GET http://www.forbiddensite.com/ HTTP/1.1\" url_categories=\"Pornography\" url_reputation_string=\"Minimal Risk\" url_reputation_code=-28 ruleset_name=\"Default\" rule_name=\"Block URLs Whose Category Is in Category Blocklist for Default Groups\" block_id=10 block_reason=\"Blocked by URL filtering\" body_infected=false virus_names=\"\" body_modified=false application_reputation=\"Unverified\" application_name=\"forbiddenapp\" http_referer=\"\" user_agent=\"curl/7.77.0\""
+  },
+  "expected": {
+    "message": "date=\"2022-03-11T10:39:16.390Z\" hostname=\"mwgproxy\" username=\"\" source_ip=1.2.3.4 destination_ip=2.2.2.41 destination_host=\"www.forbiddensite.com\" http_status_code=403 media_type=\"\" source_bytes=131 destination_bytes=0 http_request_first_line=\"GET http://www.forbiddensite.com/ HTTP/1.1\" url_categories=\"Pornography\" url_reputation_string=\"Minimal Risk\" url_reputation_code=-28 ruleset_name=\"Default\" rule_name=\"Block URLs Whose Category Is in Category Blocklist for Default Groups\" block_id=10 block_reason=\"Blocked by URL filtering\" body_infected=false virus_names=\"\" body_modified=false application_reputation=\"Unverified\" application_name=\"forbiddenapp\" http_referer=\"\" user_agent=\"curl/7.77.0\"",
+    "event": {
+      "action": "denied",
+      "category": [
+        "network"
+      ],
+      "code": "10",
+      "reason": "Blocked by URL filtering",
+      "start": "2022-03-11T10:39:16.390000Z"
+    },
+    "destination": {
+      "address": "www.forbiddensite.com",
+      "domain": "www.forbiddensite.com",
+      "ip": "2.2.2.41",
+      "registered_domain": "forbiddensite.com",
+      "subdomain": "www",
+      "top_level_domain": "com"
+    },
+    "http": {
+      "request": {
+        "bytes": 131,
+        "method": "GET"
+      },
+      "response": {
+        "bytes": 0,
+        "status_code": 403
+      }
+    },
+    "network": {
+      "direction": "egress"
+    },
+    "observer": {
+      "hostname": "mwgproxy",
+      "product": "McAfee Web Gateway",
+      "type": "proxy",
+      "vendor": "McAfee Corp."
+    },
+    "related": {
+      "hosts": [
+        "mwgproxy",
+        "www.forbiddensite.com"
+      ],
+      "ip": [
+        "1.2.3.4",
+        "2.2.2.41"
+      ]
+    },
+    "rule": {
+      "name": "Block URLs Whose Category Is in Category Blocklist for Default Groups",
+      "ruleset": "Default"
+    },
+    "skyhighsecurity": {
+      "application": {
+        "name": "forbiddenapp",
+        "reputation": "Unverified"
+      },
+      "http": {
+        "body": {
+          "infected": "false",
+          "modified": "false"
+        }
+      },
+      "url": {
+        "categories": [
+          "Pornography"
+        ],
+        "reputation": "Minimal Risk",
+        "reputation_code": -28
+      }
+    },
+    "source": {
+      "address": "1.2.3.4",
+      "ip": "1.2.3.4"
+    },
+    "url": {
+      "domain": "www.forbiddensite.com",
+      "original": "http://www.forbiddensite.com/",
+      "path": "/",
+      "port": 80,
+      "registered_domain": "forbiddensite.com",
+      "scheme": "http",
+      "subdomain": "www",
+      "top_level_domain": "com"
+    },
+    "user_agent": {
+      "device": {
+        "name": "Other"
+      },
+      "name": "curl",
+      "original": "curl/7.77.0",
+      "os": {
+        "name": "Other"
+      },
+      "version": "7.77.0"
+    }
+  }
+}

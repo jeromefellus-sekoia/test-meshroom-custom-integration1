@@ -1,0 +1,39 @@
+{
+  "input": {
+    "message": "DHCPACK on 10.100.102.108 to 6c:88:14:1d:97:1c (PDB746) via 10.100.100.4"
+  },
+  "expected": {
+    "message": "DHCPACK on 10.100.102.108 to 6c:88:14:1d:97:1c (PDB746) via 10.100.100.4",
+    "event": {
+      "category": [
+        "network"
+      ],
+      "outcome": "success",
+      "type": [
+        "connection"
+      ]
+    },
+    "destination": {
+      "address": "10.100.100.4",
+      "ip": "10.100.100.4"
+    },
+    "dhcpd": {
+      "query": "ack"
+    },
+    "related": {
+      "hosts": [
+        "PDB746"
+      ],
+      "ip": [
+        "10.100.100.4",
+        "10.100.102.108"
+      ]
+    },
+    "source": {
+      "address": "PDB746",
+      "domain": "PDB746",
+      "ip": "10.100.102.108",
+      "mac": "6c:88:14:1d:97:1c"
+    }
+  }
+}

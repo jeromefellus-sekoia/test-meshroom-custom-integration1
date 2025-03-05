@@ -1,0 +1,14 @@
+description: Wiz is a cybersecurity company specializing in cloud security solutions
+  that help businesses detect and manage risks across their cloud environments.
+name: wiz
+settings:
+- description: Client id to interact with Wiz API
+  name: client_id
+  required: true
+- description: Client secret to interact with Wiz API
+  name: client_secret
+  required: true
+  secret: true
+- description: Base url of the Wiz tenant (e.g https://api.us17.app.wiz.io)
+  name: tenant_url
+  required: true

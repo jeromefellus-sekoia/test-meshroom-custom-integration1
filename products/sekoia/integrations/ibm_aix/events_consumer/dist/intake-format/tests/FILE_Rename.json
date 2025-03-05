@@ -1,0 +1,41 @@
+{
+  "input": {
+    "message": "FILE_Rename BESClient root root OK 25 sep 2022 22:33:21.081155 No associated roles frompath: /var/opt/BESClient/besclient.config.tmp topath: /var/opt/BESClient/besclient.config"
+  },
+  "expected": {
+    "message": "FILE_Rename BESClient root root OK 25 sep 2022 22:33:21.081155 No associated roles frompath: /var/opt/BESClient/besclient.config.tmp topath: /var/opt/BESClient/besclient.config",
+    "event": {
+      "action": "FILE_Rename",
+      "category": [
+        "process"
+      ]
+    },
+    "action": {
+      "status": "OK",
+      "target": "process"
+    },
+    "file": {
+      "name": " /var/opt/BESClient/besclient.config",
+      "path": "/var/opt/BESClient/besclient.config.tmp"
+    },
+    "group": {
+      "name": "root"
+    },
+    "observer": {
+      "vendor": "IBM"
+    },
+    "process": {
+      "user": {
+        "name": "root"
+      }
+    },
+    "related": {
+      "user": [
+        "BESClient"
+      ]
+    },
+    "user": {
+      "name": "BESClient"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+automation_connector_uuid: 7aa5dd7c-d694-44dd-b605-66b7974dfb05
+automation_module_uuid: 1b02d442-b804-4987-afe7-6a4be6ef35e6
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/9844ea0a-de7f-45d4-9a9b-b07651f0630e
+intake_format_uuid: 9844ea0a-de7f-45d4-9a9b-b07651f0630e
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: connector_configuration
+  properties:
+  - default: https://api.xdr.trendmicro.com
+    description: Base URL
+    name: base_url
+    required: true
+  - description: Trend Micro api_key
+    name: api_key
+    required: true
+  - default: 60
+    description: Batch frequency in seconds
+    name: frequency
+    required: true
+    type: integer
+  type: object
+target_product: trend_micro_vision_one_workbench_alerts
+topic: events

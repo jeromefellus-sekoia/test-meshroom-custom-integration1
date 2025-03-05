@@ -1,0 +1,31 @@
+automation_connector_uuid: 9a92d17c-6740-476f-8cec-621de2e853c5
+automation_module_uuid: 0c82ee9b-f645-47f9-8e16-a689cfc246c4
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/d0383e87-e054-4a21-8a2c-6a89635d8615
+intake_format_uuid: d0383e87-e054-4a21-8a2c-6a89635d8615
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: connector_configuration
+  properties:
+  - default: 60
+    description: Batch frequency in seconds
+    name: frequency
+    type: integer
+  - default: 1000
+    description: The size of chunks for the batch processing
+    name: chunk_size
+    type: integer
+  - description: Id of cirrus provider
+    name: provider
+    required: true
+  - description: Id of cirrus tenant
+    name: tenant
+    required: true
+  - description: API token
+    name: token
+    required: true
+    secret: true
+  type: object
+target_product: ubika_cloud_protector_alerts
+topic: events

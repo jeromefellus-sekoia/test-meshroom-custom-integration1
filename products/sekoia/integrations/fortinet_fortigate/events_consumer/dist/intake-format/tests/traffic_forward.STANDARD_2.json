@@ -1,0 +1,80 @@
+{
+  "input": {
+    "message": "date=2021-06-21 time=09:38:29 devname=\"abc\" devid=\"1\" logid=\"0000000010\" type=\"traffic\" subtype=\"forward\" level=\"notice\" vd=\"PRX1-AA\" eventtime=1624261109 srcip=1.1.1.1 srcport=50592 srcintf=\"port2\" srcintfrole=\"dmz\" dstip=2.2.2.2 dstport=443 dstintf=\"test\" dstintfrole=\"wan\" sessionid=1224900441 poluuid=\"1eb429d4-ff52-51ea-d119-d1db60e409a6\" dstcountry=\"United Kingdom\" srccountry=\"Reserved\" service=\"HTTPS\" wanoptapptype=\"web-proxy\" proto=6 action=\"accept\" duration=37 policyid=1 policytype=\"proxy-policy\" wanin=5851 rcvdbyte=5851 wanout=2523 lanin=2769 sentbyte=2769 lanout=5923 appcat=\"unscanned\" utmaction=\"allow\" countweb=1"
+  },
+  "expected": {
+    "message": "date=2021-06-21 time=09:38:29 devname=\"abc\" devid=\"1\" logid=\"0000000010\" type=\"traffic\" subtype=\"forward\" level=\"notice\" vd=\"PRX1-AA\" eventtime=1624261109 srcip=1.1.1.1 srcport=50592 srcintf=\"port2\" srcintfrole=\"dmz\" dstip=2.2.2.2 dstport=443 dstintf=\"test\" dstintfrole=\"wan\" sessionid=1224900441 poluuid=\"1eb429d4-ff52-51ea-d119-d1db60e409a6\" dstcountry=\"United Kingdom\" srccountry=\"Reserved\" service=\"HTTPS\" wanoptapptype=\"web-proxy\" proto=6 action=\"accept\" duration=37 policyid=1 policytype=\"proxy-policy\" wanin=5851 rcvdbyte=5851 wanout=2523 lanin=2769 sentbyte=2769 lanout=5923 appcat=\"unscanned\" utmaction=\"allow\" countweb=1",
+    "event": {
+      "action": "accept",
+      "category": "traffic",
+      "code": "0000000010",
+      "dataset": "traffic:forward",
+      "outcome": "success"
+    },
+    "@timestamp": "2021-06-21T07:38:29Z",
+    "action": {
+      "name": "accept",
+      "outcome": "success",
+      "target": "network-traffic",
+      "type": "forward"
+    },
+    "destination": {
+      "address": "2.2.2.2",
+      "bytes": 5851,
+      "ip": "2.2.2.2",
+      "port": 443
+    },
+    "fortinet": {
+      "fortigate": {
+        "event": {
+          "type": "traffic"
+        },
+        "policyid": "1",
+        "poluuid": "1eb429d4-ff52-51ea-d119-d1db60e409a6",
+        "virtual_domain": "PRX1-AA"
+      }
+    },
+    "log": {
+      "hostname": "abc",
+      "level": "notice"
+    },
+    "network": {
+      "bytes": 8620,
+      "protocol": "https",
+      "transport": "tcp"
+    },
+    "observer": {
+      "egress": {
+        "interface": {
+          "name": "test"
+        }
+      },
+      "hostname": "abc",
+      "ingress": {
+        "interface": {
+          "name": "port2"
+        }
+      },
+      "serial_number": "1"
+    },
+    "related": {
+      "hosts": [
+        "abc"
+      ],
+      "ip": [
+        "1.1.1.1",
+        "2.2.2.2"
+      ]
+    },
+    "rule": {
+      "category": "unscanned",
+      "ruleset": "proxy-policy"
+    },
+    "source": {
+      "address": "1.1.1.1",
+      "bytes": 2769,
+      "ip": "1.1.1.1",
+      "port": 50592
+    }
+  }
+}

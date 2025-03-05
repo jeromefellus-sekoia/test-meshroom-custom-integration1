@@ -1,0 +1,34 @@
+{
+  "input": {
+    "message": "DHCPRELEASE of 10.17.81.182 from 00:08:5d:71:92:15 (6867i00085D719105) via enp4s0f0 (found)"
+  },
+  "expected": {
+    "message": "DHCPRELEASE of 10.17.81.182 from 00:08:5d:71:92:15 (6867i00085D719105) via enp4s0f0 (found)",
+    "event": {
+      "category": [
+        "network"
+      ],
+      "outcome": "success",
+      "type": [
+        "connection"
+      ]
+    },
+    "dhcpd": {
+      "query": "release"
+    },
+    "related": {
+      "hosts": [
+        "6867i00085D719105"
+      ],
+      "ip": [
+        "10.17.81.182"
+      ]
+    },
+    "source": {
+      "address": "6867i00085D719105",
+      "domain": "6867i00085D719105",
+      "ip": "10.17.81.182",
+      "mac": "00:08:5d:71:92:15"
+    }
+  }
+}

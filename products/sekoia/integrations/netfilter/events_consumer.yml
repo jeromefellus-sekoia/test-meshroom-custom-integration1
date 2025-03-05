@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/c3888137-b34e-4526-ab61-836b2d45a742
+intake_format_uuid: c3888137-b34e-4526-ab61-836b2d45a742
+product: sekoia
+role: consumer
+target_product: netfilter
+topic: events

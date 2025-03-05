@@ -1,0 +1,35 @@
+automation_connector_uuid: 568258e6-2cc9-4a70-900f-73cca68691ee
+automation_module_uuid: 94720767-a879-4f02-8561-1848d0b8d500
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/547234b3-82ea-4507-b28f-3ee3cd5b9a8e
+intake_format_uuid: 547234b3-82ea-4507-b28f-3ee3cd5b9a8e
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: module_configuration
+  properties:
+  - description: Duo Admin API hostname
+    name: hostname
+    required: true
+  - description: Duo Admin API integration key
+    name: integration_key
+    required: true
+  - description: Duo Admin API secret key
+    name: secret_key
+    required: true
+    secret: true
+  type: object
+- name: connector_configuration
+  properties:
+  - default: 60
+    description: Batch frequency in seconds
+    name: frequency
+    required: true
+    type: integer
+  - default: 1000
+    description: The size of chunks for the batch processing
+    name: chunk_size
+    type: integer
+  type: object
+target_product: duo_security
+topic: events

@@ -1,0 +1,15 @@
+description: Duo is a Cisco company offering solutions for strong authentication with
+  multi-factor authentication (MFA), single sign-on (SSO), remote access or device
+  trusting.
+name: duo
+settings:
+- description: Duo Admin API hostname
+  name: hostname
+  required: true
+- description: Duo Admin API integration key
+  name: integration_key
+  required: true
+- description: Duo Admin API secret key
+  name: secret_key
+  required: true
+  secret: true

@@ -1,0 +1,6 @@
+description: Netfilter is a framework within the Linux kernel that provides packet
+  filtering, network address translation, and port translation
+name: netfilter
+produces:
+  events:
+  - {}

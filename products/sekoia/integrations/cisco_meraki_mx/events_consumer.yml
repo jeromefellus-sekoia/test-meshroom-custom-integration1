@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/995d7daf-4e4a-42ec-b90d-9af2f7be7019
+intake_format_uuid: 995d7daf-4e4a-42ec-b90d-9af2f7be7019
+product: sekoia
+role: consumer
+target_product: cisco_meraki_mx
+topic: events

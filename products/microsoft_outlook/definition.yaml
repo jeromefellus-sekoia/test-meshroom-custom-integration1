@@ -1,0 +1,18 @@
+description: Microsoft Outlook is an email client and personal information manager
+  that includes calendar, task management, contact management, note-taking, and web
+  browsing features. It integrates with Microsoft Office suite for seamless productivity
+  and communication.
+name: microsoft_outlook
+settings:
+- description: ID of the Azure AD tenant
+  name: tenant_id
+  required: true
+- description: Client ID. An application needs to be created in the Azure Portal and
+    assigned relevant permissions. Its Client ID should then be used in this configuration.
+  name: client_id
+  required: true
+- description: Client Secret associated with the registered application. Admin Consent
+    has to be granted to the application for it to work.
+  name: client_secret
+  required: true
+  secret: true

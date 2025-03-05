@@ -1,0 +1,36 @@
+automation_connector_uuid: 8a0ff198-9f12-446e-ba0d-78c1763b58a6
+automation_module_uuid: 203d043e-a1ea-4b5c-81ef-6fc0f8a6a9d3
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/838ed6e5-6d5e-4a5b-b079-ab35ac6b2ab9
+intake_format_uuid: 838ed6e5-6d5e-4a5b-b079-ab35ac6b2ab9
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: module_configuration
+  properties:
+  - default: https://cloud.vadesecure.com
+    description: Vade Cloud API hostname
+    name: hostname
+    required: true
+  - description: Vade Cloud Email
+    name: login
+    required: true
+  - description: Vade Cloud password
+    name: password
+    required: true
+    secret: true
+  type: object
+- name: connector_configuration
+  properties:
+  - default: 60
+    description: Batch frequency in seconds
+    name: frequency
+    required: true
+    type: integer
+  - default: 1000
+    description: The size of chunks for the batch processing
+    name: chunk_size
+    type: integer
+  type: object
+target_product: vade_cloud
+topic: events

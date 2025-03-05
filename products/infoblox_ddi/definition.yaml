@@ -1,0 +1,9 @@
+description: 'Infoblox DNS, DHCP and IP address management (DDI) enables customer
+  to control and automate their network.
+
+  This format handle Infoblox DDI and BloxOne DDI events.'
+name: infoblox_ddi
+produces:
+  events:
+  - {}
+vendor: Infoblox

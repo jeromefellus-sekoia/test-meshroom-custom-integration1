@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/0642b03a-9d4a-4c88-a5e2-4597e366b8c4
+intake_format_uuid: 0642b03a-9d4a-4c88-a5e2-4597e366b8c4
+product: sekoia
+role: consumer
+target_product: vmware_vcenter
+topic: events

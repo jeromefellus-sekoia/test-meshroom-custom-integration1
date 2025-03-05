@@ -1,0 +1,15 @@
+description: CyberReason is a Cybersecurity company providing products to detect and
+  prevents attacks targeting endpoints
+name: cybereason
+settings:
+- default: https://<tenant>.cybereason.net
+  description: API base URL
+  name: base_url
+  required: true
+- description: The username to use to authenticate against the API
+  name: username
+  required: true
+- description: The password to use to authenticate against the API
+  name: password
+  required: true
+  secret: true

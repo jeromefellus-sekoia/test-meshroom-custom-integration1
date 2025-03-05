@@ -1,0 +1,14 @@
+description: ExtraHop is a leading provider of network detection and response (NDR)
+  solutions.
+name: extrahop
+settings:
+- description: API base URL
+  name: base_url
+  required: true
+- description: Client ID
+  name: client_id
+  required: true
+- description: Client Secret
+  name: client_secret
+  required: true
+  secret: true

@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/bae128bb-98c6-45f7-9763-aad3451821e5
+intake_format_uuid: bae128bb-98c6-45f7-9763-aad3451821e5
+product: sekoia
+role: consumer
+target_product: trellix_network_security
+topic: events

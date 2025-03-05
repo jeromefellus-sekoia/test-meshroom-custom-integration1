@@ -1,0 +1,6 @@
+description: RSA Security is a computer and network security company providing encryption
+  standards and security software.
+name: rsa_securid
+produces:
+  events:
+  - {}

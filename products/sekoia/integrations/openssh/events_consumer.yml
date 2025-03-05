@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/b28db14b-e3a7-463e-8659-9bf0e577944f
+intake_format_uuid: b28db14b-e3a7-463e-8659-9bf0e577944f
+product: sekoia
+role: consumer
+target_product: openssh
+topic: events

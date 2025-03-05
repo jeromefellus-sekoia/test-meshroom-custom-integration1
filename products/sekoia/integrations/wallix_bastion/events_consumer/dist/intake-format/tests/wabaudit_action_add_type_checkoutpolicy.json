@@ -1,0 +1,36 @@
+{
+  "input": {
+    "message": "[wabaudit] action=\"add\" type=\"CheckoutPolicy\" object=\"QA_CHECKOUT_POLICY_LOCK\" user=\"admin\" client_ip=\"10.10.45.212\" infos=\"enableLock [True], duration [600], extension [0], maxDuration [600], checkinChange [0]\""
+  },
+  "expected": {
+    "message": "[wabaudit] action=\"add\" type=\"CheckoutPolicy\" object=\"QA_CHECKOUT_POLICY_LOCK\" user=\"admin\" client_ip=\"10.10.45.212\" infos=\"enableLock [True], duration [600], extension [0], maxDuration [600], checkinChange [0]\"",
+    "event": {
+      "action": "CheckoutPolicy",
+      "provider": "wabengine",
+      "reason": "enableLock [True], duration [600], extension [0], maxDuration [600], checkinChange [0]",
+      "type": [
+        "creation"
+      ]
+    },
+    "related": {
+      "ip": [
+        "10.10.45.212"
+      ],
+      "user": [
+        "admin"
+      ]
+    },
+    "source": {
+      "address": "10.10.45.212",
+      "ip": "10.10.45.212"
+    },
+    "user": {
+      "name": "admin"
+    },
+    "wallix": {
+      "action": "add",
+      "object": "QA_CHECKOUT_POLICY_LOCK",
+      "type": "CheckoutPolicy"
+    }
+  }
+}

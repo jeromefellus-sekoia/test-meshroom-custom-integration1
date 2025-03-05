@@ -1,0 +1,7 @@
+description: OGO Shield Web Application Firewall provides protection and performance
+  for your web applications and APIs.
+name: ogo_shield
+produces:
+  events:
+  - {}
+vendor: OGO

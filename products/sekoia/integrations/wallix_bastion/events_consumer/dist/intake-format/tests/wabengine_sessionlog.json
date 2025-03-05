@@ -1,0 +1,38 @@
+{
+  "input": {
+    "message": "[wabaudit] action=\"list\" type=\"sessionlog\" user=\"OPERATOR\" client_ip=\"127.0.0.1\" infos=\"Closed sessions, Sessionlogs newly terminated\"\n"
+  },
+  "expected": {
+    "message": "[wabaudit] action=\"list\" type=\"sessionlog\" user=\"OPERATOR\" client_ip=\"127.0.0.1\" infos=\"Closed sessions, Sessionlogs newly terminated\"\n",
+    "event": {
+      "action": "sessionlog",
+      "category": [
+        "authentication"
+      ],
+      "provider": "wabengine",
+      "reason": "Closed sessions, Sessionlogs newly terminated",
+      "type": [
+        "access"
+      ]
+    },
+    "related": {
+      "ip": [
+        "127.0.0.1"
+      ],
+      "user": [
+        "OPERATOR"
+      ]
+    },
+    "source": {
+      "address": "127.0.0.1",
+      "ip": "127.0.0.1"
+    },
+    "user": {
+      "name": "OPERATOR"
+    },
+    "wallix": {
+      "action": "list",
+      "type": "sessionlog"
+    }
+  }
+}

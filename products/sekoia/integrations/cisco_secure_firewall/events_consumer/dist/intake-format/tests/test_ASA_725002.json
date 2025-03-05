@@ -1,0 +1,37 @@
+{
+  "input": {
+    "message": "%ASA-6-725002: Device completed SSL handshake with client WAN:90.114.208.186/65531"
+  },
+  "expected": {
+    "message": "%ASA-6-725002: Device completed SSL handshake with client WAN:90.114.208.186/65531",
+    "event": {
+      "category": [
+        "network"
+      ],
+      "code": "725002"
+    },
+    "action": {
+      "name": "device completed ssl handshake",
+      "target": "network-traffic"
+    },
+    "observer": {
+      "ingress": {
+        "interface": {
+          "name": "WAN"
+        }
+      },
+      "product": "Adaptive Security Appliance",
+      "vendor": "Cisco"
+    },
+    "related": {
+      "ip": [
+        "90.114.208.186"
+      ]
+    },
+    "source": {
+      "address": "90.114.208.186",
+      "ip": "90.114.208.186",
+      "port": 65531
+    }
+  }
+}

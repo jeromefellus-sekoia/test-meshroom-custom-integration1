@@ -1,0 +1,8 @@
+description: IBM iSeries (AS/400) is a robust, scalable family of midrange business
+  computers running the IBM i operating system, known for its integrated DB2 database
+  and strong security features
+name: ibm_i
+produces:
+  events:
+  - {}
+vendor: IBM

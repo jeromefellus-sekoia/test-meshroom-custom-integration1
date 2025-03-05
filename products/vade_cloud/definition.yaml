@@ -1,0 +1,19 @@
+description: Vade is a cybersecurity company specializing in email security solutions,
+  offering predictive threat detection and response to combat phishing, malware, and
+  spam. This module helps to collect information from Vade Cloud
+name: vade_cloud
+produces:
+  events:
+  - mode: pull
+settings:
+- default: https://cloud.vadesecure.com
+  description: Vade Cloud API hostname
+  name: hostname
+  required: true
+- description: Vade Cloud Email
+  name: login
+  required: true
+- description: Vade Cloud password
+  name: password
+  required: true
+  secret: true

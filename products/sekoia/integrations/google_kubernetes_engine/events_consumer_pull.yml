@@ -1,0 +1,56 @@
+automation_connector_uuid: a28a9363-a857-4521-8a29-12d43a5303a1
+automation_module_uuid: 4f682a9e-9a25-43a5-8a48-cd9bd7fade7e
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/00bbde4f-cb17-4c3f-9f5e-a585fc7c8fc0
+intake_format_uuid: 00bbde4f-cb17-4c3f-9f5e-a585fc7c8fc0
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: module_configuration
+  properties:
+  - description: Credentials to use. You can find them in the credentials file
+    name: credentials
+    properties:
+    - name: type
+      required: true
+    - name: project_id
+      required: true
+    - name: private_key_id
+      required: true
+    - name: private_key
+      required: true
+    - name: client_email
+      required: true
+    - name: client_id
+      required: true
+    - name: auth_uri
+      required: true
+    - name: token_uri
+      required: true
+      secret: true
+    - name: auth_provider_x509_cert_url
+      required: true
+    - name: client_x509_cert_url
+      required: true
+    required: true
+    type: object
+  type: object
+- name: connector_configuration
+  properties:
+  - default: 20
+    description: Batch frequency in seconds
+    name: frequency
+    type: integer
+  - description: Project ID
+    name: project_id
+    required: true
+  - description: Subscription ID
+    name: subject_id
+    required: true
+  - default: 1000
+    description: The size of chunks for the batch processing (max is 1000)
+    name: chunk_size
+    type: integer
+  type: object
+target_product: google_kubernetes_engine
+topic: events

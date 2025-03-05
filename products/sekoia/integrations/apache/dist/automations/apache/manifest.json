@@ -1,0 +1,14 @@
+{
+    "configuration": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "title": "apache",
+        "type": "object",
+        "properties": {},
+        "required": []
+    },
+    "description": "apache",
+    "name": "apache",
+    "uuid": "b33ebc8c-4f81-43ce-b033-15130cec34d8",
+    "slug": "apache",
+    "version": "0.1.0"
+}

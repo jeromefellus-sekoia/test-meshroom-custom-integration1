@@ -1,0 +1,10 @@
+description: 'Microsoft 365 is an online service, providing the Microsoft Office Products.
+
+  Providing Microsoft 365 activity logs is very valuable source of information for
+  Sekoia.io. It will help detection of account breaches (e.g. impossible travel activity),
+  phishing attempts, data theft.'
+name: o365
+produces:
+  events:
+  - mode: pull
+vendor: Office 365

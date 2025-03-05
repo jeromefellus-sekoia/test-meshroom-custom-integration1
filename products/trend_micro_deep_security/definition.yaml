@@ -1,0 +1,8 @@
+description: Trend Micro Cloud One / Deep Security detects malware, vulnerabilities
+  and many other threats. It protects your physical and virtual servers as well as
+  your cloud and containers instances.
+name: trend_micro_deep_security
+produces:
+  events:
+  - {}
+vendor: Trend Micro

@@ -1,0 +1,35 @@
+{
+  "input": {
+    "message": "[wabaudit] action=\"delete\" type=\"Authorization\" object=\"user_group_154954865272:target_group_154954865373\" user=\"QA_ADMIN\" client_ip=\"10.10.45.212\" infos=\"\""
+  },
+  "expected": {
+    "message": "[wabaudit] action=\"delete\" type=\"Authorization\" object=\"user_group_154954865272:target_group_154954865373\" user=\"QA_ADMIN\" client_ip=\"10.10.45.212\" infos=\"\"",
+    "event": {
+      "action": "Authorization",
+      "provider": "wabengine",
+      "type": [
+        "deletion"
+      ]
+    },
+    "related": {
+      "ip": [
+        "10.10.45.212"
+      ],
+      "user": [
+        "QA_ADMIN"
+      ]
+    },
+    "source": {
+      "address": "10.10.45.212",
+      "ip": "10.10.45.212"
+    },
+    "user": {
+      "name": "QA_ADMIN"
+    },
+    "wallix": {
+      "action": "delete",
+      "object": "user_group_154954865272:target_group_154954865373",
+      "type": "Authorization"
+    }
+  }
+}

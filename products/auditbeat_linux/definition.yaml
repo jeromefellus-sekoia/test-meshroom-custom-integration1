@@ -1,0 +1,7 @@
+description: Elastic Auditbeat allows careful monitoring of directory listings for
+  anomalies on Linux, macOS and Windows.
+name: auditbeat_linux
+produces:
+  events:
+  - {}
+vendor: Beats

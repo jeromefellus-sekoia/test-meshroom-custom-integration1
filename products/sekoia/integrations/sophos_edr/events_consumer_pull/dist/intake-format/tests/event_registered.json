@@ -1,0 +1,57 @@
+{
+  "input": {
+    "message": "{\"severity\":\"low\",\"type\":\"Event::Endpoint::Registered\",\"name\":\"New computer registered: DESKTOP-1234\",\"id\":\"b3c9c053-6037-469d-9bee-49d39f7932d0\",\"source_info\":{\"ip\":\"1.2.3.4\"},\"customer_id\":\"36d5cd97-169e-490b-a2c4-bcd9d5d2a54b\",\"endpoint_id\":\"92d4ef41-9c13-4041-bbed-952011796812\",\"endpoint_type\":\"computer\",\"group\":\"PROTECTION\",\"datastream\":\"event\",\"end\":\"2022-04-27T13:17:10.188Z\",\"dhost\":\"DESKTOP-1234\",\"rt\":\"2022-04-27T13:17:10.197Z\",\"duid\":\"574fcff42ead810f5e43b0fc\",\"suser\":\"admin tech\"}"
+  },
+  "expected": {
+    "message": "{\"severity\":\"low\",\"type\":\"Event::Endpoint::Registered\",\"name\":\"New computer registered: DESKTOP-1234\",\"id\":\"b3c9c053-6037-469d-9bee-49d39f7932d0\",\"source_info\":{\"ip\":\"1.2.3.4\"},\"customer_id\":\"36d5cd97-169e-490b-a2c4-bcd9d5d2a54b\",\"endpoint_id\":\"92d4ef41-9c13-4041-bbed-952011796812\",\"endpoint_type\":\"computer\",\"group\":\"PROTECTION\",\"datastream\":\"event\",\"end\":\"2022-04-27T13:17:10.188Z\",\"dhost\":\"DESKTOP-1234\",\"rt\":\"2022-04-27T13:17:10.197Z\",\"duid\":\"574fcff42ead810f5e43b0fc\",\"suser\":\"admin tech\"}",
+    "event": {
+      "category": [
+        "iam"
+      ],
+      "code": "Event::Endpoint::Registered",
+      "end": "2022-04-27T13:17:10.188000Z",
+      "reason": "New computer registered: DESKTOP-1234",
+      "type": [
+        "info"
+      ]
+    },
+    "@timestamp": "2022-04-27T13:17:10.197000Z",
+    "host": {
+      "hostname": "DESKTOP-1234",
+      "name": "DESKTOP-1234"
+    },
+    "log": {
+      "level": "low"
+    },
+    "observer": {
+      "ip": "1.2.3.4"
+    },
+    "related": {
+      "hosts": [
+        "DESKTOP-1234"
+      ],
+      "ip": [
+        "1.2.3.4"
+      ],
+      "user": [
+        "admin tech"
+      ]
+    },
+    "sophos": {
+      "customer": {
+        "id": "36d5cd97-169e-490b-a2c4-bcd9d5d2a54b"
+      },
+      "endpoint": {
+        "id": "92d4ef41-9c13-4041-bbed-952011796812",
+        "type": "computer"
+      },
+      "event": {
+        "group": "PROTECTION"
+      }
+    },
+    "user": {
+      "id": "574fcff42ead810f5e43b0fc",
+      "name": "admin tech"
+    }
+  }
+}

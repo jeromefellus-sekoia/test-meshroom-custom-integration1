@@ -1,0 +1,11 @@
+description: 'Cisco Umbrella is a cloud security platform that provides security functions,
+  including IP traffic.
+
+  Sending Umbrella IP logs to Sekoia.io will allow to monitor IP traffic to/from known-bad
+  or suspicious IP address (e.g. C2 communications). Detected threats are contextualized
+  thanks to our Cyber Threat Intelligence (CTI).'
+name: cisco_umbrella_ip
+produces:
+  events:
+  - {}
+vendor: Umbrella

@@ -1,0 +1,62 @@
+{
+  "input": {
+    "message": "\"VPNTEST1\",\"RAS\",09/22/2022,13:32:06,11,,\"DOMAIN\\doe-j\",,,,,,,,,,,,,,,,,11,\"VPN TEST\",0,\"311 1 <REDACTED> 08/25/2022 03:41:37 317091\",30,,,,,,,,\"317092\",,,,,,,,,,,,,,,,,,,,,,,,,\"VPN TEST\",1,,,,"
+  },
+  "expected": {
+    "message": "\"VPNTEST1\",\"RAS\",09/22/2022,13:32:06,11,,\"DOMAIN\\doe-j\",,,,,,,,,,,,,,,,,11,\"VPN TEST\",0,\"311 1 <REDACTED> 08/25/2022 03:41:37 317091\",30,,,,,,,,\"317092\",,,,,,,,,,,,,,,,,,,,,,,,,\"VPN TEST\",1,,,,",
+    "event": {
+      "category": [
+        "network"
+      ],
+      "type": [
+        "info"
+      ]
+    },
+    "@timestamp": "2022-09-22T13:32:06Z",
+    "observer": {
+      "hostname": "VPNTEST1"
+    },
+    "related": {
+      "hosts": [
+        "VPNTEST1"
+      ],
+      "user": [
+        "doe-j"
+      ]
+    },
+    "rule": {
+      "name": "VPN TEST"
+    },
+    "service": {
+      "name": "RAS"
+    },
+    "user": {
+      "domain": "DOMAIN",
+      "name": "doe-j"
+    },
+    "windows": {
+      "remote_access_server": {
+        "authentication": {
+          "name": "PEAP",
+          "type": 11
+        },
+        "class": "311 1 <REDACTED> 08/25/2022 03:41:37 317091",
+        "packet": {
+          "name": "Access-Challenge",
+          "type": 11
+        },
+        "provider": {
+          "type": 1
+        },
+        "reason": {
+          "code": 0,
+          "name": "IAS_SUCCESS"
+        },
+        "session": {
+          "id": "317092",
+          "timeout": 30
+        }
+      }
+    }
+  }
+}

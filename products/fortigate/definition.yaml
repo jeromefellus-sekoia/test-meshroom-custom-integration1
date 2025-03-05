@@ -1,0 +1,22 @@
+description: Fortigate is a firewall appliance from Fortinet with anti-spam and anti-virus
+  features. Initially distributed as a physical, rack-mounted product, Fortigate can
+  now be installed as a virtual appliance that could run on virtualization platforms
+  such as VMware vSphere
+name: fortigate
+settings:
+- items:
+  - description: Fortigate API Key related to the API user generated
+    name: api_key
+    required: true
+  - description: Fortigate base IP (ex. 31.7.YYY.XXX)
+    name: base_ip
+    required: true
+  - description: Fortigate base Port (ex. 4443)
+    name: base_port
+    required: true
+  - default: root
+    description: Fortigate Virtual Domain (VDOM)
+    name: vdom
+  name: firewalls
+  required: true
+  type: array

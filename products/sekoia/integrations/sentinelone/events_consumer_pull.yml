@@ -1,0 +1,27 @@
+automation_connector_uuid: 09b4d451-0445-4a4a-91ac-1241550cdbfd
+automation_module_uuid: ff675e74-e5c1-47c8-a571-d207fc297464
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/07c556c0-0675-478c-9803-e7990afe78b6
+intake_format_uuid: 07c556c0-0675-478c-9803-e7990afe78b6
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: module_configuration
+  properties:
+  - description: The domain-name to the SentinelOne instance
+    name: hostname
+    required: true
+  - description: The API token to authenticate to SentinelOne
+    name: api_token
+    required: true
+    secret: true
+  type: object
+- name: connector_configuration
+  properties:
+  - default: 60
+    description: Batch frequency in seconds
+    name: frequency
+    type: integer
+  type: object
+target_product: sentinelone
+topic: events

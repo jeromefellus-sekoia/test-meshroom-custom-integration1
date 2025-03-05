@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/4760d0bc-2194-44e5-a876-85102b18d832
+intake_format_uuid: 4760d0bc-2194-44e5-a876-85102b18d832
+product: sekoia
+role: consumer
+target_product: ekinops_oneos
+topic: events

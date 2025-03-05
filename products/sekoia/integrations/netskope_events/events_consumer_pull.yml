@@ -1,0 +1,27 @@
+automation_connector_uuid: 97edba63-7643-4232-91b9-2e7aafa232c8
+automation_module_uuid: 1e3f2e33-fb9c-4387-bcf7-8d7ece37f913
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/de9ca004-991e-4f5c-89c5-e075f3fb3216
+intake_format_uuid: de9ca004-991e-4f5c-89c5-e075f3fb3216
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: module_configuration
+  properties:
+  - description: API base URL
+    name: base_url
+    required: true
+  type: object
+- name: connector_configuration
+  properties:
+  - description: The API token
+    name: api_token
+    required: true
+    secret: true
+  - default: ''
+    description: A unique name to track event consumption (default empty for auto-generated
+      one)
+    name: consumer_group
+  type: object
+target_product: netskope_events
+topic: events

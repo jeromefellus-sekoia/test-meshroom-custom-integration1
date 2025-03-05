@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/591feb54-1d1f-4453-b780-b225c59e9f99
+intake_format_uuid: 591feb54-1d1f-4453-b780-b225c59e9f99
+product: sekoia
+role: consumer
+target_product: cisco_nx_os
+topic: events

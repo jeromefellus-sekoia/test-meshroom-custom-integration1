@@ -1,0 +1,9 @@
+description: 'Cloudflare is a global network designed to make everything you connect
+  to the Internet secure, private, fast, and reliable.
+
+  The HTTP requests datasets represents all access logs to the reverse proxy'
+name: cloudflare_http_requests
+produces:
+  events:
+  - {}
+vendor: Cloudflare

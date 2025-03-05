@@ -1,0 +1,6 @@
+description: Process useful telemetry from CrowdStrike.
+name: crowdstrike_telemetry
+produces:
+  events:
+  - mode: pull
+vendor: CrowdStrike

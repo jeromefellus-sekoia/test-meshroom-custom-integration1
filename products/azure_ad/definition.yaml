@@ -1,0 +1,25 @@
+description: Microsoft Entra ID (formely Azure Active Directory) is an enterprise
+  identity service that provides single sign-on, multifactor authentication, and conditional
+  access to guard against 99.9 percent of cybersecurity attacks.
+name: azure_ad
+produces:
+  events:
+  - mode: pull
+settings:
+- description: ID of the Microsoft Entra ID tenant
+  name: tenant_id
+  required: true
+- description: Client ID. An application needs to be created in the Azure Portal and
+    assigned relevent permissions. Its Client ID should then be used in this configuration.
+  name: client_id
+- description: Client Secret associated with the registered application. Admin Consent
+    has to be granted to the application for it to work.
+  name: client_secret
+  secret: true
+- description: 'The username of the delegated account used for some administrative
+    tasks (eg: reset password)'
+  name: username
+- description: 'The password of the delegated account used for some administrative
+    tasks (eg: reset password)'
+  name: password
+  secret: true

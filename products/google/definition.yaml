@@ -1,0 +1,32 @@
+description: Google Cloud is a suite of cloud computing services that offers infrastructure
+  as a service, platform as a service, and serverless computing. It provides tools
+  for storage, machine learning, data analytics, and app development, leveraging Google's
+  infrastructure.
+name: google
+settings:
+- description: Credentials to use. You can find them in the credentials file
+  name: credentials
+  properties:
+  - name: type
+    required: true
+  - name: project_id
+    required: true
+  - name: private_key_id
+    required: true
+  - name: private_key
+    required: true
+  - name: client_email
+    required: true
+  - name: client_id
+    required: true
+  - name: auth_uri
+    required: true
+  - name: token_uri
+    required: true
+    secret: true
+  - name: auth_provider_x509_cert_url
+    required: true
+  - name: client_x509_cert_url
+    required: true
+  required: true
+  type: object

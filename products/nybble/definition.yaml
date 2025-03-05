@@ -1,0 +1,13 @@
+description: Nybble Hub is the worldwide first blue team community which handles your
+  alerts at a glance.
+name: nybble
+settings:
+- description: Nybble Hub Connector Base URL
+  name: nhub_url
+  required: true
+- description: Nybble Hub Connector username
+  name: nhub_username
+  required: true
+- description: Nybble Hub Connector Key to authenticate the requests
+  name: nhub_key
+  required: true

@@ -1,0 +1,161 @@
+{
+  "arguments": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "properties": {
+      "sekoia_base_url": {
+        "description": "Sekoia base URL",
+        "type": "string"
+      },
+      "stix_objects_path": {
+        "description": "Filepath of the STIX objects fetched from the collection",
+        "type": "string"
+      },
+      "filters": {
+        "description": "Filter where to add iocs ",
+        "type": "object",
+        "properties": {
+          "account_ids": {
+            "description": "The list of Account IDs to filter by",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "group_ids": {
+            "description": "The list of network group to filter by",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "site_ids": {
+            "description": "The list of Site IDs to filter by",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "account_ids"
+        ]
+      }
+    },
+    "required": [
+      "stix_objects_path"
+    ],
+    "title": "Arguments",
+    "type": "object"
+  },
+  "description": "Push IOCs in the Threat Intelligence API of SentinelOne",
+  "docker_parameters": "sentinelone_iocs_create_iocs",
+  "name": "[BETA] Create IOCs",
+  "configuration_part" : "For this action, account IDs are required. These can be obtained using either an account-level or global-level user",
+  "results": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Indicators pushed",
+    "type": "object",
+    "properties": {
+      "indicators": {
+        "description": "All indicators pushed",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "source": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "method": {
+              "type": "string"
+            },
+            "category": {
+              "type": "array"
+            },
+            "validUntil": {
+              "type": "string"
+            },
+            "creationTime": {
+              "type": "string"
+            },
+            "metadata": {
+              "type": "string"
+            },
+            "mitreTactic": {
+              "type": "array"
+            },
+            "intrusionSets": {
+              "type": "array"
+            },
+            "reference": {
+              "type": "array"
+            },
+            "threatActors": {
+              "type": "array"
+            },
+            "creator": {
+              "type": "string"
+            },
+            "batchId": {
+              "type": "string"
+            },
+            "uuid": {
+              "type": "string"
+            },
+            "scope": {
+              "type": "string"
+            },
+            "scopeId": {
+              "type": "string"
+            },
+            "updatedAt": {
+              "type": "string"
+            },
+            "patternType": {
+              "type": "string"
+            },
+            "campaignNames": {
+              "type": "array"
+            },
+            "description": {
+              "type": "string"
+            },
+            "externalId": {
+              "type": "string"
+            },
+            "labels": {
+              "type": "array"
+            },
+            "pattern": {
+              "type": "string"
+            },
+            "originalRiskScore": {
+              "type": "integer"
+            },
+            "severity": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "malwareNames": {
+              "type": "array"
+            },
+            "uploadTime": {
+              "type": "string"
+            },
+            "threatActorTypes": {
+              "type": "array"
+            }
+          }
+        }
+      }
+    }
+  },
+  "uuid": "3483ff12-8b2e-4614-b9b0-5f6019cb2678"
+}

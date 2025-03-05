@@ -1,0 +1,6 @@
+description: VirusTotal is a cybersecurity company specialized in malware analysis.
+name: virustotal
+settings:
+- description: APIKEY for VirusTotal
+  name: apikey
+  required: true

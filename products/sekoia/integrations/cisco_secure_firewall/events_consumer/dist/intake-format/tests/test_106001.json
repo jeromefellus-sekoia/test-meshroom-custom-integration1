@@ -1,0 +1,47 @@
+{
+  "input": {
+    "message": "%FTD-2-106001: Inbound TCP connection denied from 172.16.10.234/901 to 192.168.122.55/111 flags SYN  on interface LAN"
+  },
+  "expected": {
+    "message": "%FTD-2-106001: Inbound TCP connection denied from 172.16.10.234/901 to 192.168.122.55/111 flags SYN  on interface LAN",
+    "event": {
+      "category": [
+        "network"
+      ],
+      "code": "106001"
+    },
+    "action": {
+      "name": "denied",
+      "target": "network-traffic"
+    },
+    "destination": {
+      "address": "192.168.122.55",
+      "ip": "192.168.122.55",
+      "port": 111
+    },
+    "network": {
+      "direction": "Inbound",
+      "transport": "tcp"
+    },
+    "observer": {
+      "egress": {
+        "interface": {
+          "name": "LAN"
+        }
+      },
+      "product": "Firepower Threat Defense",
+      "vendor": "Cisco"
+    },
+    "related": {
+      "ip": [
+        "172.16.10.234",
+        "192.168.122.55"
+      ]
+    },
+    "source": {
+      "address": "172.16.10.234",
+      "ip": "172.16.10.234",
+      "port": 901
+    }
+  }
+}

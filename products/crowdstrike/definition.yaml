@@ -1,0 +1,15 @@
+description: "CrowdStrike provides cloud workload and endpoint security, threat intelligence,\
+  \ and cyberattack response services and products.\n This module provides triggers\
+  \ to collect events from CrowdStrike"
+name: crowdstrike
+settings:
+- description: The identifier of the access key
+  name: aws_access_key_id
+  required: true
+- description: The secret associated to the access key
+  name: aws_secret_access_key
+  required: true
+  secret: true
+- description: The area hosting the AWS resources
+  name: aws_region
+  required: true

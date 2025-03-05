@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/ee6364a1-9e3c-4363-9cb6-2f574bd4ce51
+intake_format_uuid: ee6364a1-9e3c-4363-9cb6-2f574bd4ce51
+product: sekoia
+role: consumer
+target_product: panda_security_aether
+topic: events

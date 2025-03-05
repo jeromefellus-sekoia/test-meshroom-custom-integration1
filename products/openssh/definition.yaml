@@ -1,0 +1,7 @@
+description: OpenSSH is a suite of secure networking utilities based on the Secure
+  Shell (SSH) protocol, providing encrypted communication over unsecured networks.
+  It includes tools for secure remote login, file transfers, and network tunneling.
+name: openssh
+produces:
+  events:
+  - {}

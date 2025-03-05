@@ -1,0 +1,14 @@
+description: ServiceNow is an IT company allowing creating workflow to empower employees
+  productivity and to improve customers experience
+name: servicenow
+settings:
+- description: ServiceNox base url
+  name: base_url
+  required: true
+- description: Username
+  name: username
+  required: true
+- description: Password
+  name: password
+  required: true
+  secret: true

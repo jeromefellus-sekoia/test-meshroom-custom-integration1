@@ -1,0 +1,33 @@
+{
+  "configuration": {
+    "title": "SentinelOne",
+    "type": "object",
+    "properties": {
+      "hostname": {
+        "title": "Hostname",
+        "description": "The domain-name to the SentinelOne instance",
+        "type": "string"
+      },
+      "api_token": {
+        "title": "API Token",
+        "description": "The API token to authenticate to SentinelOne",
+        "type": "string"
+      }
+    },
+    "required": [
+      "hostname",
+      "api_token"
+    ],
+    "secrets": [
+      "api_token"
+    ]
+  },
+  "description": "SentinelOne is a cybersecurity company that provides autonomous endpoint protection through AI-powered threat detection and response. Its platform offers real-time prevention, detection, and remediation of cyber threats across networks.",
+  "name": "SentinelOne",
+  "uuid": "ff675e74-e5c1-47c8-a571-d207fc297464",
+  "slug": "sentinelone",
+  "version": "1.20.1",
+  "categories": [
+    "Endpoint"
+  ]
+}

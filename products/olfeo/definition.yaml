@@ -1,0 +1,8 @@
+description: Olfeo is a leading provider of web security solutions, offering customizable
+  web filtering and secure web gateway services to businesses worldwide. Their technology
+  helps organizations protect against online threats and enforce internet usage policies
+  effectively.
+name: olfeo
+produces:
+  events:
+  - {}

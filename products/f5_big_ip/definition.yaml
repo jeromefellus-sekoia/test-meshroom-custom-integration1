@@ -1,0 +1,10 @@
+description: 'BIG-IP is a collection of hardware platforms and software solutions
+  providing services focused on security, reliability, and performance.
+
+  With the various products in the BIG-IP line the logs provided give a lot of information
+  about the network activity'
+name: f5_big_ip
+produces:
+  events:
+  - {}
+vendor: F5 Networks

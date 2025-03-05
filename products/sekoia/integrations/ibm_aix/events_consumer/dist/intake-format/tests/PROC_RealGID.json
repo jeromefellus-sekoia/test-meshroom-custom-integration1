@@ -1,0 +1,30 @@
+{
+  "input": {
+    "message": "PROC_RealGID rm_mlcache_file root root OK 25 sep 2022 21:13:31.584159 No associated roles old rgid: 0, new gid: 0, which: egid"
+  },
+  "expected": {
+    "message": "PROC_RealGID rm_mlcache_file root root OK 25 sep 2022 21:13:31.584159 No associated roles old rgid: 0, new gid: 0, which: egid",
+    "event": {
+      "action": "PROC_RealGID",
+      "category": [
+        "process"
+      ]
+    },
+    "action": {
+      "status": "OK",
+      "target": "process"
+    },
+    "group": {
+      "name": "root"
+    },
+    "observer": {
+      "vendor": "IBM"
+    },
+    "process": {
+      "name": "rm_mlcache_file",
+      "user": {
+        "name": "root"
+      }
+    }
+  }
+}

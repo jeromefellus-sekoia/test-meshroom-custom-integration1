@@ -1,0 +1,35 @@
+{
+  "input": {
+    "message": "[wabaudit] action=\"edit\" type=\"Device\" object=\"device_154954892089\" user=\"QA_ADMIN\" client_ip=\"10.10.45.212\" infos=\"\""
+  },
+  "expected": {
+    "message": "[wabaudit] action=\"edit\" type=\"Device\" object=\"device_154954892089\" user=\"QA_ADMIN\" client_ip=\"10.10.45.212\" infos=\"\"",
+    "event": {
+      "action": "Device",
+      "provider": "wabengine",
+      "type": [
+        "change"
+      ]
+    },
+    "related": {
+      "ip": [
+        "10.10.45.212"
+      ],
+      "user": [
+        "QA_ADMIN"
+      ]
+    },
+    "source": {
+      "address": "10.10.45.212",
+      "ip": "10.10.45.212"
+    },
+    "user": {
+      "name": "QA_ADMIN"
+    },
+    "wallix": {
+      "action": "edit",
+      "object": "device_154954892089",
+      "type": "Device"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "input": {
+    "message": "[wabaudit] action=\"list\" type=\"Approval\" user=\"QA_ADMIN\" client_ip=\"10.10.45.212\" infos=\"\""
+  },
+  "expected": {
+    "message": "[wabaudit] action=\"list\" type=\"Approval\" user=\"QA_ADMIN\" client_ip=\"10.10.45.212\" infos=\"\"",
+    "event": {
+      "action": "Approval",
+      "provider": "wabengine",
+      "type": [
+        "access"
+      ]
+    },
+    "related": {
+      "ip": [
+        "10.10.45.212"
+      ],
+      "user": [
+        "QA_ADMIN"
+      ]
+    },
+    "source": {
+      "address": "10.10.45.212",
+      "ip": "10.10.45.212"
+    },
+    "user": {
+      "name": "QA_ADMIN"
+    },
+    "wallix": {
+      "action": "list",
+      "type": "Approval"
+    }
+  }
+}

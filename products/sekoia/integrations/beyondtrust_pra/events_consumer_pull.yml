@@ -1,0 +1,31 @@
+automation_connector_uuid: bd4cd092-ce96-5d5c-afa0-6516912a88c9
+automation_module_uuid: ab96c1e6-20b9-4589-aa9a-43d84043d857
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/f6cfddb4-543a-41fe-9802-c66b7c90366d
+intake_format_uuid: f6cfddb4-543a-41fe-9802-c66b7c90366d
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: module_configuration
+  properties:
+  - default: https://<tenant>.beyondtrustcloud.com
+    description: Base URL
+    name: base_url
+    required: true
+  - description: Client ID
+    name: client_id
+    required: true
+  - description: Client secret
+    name: client_secret
+    required: true
+    secret: true
+  type: object
+- name: connector_configuration
+  properties:
+  - default: 300
+    description: Batch frequency in seconds
+    name: frequency
+    type: integer
+  type: object
+target_product: beyondtrust_pra
+topic: events

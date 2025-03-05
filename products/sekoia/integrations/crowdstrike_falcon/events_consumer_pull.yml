@@ -1,0 +1,35 @@
+automation_connector_uuid: 5258c493-3624-4301-a368-198e03df5d27
+automation_module_uuid: 4fdbae70-e9cd-492e-9a39-24ce99325e3f
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/22f2afd2-c858-443d-8e06-7b335e439c29
+intake_format_uuid: 22f2afd2-c858-443d-8e06-7b335e439c29
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: module_configuration
+  properties:
+  - description: Client Identifier
+    name: client_id
+    required: true
+  - description: Client Secret
+    name: client_secret
+    required: true
+    secret: true
+  - default: https://api.eu-1.crowdstrike.com
+    description: Base URL of the API
+    name: base_url
+    required: true
+  type: object
+- name: connector_configuration
+  properties:
+  - default: https://falconapi.eu-1.crowdstrike.com
+    description: The base_url for the ThreatGraphAPI
+    name: tg_base_url
+  - description: The username for the ThreatGraphAPI
+    name: tg_username
+  - description: The password for the ThreatGraphAPI
+    name: tg_password
+    secret: true
+  type: object
+target_product: crowdstrike_falcon
+topic: events

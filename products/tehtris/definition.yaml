@@ -1,0 +1,13 @@
+description: TEHTRIS is a cybersecurity company offering products designed to protect
+  endpoints against knwon and unknown threats
+name: tehtris
+settings:
+- description: The APIkey to authenticate call to the API
+  name: apikey
+  required: true
+- description: 'The identifier of your tenant (most of the time, your tenant id is
+    a trigram in the url of your TETHRIS instance; eg: https://{tenant_id}.tehtris.net)'
+  name: tenant_id
+  required: true
+- description: The alternative url to contact the TEHTRIS instance
+  name: alternative_url

@@ -1,0 +1,41 @@
+{
+  "input": {
+    "message": "%ASA-5-722028: Group <GroupPolicy_CLIENT_VPN> User <User_Acme> IP <91.172.139.4> Stale SVC connection closed."
+  },
+  "expected": {
+    "message": "%ASA-5-722028: Group <GroupPolicy_CLIENT_VPN> User <User_Acme> IP <91.172.139.4> Stale SVC connection closed.",
+    "event": {
+      "category": [
+        "network"
+      ],
+      "code": "722028",
+      "type": [
+        "connection"
+      ]
+    },
+    "action": {
+      "name": "connection closed.",
+      "target": "network-traffic"
+    },
+    "observer": {
+      "product": "Adaptive Security Appliance",
+      "vendor": "Cisco"
+    },
+    "related": {
+      "ip": [
+        "91.172.139.4"
+      ],
+      "user": [
+        "User_Acme"
+      ]
+    },
+    "source": {
+      "address": "91.172.139.4",
+      "ip": "91.172.139.4"
+    },
+    "user": {
+      "domain": "GroupPolicy_CLIENT_VPN",
+      "name": "User_Acme"
+    }
+  }
+}

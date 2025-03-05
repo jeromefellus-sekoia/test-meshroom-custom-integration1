@@ -1,0 +1,6 @@
+description: Authentication events through Cloudflare Access
+name: cloudflare_audit_logs
+produces:
+  events:
+  - {}
+vendor: Cloudflare

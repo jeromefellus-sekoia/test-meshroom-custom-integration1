@@ -1,0 +1,8 @@
+description: 'MalOps, or Malicious Operations, are a set of malicious operations.
+
+  This format handles MalOps activities forwarded through syslog-CEF.'
+name: cybereason_malop_activity
+produces:
+  events:
+  - {}
+vendor: Cybereason

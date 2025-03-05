@@ -1,0 +1,7 @@
+description: AWS GuardDuty is a service that detects potential security issue within
+  your network.
+name: aws_guardduty
+produces:
+  events:
+  - mode: pull
+vendor: AWS

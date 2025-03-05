@@ -1,0 +1,13 @@
+description: TheHive is a scalable, open source and free Security Incident Response
+  Platform
+name: thehivev5
+settings:
+- description: Your TheHive instance URL
+  name: base_url
+  required: true
+- description: An API key
+  name: apikey
+  required: true
+- description: The user organisation
+  name: organisation
+  required: true

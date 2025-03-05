@@ -1,0 +1,6 @@
+description: Mattermost is a secure, open and flexible collaboration platform
+name: mattermost
+settings:
+- description: URL of the mattermost incoming webhook
+  name: hook_url
+  required: true

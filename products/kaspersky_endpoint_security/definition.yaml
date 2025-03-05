@@ -1,0 +1,7 @@
+description: Kaspersky Endpoint Security is an advanced cybersecurity solution providing
+  real-time threat detection, incident response, and forensic analysis for endpoints.
+name: kaspersky_endpoint_security
+produces:
+  events:
+  - {}
+vendor: Kaspersky

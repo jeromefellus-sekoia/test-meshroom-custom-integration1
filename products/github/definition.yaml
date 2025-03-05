@@ -1,0 +1,15 @@
+description: GitHub is a leading platform for version control and collaboration, allowing
+  developers to host, review, and manage code projects using Git. It fosters collaboration
+  through features like pull requests, issues, and project management tools.
+name: github
+settings:
+- description: The name of your Github organization
+  name: org_name
+  required: true
+- description: The APIkey to authenticate call to the Github API
+  name: apikey
+- description: Pem file to interact with Github API
+  name: pem_file
+- description: Github app id to interact with Github API
+  name: app_id
+  type: integer

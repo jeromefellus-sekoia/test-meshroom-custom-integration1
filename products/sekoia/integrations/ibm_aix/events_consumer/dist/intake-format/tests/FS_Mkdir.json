@@ -1,0 +1,40 @@
+{
+  "input": {
+    "message": "FS_Mkdir Pipin root root OK 25 sep 2022 23:04:23.825394 No associated roles mode: 755 dir: /var/adm/nim/6292044"
+  },
+  "expected": {
+    "message": "FS_Mkdir Pipin root root OK 25 sep 2022 23:04:23.825394 No associated roles mode: 755 dir: /var/adm/nim/6292044",
+    "event": {
+      "action": "FS_Mkdir",
+      "category": [
+        "process"
+      ]
+    },
+    "action": {
+      "status": "OK",
+      "target": "process"
+    },
+    "file": {
+      "directory": "/var/adm/nim/6292044"
+    },
+    "group": {
+      "name": "root"
+    },
+    "observer": {
+      "vendor": "IBM"
+    },
+    "process": {
+      "user": {
+        "name": "root"
+      }
+    },
+    "related": {
+      "user": [
+        "Pipin"
+      ]
+    },
+    "user": {
+      "name": "Pipin"
+    }
+  }
+}

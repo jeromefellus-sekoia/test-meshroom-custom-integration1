@@ -1,0 +1,48 @@
+automation_connector_uuid: d3860745-4433-4690-b025-378369ad7201
+automation_module_uuid: 1411df5b-5de1-40bd-a988-725cfe692aff
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/e4a758fc-7620-49e6-b8ed-b7fb3d7fa232
+intake_format_uuid: e4a758fc-7620-49e6-b8ed-b7fb3d7fa232
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: module_configuration
+  properties:
+  - description: OAuth2 authorization URL
+    name: oauth2_authorization_url
+    required: true
+  - description: API Url of the VadeSecure platform (e.g. 'https://m365.eu.vadesecure.com')
+    name: api_host
+    required: true
+  - description: OAuth2 client identifier
+    name: client_id
+    required: true
+  - description: OAuth2 client secret
+    name: client_secret
+    required: true
+    secret: true
+  type: object
+- name: connector_configuration
+  properties:
+  - description: Batch frequency in seconds
+    name: frequency
+    required: true
+    type: integer
+  - description: Identifier of your 365 Tenant
+    name: tenant_id
+    required: true
+  - default: 10000
+    description: The max size of chunks for the batch processing
+    name: chunk_size
+    type: integer
+  - default: 100
+    description: Limit of records to fetch from the API per request
+    name: pagination_limit
+    type: integer
+  - default: 10
+    description: Limit of requests per second to VadeSecure API
+    name: rate_limit
+    type: integer
+  type: object
+target_product: vade_m365
+topic: events

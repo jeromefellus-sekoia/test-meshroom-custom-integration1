@@ -1,0 +1,14 @@
+description: Darktrace monitors and protects all people and digital assets across
+  your entire ecosystem.
+name: darktrace
+settings:
+- description: The url of the Darktrace appliance. (e.g. https://example.darktrace.com
+    or https://192.168.0.1)
+  name: api_url
+  required: true
+- description: The public key to the Darktrace API
+  name: public_key
+  required: true
+- description: The private key to the Darktrace API
+  name: private_key
+  required: true

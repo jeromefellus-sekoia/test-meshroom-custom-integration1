@@ -1,0 +1,7 @@
+description: ExtraHop Reveal(x) 360 is a cloud-based network detection and response
+  platform offering protection and detections for on-premises and cloud environments.
+name: extrahop_revealx_360
+produces:
+  events:
+  - mode: pull
+vendor: ExtraHop

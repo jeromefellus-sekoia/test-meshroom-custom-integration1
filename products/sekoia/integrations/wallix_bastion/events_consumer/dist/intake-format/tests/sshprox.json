@@ -1,0 +1,25 @@
+{
+  "input": {
+    "message": "[sshproxy] psid=\"161607370130601\" type=\"INCOMING_CONNECTION\" src_ip=\"10.17.86.250\" src_port=\"53344\""
+  },
+  "expected": {
+    "message": "[sshproxy] psid=\"161607370130601\" type=\"INCOMING_CONNECTION\" src_ip=\"10.17.86.250\" src_port=\"53344\"",
+    "event": {
+      "action": "INCOMING_CONNECTION",
+      "provider": "sshproxy"
+    },
+    "related": {
+      "ip": [
+        "10.17.86.250"
+      ]
+    },
+    "source": {
+      "address": "10.17.86.250",
+      "ip": "10.17.86.250",
+      "port": 53344
+    },
+    "wallix": {
+      "type": "INCOMING_CONNECTION"
+    }
+  }
+}

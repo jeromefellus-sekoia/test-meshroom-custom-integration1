@@ -1,0 +1,10 @@
+description: Aether is a new Panda platform for delivering complete security integrating
+  all Panda Endpoint solutions. The vision for Aether is to offer complete security
+  management from the cloud. In this way, under a single web console and with the
+  deployment of a single agent, the entire Panda solution portfolio can be managed
+  in a centralized way.
+name: panda_security_aether
+produces:
+  events:
+  - {}
+vendor: Panda Security

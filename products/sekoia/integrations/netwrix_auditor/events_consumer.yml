@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/a406a8c1-e1e0-4fe9-835b-3607d01150e6
+intake_format_uuid: a406a8c1-e1e0-4fe9-835b-3607d01150e6
+product: sekoia
+role: consumer
+target_product: netwrix_auditor
+topic: events

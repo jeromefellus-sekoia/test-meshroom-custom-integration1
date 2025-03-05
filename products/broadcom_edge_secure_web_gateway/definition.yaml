@@ -1,0 +1,9 @@
+description: Broadcom Edge Security Web Gateway provides comprehensive protection
+  for web traffic, offering advanced threat detection and prevention capabilities,
+  along with granular policy controls, to safeguard organizations against evolving
+  cyber threats at the network edge.
+name: broadcom_edge_secure_web_gateway
+produces:
+  events:
+  - mode: pull
+vendor: Broadcom

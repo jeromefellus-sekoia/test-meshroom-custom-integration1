@@ -1,0 +1,41 @@
+automation_connector_uuid: ff092b32-68dc-11ee-8c99-0242ac120002
+automation_module_uuid: 096f4eda-68dd-11ee-8c99-0242ac120002
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/ff53e0db-059b-4e16-ba90-8c4dbf5cee35
+intake_format_uuid: ff53e0db-059b-4e16-ba90-8c4dbf5cee35
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: module_configuration
+  properties:
+  - description: Client Id to interact with Checkpoint API
+    name: client_id
+    required: true
+  - description: Secret key to work with Checkpoint API
+    name: secret_key
+    required: true
+    secret: true
+  - description: Authentication url to authenticate Checkpoint API
+    name: authentication_url
+    required: true
+  - default: https://cloudinfra-gw.portal.checkpoint.com
+    description: Base url to interact with Checkpoint API
+    name: base_url
+  type: object
+- name: connector_configuration
+  properties:
+  - default: 60
+    description: Maximum number of requests per minute
+    name: ratelimit_per_minute
+    type: integer
+  - default: 1000
+    description: The max size of chunks for the batch processing
+    name: chunk_size
+    type: integer
+  - default: 60
+    description: Batch frequency in seconds
+    name: frequency
+    type: integer
+  type: object
+target_product: checkpoint_harmony_mobile
+topic: events

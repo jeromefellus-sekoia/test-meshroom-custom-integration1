@@ -1,0 +1,13 @@
+description: 1Password's Enterprise Password Manager offers robust security features
+  for businesses, enabling secure sharing and management of passwords and sensitive
+  data across teams, with advanced admin controls and seamless integration into existing
+  workflows.
+name: one_password
+settings:
+- description: 1Password base URL
+  name: base_url
+  required: true
+- description: API token
+  name: api_token
+  required: true
+  secret: true

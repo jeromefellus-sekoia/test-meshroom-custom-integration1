@@ -1,0 +1,10 @@
+description: Google Workspace is a suite of collaborative services offered by Google,
+  which includes tools such as Gmail, Drive, Google Meet, and Google Calendar, among
+  others. This service provides detailed activity reports for Google Workspace accounts,
+  giving access to audit logs for various services. Administrators can use these reports
+  to monitor usage, secure data, and optimize user management within the organization.
+name: google_workspace
+produces:
+  events:
+  - mode: pull
+vendor: Google Cloud

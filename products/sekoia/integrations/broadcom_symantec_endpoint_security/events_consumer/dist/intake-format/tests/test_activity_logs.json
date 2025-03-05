@@ -1,0 +1,44 @@
+{
+  "input": {
+    "message": "Site: OSTAM,Server Name: STR04,Domain Name: MyDomain,The client has downloaded the content package successfully,STV02,ADMIN,stv02.local"
+  },
+  "expected": {
+    "message": "Site: OSTAM,Server Name: STR04,Domain Name: MyDomain,The client has downloaded the content package successfully,STV02,ADMIN,stv02.local",
+    "event": {
+      "category": [
+        "network"
+      ],
+      "reason": "The client has downloaded the content package successfully",
+      "type": [
+        "info"
+      ]
+    },
+    "broadcom": {
+      "endpoint_protection": {
+        "server": {
+          "domain": "MyDomain",
+          "name": "STR04"
+        }
+      }
+    },
+    "host": {
+      "hostname": "STV02",
+      "name": "stv02.local"
+    },
+    "observer": {
+      "product": "Symantec Endpoint Protection",
+      "vendor": "Broadcom"
+    },
+    "related": {
+      "hosts": [
+        "STV02"
+      ],
+      "user": [
+        "ADMIN"
+      ]
+    },
+    "user": {
+      "name": "ADMIN"
+    }
+  }
+}

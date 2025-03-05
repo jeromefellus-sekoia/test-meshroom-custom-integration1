@@ -1,0 +1,47 @@
+{
+  "input": {
+    "message": "%FTD-2-106006: Deny inbound UDP from 172.16.10.234/901 to 192.168.122.55/111 on interface LAN"
+  },
+  "expected": {
+    "message": "%FTD-2-106006: Deny inbound UDP from 172.16.10.234/901 to 192.168.122.55/111 on interface LAN",
+    "event": {
+      "category": [
+        "network"
+      ],
+      "code": "106006"
+    },
+    "action": {
+      "name": "deny",
+      "target": "network-traffic"
+    },
+    "destination": {
+      "address": "192.168.122.55",
+      "ip": "192.168.122.55",
+      "port": 111
+    },
+    "network": {
+      "direction": "inbound",
+      "transport": "udp"
+    },
+    "observer": {
+      "egress": {
+        "interface": {
+          "name": "LAN"
+        }
+      },
+      "product": "Firepower Threat Defense",
+      "vendor": "Cisco"
+    },
+    "related": {
+      "ip": [
+        "172.16.10.234",
+        "192.168.122.55"
+      ]
+    },
+    "source": {
+      "address": "172.16.10.234",
+      "ip": "172.16.10.234",
+      "port": 901
+    }
+  }
+}

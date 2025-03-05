@@ -1,0 +1,4 @@
+product: myedr
+role: executor
+target_product: mysoar
+topic: playbook-action

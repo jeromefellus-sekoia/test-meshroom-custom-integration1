@@ -1,0 +1,58 @@
+consumes:
+  carots:
+  - {}
+description: The solution implements agent-based protection using multiple security
+  techniques, such as static and behavioral analysis and attack surface reduction.
+  The solution implements all its prevention, detection, and response functionality
+  using a single agent installed on the endpoint. The solution can automatically invoke
+  a native malware response action, such as deleting or quarantining files, blocking
+  or killing processes, and isolating compromised endpoints. The solution provides
+  a severity rating, a process tree, and a mapping of events and alerts to MITRE ATT&CK
+  tactics, techniques and procedures to aid root cause analysis and remediation. The
+  solution provides support for new versions of major operating systems, including
+  Windows, macOS and Linux, within 90 days of the OS release. The solution provides
+  a cloud-based, SaaS-style, multitenant security analytics and management infrastructure
+  that is required to be maintained by the EPP vendor. The solution stores endpoint
+  telemetry and detection events in its management infrastructure for at least 30
+  days, with the ability to extend or forward to other long-term storage. The solution
+  natively integrates with vendor-owned or third-party security controls, such as
+  identity protection, email security, security service edge and workload protection.
+executes:
+  allow:
+  - format: path
+  - format: hash
+  - format: domain
+  contain:
+  - format: endpoint
+  - format: path
+  - format: account
+  deny:
+  - format: path
+  - format: hash
+  - format: domain
+  download:
+  - format: path
+  playbook-action:
+  - {}
+  restart:
+  - format: service
+  - format: endpoint
+  scan:
+  - {}
+  start:
+  - format: process
+  stop:
+  - format: process
+name: myedr
+produces:
+  alerts:
+  - {}
+  events:
+  - {}
+settings:
+- name: API_KEY
+  secret: true
+- name: API_URL
+tags:
+- Endpoint detection and response
+- EDR

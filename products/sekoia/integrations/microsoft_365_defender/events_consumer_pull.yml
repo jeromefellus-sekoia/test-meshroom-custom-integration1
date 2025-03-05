@@ -1,0 +1,33 @@
+automation_connector_uuid: 57f8f587-18ee-434b-a4ed-b5459f5b0fef
+automation_module_uuid: 525eecc0-9eee-484d-92bd-039117cf4dac
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/05e6f36d-cee0-4f06-b575-9e43af779f9f
+intake_format_uuid: 05e6f36d-cee0-4f06-b575-9e43af779f9f
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: connector_configuration
+  properties:
+  - description: The connection string to connect the eventhub on Microsoft Azure
+      eventHub
+    name: hub_connection_string
+    required: true
+  - description: The connection string to connect the Microsoft Azure Storage blob
+    name: storage_connection_string
+    required: true
+  - description: The name of the container to use
+    name: storage_container_name
+    required: true
+  - description: The name of the hub
+    name: hub_name
+    required: true
+  - default: sekoiaio
+    description: The consumer group to supplied to the hub
+    name: hub_consumer_group
+  - default: 1000
+    description: The max size of chunks for the batch processing
+    name: chunk_size
+    type: integer
+  type: object
+target_product: microsoft_365_defender
+topic: events

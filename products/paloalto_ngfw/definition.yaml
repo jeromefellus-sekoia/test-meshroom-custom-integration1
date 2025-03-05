@@ -1,0 +1,10 @@
+description: 'Palo Alto Networks offers an enterprise cybersecurity platform which
+  provides network security.
+
+  Sending Palo Alto logs to Sekoia.io allows to discover potential network security
+  threats.'
+name: paloalto_ngfw
+produces:
+  events:
+  - {}
+vendor: Palo Alto Networks

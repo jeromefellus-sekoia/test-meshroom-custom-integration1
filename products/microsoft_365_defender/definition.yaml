@@ -1,0 +1,12 @@
+description: 'Microsoft Defender XDR is a entreprise defense suite that coordinates
+  detection, prevention, investigation, and response across endpoints, identities,
+  email, and cloud applications.
+
+  Microsoft Defender for Endpoint is an enterprise endpoint security platform designed
+  to help enterprise networks prevent, detect, investigate, and respond to advanced
+  threats.'
+name: microsoft_365_defender
+produces:
+  events:
+  - mode: pull
+vendor: Microsoft

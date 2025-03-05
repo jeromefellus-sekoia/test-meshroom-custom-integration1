@@ -1,0 +1,10 @@
+description: 'Sekoia.io activity logs collect all operations done, on Sekoia.io, by
+  the members of the community.
+
+  Enabling Sekoia.io activity logs allow to monitor activities and detect malicious
+  behavior.'
+name: sekoiaio_activity_logs
+produces:
+  events:
+  - {}
+vendor: Sekoia.io

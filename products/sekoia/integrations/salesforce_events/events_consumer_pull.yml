@@ -1,0 +1,46 @@
+automation_connector_uuid: ea8a9a1a-2548-11ee-be56-0242ac120002
+automation_module_uuid: f811e134-2548-11ee-be56-0242ac120002
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/d2725f97-0c7b-4942-a847-983f38efb8ff
+intake_format_uuid: d2725f97-0c7b-4942-a847-983f38efb8ff
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: module_configuration
+  properties:
+  - default: production
+    description: 'Organization type. Might be one of the following: ''production'',
+      ''sandbox'', ''trial'', ''developer''. Default is ''production'''
+    name: org_type
+  - description: Client id to interact with salesforce API
+    name: client_id
+    required: true
+  - description: Client secret to interact with salesforce API
+    name: client_secret
+    required: true
+    secret: true
+  - description: 'Rate limit for requests to salesforce. Value should have next format
+      {max_rate}/{time_period}. For example: 3/60. Sekoia will use default rate limits
+      if value is empty or invalid. More information you can find in docs: https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm'
+    name: rate_limit
+  - description: Url of salesforce instance. Consists of https://<instance>.salesforce.com
+    name: base_url
+    required: true
+  type: object
+- name: connector_configuration
+  properties:
+  - default: 1000
+    description: The max size of chunks for the batch processing
+    name: chunk_size
+    type: integer
+  - default: 600
+    description: Batch frequency in seconds
+    name: frequency
+    type: integer
+  - default: false
+    description: Fetch daily logs. By default, it will fetch Hourly logs
+    name: fetch_daily_logs
+    type: boolean
+  type: object
+target_product: salesforce_events
+topic: events

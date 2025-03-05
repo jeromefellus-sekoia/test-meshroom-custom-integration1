@@ -1,0 +1,8 @@
+description: Ubika Cloud Protector is a cloud-native security solution, providing
+  advanced threat detection and data protection to secure cloud environments, enabling
+  real-time monitoring and mitigation of risks in cloud-based infrastructures.
+name: ubika_cloud_protector_alerts
+produces:
+  events:
+  - mode: pull
+vendor: Ubika

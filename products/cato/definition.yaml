@@ -1,0 +1,10 @@
+description: Cato Networks is a software company providing solutions to protect cloud
+  applications.
+name: cato
+settings:
+- description: Api key to interact with Cato API
+  name: api_key
+  required: true
+- description: Account Id (4 or 5 digits) to work with Cato API
+  name: account_id
+  required: true

@@ -1,0 +1,9 @@
+description: PagerDuty is an incident response platform for IT departments it allows
+  triggering alerts and managing incidents.
+name: pagerduty
+settings:
+- description: The integration key (a.k.a routing key) of your PagerDuty Service
+  name: integration_key
+  required: true
+- description: URL of the PagerDuty endpoint
+  name: integration_url

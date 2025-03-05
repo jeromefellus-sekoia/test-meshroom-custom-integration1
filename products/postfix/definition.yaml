@@ -1,0 +1,6 @@
+description: Postfix is an open-source mail transfer agent (MTA) that routes and delivers
+  electronic mail, known for its efficiency and secure handling of email traffic.
+name: postfix
+produces:
+  events:
+  - {}

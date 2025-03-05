@@ -1,0 +1,7 @@
+description: Symantec Endpoint Protection is a client-server solution that protects
+  laptops, desktops, and servers in your network against malware, risks, and vulnerabilities.
+name: broadcom_symantec_endpoint_security
+produces:
+  events:
+  - {}
+vendor: Broadcom

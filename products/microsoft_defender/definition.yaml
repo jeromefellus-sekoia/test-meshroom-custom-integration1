@@ -1,0 +1,18 @@
+description: ' Microsoft Defender for Endpoint is an Endpoint Detection and Response
+  (EDR) product that monitors the security of endpoints. The module required, at least,
+  the Microsoft Defender for Endpoint plan 1'
+name: microsoft_defender
+settings:
+- default: https://api.securitycenter.microsoft.com
+  description: Base URL
+  name: base_url
+- description: The identifier of the Azure Application
+  name: app_id
+  required: true
+- description: The value of the secret associated to the Azure Application
+  name: app_secret
+  required: true
+  secret: true
+- description: The identifier of the Azure Directory
+  name: tenant_id
+  required: true

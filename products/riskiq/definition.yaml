@@ -1,0 +1,14 @@
+description: RiskIQ is a cyber security company providing software as a service to
+  detect phishing, fraud, malware, and other online security threats.
+name: riskiq
+settings:
+- description: RiskIQ base url
+  name: base_url
+  required: true
+- description: API key
+  name: api_key
+  required: true
+- description: API secret
+  name: api_secret
+  required: true
+  secret: true

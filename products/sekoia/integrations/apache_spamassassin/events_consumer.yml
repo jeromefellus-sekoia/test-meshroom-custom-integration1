@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/7954ae6f-eafa-404d-8e15-4b99a12b754c
+intake_format_uuid: 7954ae6f-eafa-404d-8e15-4b99a12b754c
+product: sekoia
+role: consumer
+target_product: apache_spamassassin
+topic: events

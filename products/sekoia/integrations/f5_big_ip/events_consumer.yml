@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/a14b1141-2d61-414b-bf79-da99b487b1af
+intake_format_uuid: a14b1141-2d61-414b-bf79-da99b487b1af
+product: sekoia
+role: consumer
+target_product: f5_big_ip
+topic: events

@@ -1,0 +1,9 @@
+description: Veeam Backup & Replication is a comprehensive data protection solution
+  known for its robust backup, recovery, and replication capabilities, ensuring the
+  secure and efficient management of data across various environments for businesses
+  and organizations.
+name: veeam_backup
+produces:
+  events:
+  - {}
+vendor: Veeam

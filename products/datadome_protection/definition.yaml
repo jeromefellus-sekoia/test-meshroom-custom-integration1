@@ -1,0 +1,8 @@
+description: Datadome offers is a bot protection solution, providing real-time detection
+  and mitigation of malicious bots, safeguarding websites and APIs from fraud, scraping,
+  and other automated threats with advanced security measures.
+name: datadome_protection
+produces:
+  events:
+  - {}
+vendor: Datadome

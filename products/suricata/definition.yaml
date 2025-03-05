@@ -1,0 +1,7 @@
+description: Suricata is an open-source network threat detection engine providing
+  intrusion detection, intrusion prevention, and network security monitoring. It analyzes
+  network traffic in real-time using advanced multi-threading capabilities.
+name: suricata
+produces:
+  events:
+  - {}

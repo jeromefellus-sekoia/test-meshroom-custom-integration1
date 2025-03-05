@@ -1,0 +1,27 @@
+automation_connector_uuid: 663b3611-84b5-4e99-9d53-ce5e873bb608
+automation_module_uuid: c56d64b8-b70f-4bab-a334-b4d5a4a25214
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/2886cd2d-f686-4e7d-9976-250cba2eaf5b
+intake_format_uuid: 2886cd2d-f686-4e7d-9976-250cba2eaf5b
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: module_configuration
+  properties:
+  - description: Username to do authentication on remote server
+    name: username
+    required: true
+  - description: Password to do authentication on remote server
+    name: password
+    required: true
+    secret: true
+  type: object
+- name: connector_configuration
+  properties:
+  - default: 1000
+    description: The max size of chunks for the batch processing
+    name: chunk_size
+    type: integer
+  type: object
+target_product: broadcom_edge_secure_web_gateway
+topic: events

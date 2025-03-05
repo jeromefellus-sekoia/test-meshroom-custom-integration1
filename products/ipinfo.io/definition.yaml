@@ -1,0 +1,8 @@
+description: IPINFO.IO is a database that gives access to daily updates for IP to
+  country and IP to ASN
+name: ipinfo.io
+settings:
+- description: ipinfo.io token
+  name: api_token
+  required: true
+  secret: true

@@ -1,0 +1,27 @@
+description: Microsoft Sentinel is a cloud-based SIEM and SOAR solution on the Azure
+  platform, designed to help organizations detect, investigate, and respond to security
+  threats using AI and automation.
+name: microsoft_sentinel
+produces:
+  events:
+  - mode: pull
+settings:
+- description: Tenant ID or Directory ID
+  name: tenant_id
+  required: true
+- description: Client ID or Application ID
+  name: client_id
+  required: true
+- description: Client secret or password
+  name: client_secret
+  required: true
+  secret: true
+- description: Subscription ID of the Microsoft Sentinel instance
+  name: subscription_id
+  required: true
+- description: Resource group of the Microsoft Sentinel instance
+  name: resource_group
+  required: true
+- description: Workspace name of the Microsoft Sentinel instance
+  name: workspace_name
+  required: true

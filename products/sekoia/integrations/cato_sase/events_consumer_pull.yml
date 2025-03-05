@@ -1,0 +1,19 @@
+automation_connector_uuid: cc29cc08-3182-11ee-be56-0242ac120002
+automation_module_uuid: d7aa9364-3182-11ee-be56-0242ac120002
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/469bd3ae-61c9-4c39-9703-7452882e70da
+intake_format_uuid: 469bd3ae-61c9-4c39-9703-7452882e70da
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: module_configuration
+  properties:
+  - description: Api key to interact with Cato API
+    name: api_key
+    required: true
+  - description: Account Id (4 or 5 digits) to work with Cato API
+    name: account_id
+    required: true
+  type: object
+target_product: cato_sase
+topic: events

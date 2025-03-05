@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/270777d7-0c5a-42fb-b901-b7fadfb0ba48
+intake_format_uuid: 270777d7-0c5a-42fb-b901-b7fadfb0ba48
+product: sekoia
+role: consumer
+target_product: fortinet_fortiproxy
+topic: events

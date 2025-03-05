@@ -1,0 +1,25 @@
+description: Trellix has been involved in the detection and prevention of major cybersecurity
+  attacks. It provides hardware, software, and services to investigate cybersecurity
+  attacks, protect against malicious software, and analyze IT security risks
+name: trellix
+settings:
+- description: Client id to interact with Trellix API
+  name: client_id
+  required: true
+- description: Client secret to interact with Trellix API
+  name: client_secret
+  required: true
+  secret: true
+- description: Api key to interact with Trellix API
+  name: api_key
+  required: true
+- default: 1
+  description: Delay between running the connector
+  name: delay
+  type: integer
+- default: https://api.manage.trellix.com
+  description: Base url of the Trellix API
+  name: base_url
+- default: https://iam.mcafee-cloud.com/iam/v1.1
+  description: Url of the authentication server
+  name: auth_url

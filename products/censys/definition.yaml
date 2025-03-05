@@ -1,0 +1,12 @@
+description: Censys is Cybersecurity company discovering and inventoring assets exposed
+  on Internet. The Censys API provides programmatic access to the same data accessible
+  through the web interface
+name: censys
+settings:
+- description: Censys API user ID
+  name: api_user_id
+  required: true
+- description: Censys API user secret
+  name: api_user_secret
+  required: true
+  secret: true

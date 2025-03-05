@@ -1,0 +1,19 @@
+description: Zscaler is a cloud security company providing secure internet access
+  and zero trust network access to protect enterprise data and applications. Its platform
+  offers scalable, cloud-native solutions for secure browsing, data protection, and
+  threat prevention.
+name: zscaler
+settings:
+- description: 'Zscaler Base Url (ex: zscalerone.net, zscaler.net, zscloud.net)'
+  name: base_url
+  required: true
+- description: Email ID of the API admin
+  name: username
+  required: true
+- description: Password for the API admin
+  name: password
+  required: true
+  secret: true
+- description: API key
+  name: api_key
+  required: true

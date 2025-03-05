@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/90179796-f949-490c-8729-8cbc9c65be55
+intake_format_uuid: 90179796-f949-490c-8729-8cbc9c65be55
+product: sekoia
+role: consumer
+target_product: cisco_umbrella_dns
+topic: events

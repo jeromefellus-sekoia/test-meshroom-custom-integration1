@@ -1,0 +1,7 @@
+description: The OpenAI API can be applied to virtually any task that involves understanding
+  or generating natural language, code, or images.
+name: openai
+settings:
+- description: API Key to use to connect to OpenAI API endpoints
+  name: api_key
+  required: true

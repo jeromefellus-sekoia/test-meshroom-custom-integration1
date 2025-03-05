@@ -1,0 +1,15 @@
+description: ESET is a global cybersecurity company known for its antivirus and security
+  software solutions for both businesses and consumers, providing advanced threat
+  detection and malware protection.
+name: eset
+settings:
+- description: Region
+  name: region
+  required: true
+- description: Username
+  name: username
+  required: true
+- description: Password
+  name: password
+  required: true
+  secret: true

@@ -1,0 +1,15 @@
+description: SentinelOne is a cybersecurity company that provides autonomous endpoint
+  protection through AI-powered threat detection and response. This module collects
+  telemetry from SentinelOne DeepVisibility (through AWS S3)
+name: sentinelonedeepvisibility
+settings:
+- description: The identifier of the access key
+  name: aws_access_key
+  required: true
+- description: The secret associated to the access key
+  name: aws_secret_access_key
+  required: true
+  secret: true
+- description: The area hosting the AWS resources
+  name: aws_region_name
+  required: true

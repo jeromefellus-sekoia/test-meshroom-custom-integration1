@@ -1,0 +1,78 @@
+{
+  "input": {
+    "message": "{\"awsRegion\":\"eu-west-3\",\"eventID\":\"bcf6f457-76bc-4e8c-8a7b-8a2451481675\",\"eventName\":\"AssumeRole\",\"eventSource\":\"sts.amazonaws.com\",\"eventTime\":\"2020-08-12T12:03:12Z\",\"eventType\":\"AwsApiCall\",\"eventVersion\":\"1.05\",\"recipientAccountId\":\"1111111111\",\"requestID\":\"34c3d58a-83f5-42cc-9e4d-1beeb85f809c\",\"requestParameters\":{\"roleArn\":\"arn:aws:iam::1111111111:role/user\",\"roleSessionName\":\"session-name\"},\"resources\":[{\"ARN\":\"arn:aws:iam::1111111111:role/user\",\"accountId\":\"1111111111\",\"type\":\"AWS::IAM::Role\"}],\"responseElements\":{\"credentials\":{\"accessKeyId\":\"ASIA11111111111111\",\"expiration\":\"Aug 13, 2020, 12:03:12 AM\",\"sessionToken\":\"1111111111111111111111111111111111111111111111111111111111111111111111111\"}},\"sharedEventID\":\"e0b224e9-a818-452c-87e3-a1d4078bb102\",\"sourceIPAddress\":\"lambda.amazonaws.com\",\"userAgent\":\"lambda.amazonaws.com\",\"userIdentity\":{\"invokedBy\":\"lambda.amazonaws.com\",\"type\":\"AWSService\"}}"
+  },
+  "expected": {
+    "message": "{\"awsRegion\":\"eu-west-3\",\"eventID\":\"bcf6f457-76bc-4e8c-8a7b-8a2451481675\",\"eventName\":\"AssumeRole\",\"eventSource\":\"sts.amazonaws.com\",\"eventTime\":\"2020-08-12T12:03:12Z\",\"eventType\":\"AwsApiCall\",\"eventVersion\":\"1.05\",\"recipientAccountId\":\"1111111111\",\"requestID\":\"34c3d58a-83f5-42cc-9e4d-1beeb85f809c\",\"requestParameters\":{\"roleArn\":\"arn:aws:iam::1111111111:role/user\",\"roleSessionName\":\"session-name\"},\"resources\":[{\"ARN\":\"arn:aws:iam::1111111111:role/user\",\"accountId\":\"1111111111\",\"type\":\"AWS::IAM::Role\"}],\"responseElements\":{\"credentials\":{\"accessKeyId\":\"ASIA11111111111111\",\"expiration\":\"Aug 13, 2020, 12:03:12 AM\",\"sessionToken\":\"1111111111111111111111111111111111111111111111111111111111111111111111111\"}},\"sharedEventID\":\"e0b224e9-a818-452c-87e3-a1d4078bb102\",\"sourceIPAddress\":\"lambda.amazonaws.com\",\"userAgent\":\"lambda.amazonaws.com\",\"userIdentity\":{\"invokedBy\":\"lambda.amazonaws.com\",\"type\":\"AWSService\"}}",
+    "event": {
+      "action": "AssumeRole",
+      "category": [
+        "network"
+      ],
+      "outcome": "success",
+      "provider": "sts.amazonaws.com",
+      "type": [
+        "access"
+      ]
+    },
+    "@timestamp": "2020-08-12T12:03:12Z",
+    "action": {
+      "name": "AssumeRole",
+      "outcome": "success",
+      "properties": {
+        "recipientAccountId": "1111111111",
+        "resources": [
+          {
+            "ARN": "arn:aws:iam::1111111111:role/user"
+          }
+        ],
+        "userIdentity": {
+          "invokedBy": "lambda.amazonaws.com",
+          "type": "AWSService"
+        }
+      },
+      "target": "network-traffic",
+      "type": "AwsApiCall"
+    },
+    "aws": {
+      "cloudtrail": {
+        "flattened": {
+          "request_parameters": "{\"roleArn\":\"arn:aws:iam::1111111111:role/user\",\"roleSessionName\":\"session-name\"}",
+          "response_elements": "{\"credentials\":{\"accessKeyId\":\"ASIA11111111111111\",\"expiration\":\"Aug 13, 2020, 12:03:12 AM\",\"sessionToken\":\"1111111111111111111111111111111111111111111111111111111111111111111111111\"}}"
+        },
+        "user_identity": {
+          "type": "AWSService"
+        }
+      }
+    },
+    "cloud": {
+      "provider": "aws",
+      "region": "eu-west-3",
+      "service": {
+        "name": "cloudtrail"
+      }
+    },
+    "related": {
+      "hosts": [
+        "lambda.amazonaws.com"
+      ]
+    },
+    "source": {
+      "address": "lambda.amazonaws.com",
+      "domain": "lambda.amazonaws.com",
+      "registered_domain": "amazonaws.com",
+      "subdomain": "lambda",
+      "top_level_domain": "com"
+    },
+    "user_agent": {
+      "device": {
+        "name": "Other"
+      },
+      "name": "Other",
+      "original": "lambda.amazonaws.com",
+      "os": {
+        "name": "Other"
+      }
+    }
+  }
+}

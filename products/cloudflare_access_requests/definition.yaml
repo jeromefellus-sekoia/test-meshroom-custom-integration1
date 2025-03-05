@@ -1,0 +1,6 @@
+description: HTTP requests to sites protected by Cloudflare Access
+name: cloudflare_access_requests
+produces:
+  events:
+  - {}
+vendor: Cloudflare

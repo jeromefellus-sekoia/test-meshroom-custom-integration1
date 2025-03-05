@@ -1,0 +1,8 @@
+description: McAfee Web Gateway / Skyhigh Secure Web Gateway is a high-performance
+  web gateway with threat prevention, malware detection and reputation or Category-based
+  filtering.
+name: mcafee_web_gateway
+produces:
+  events:
+  - {}
+vendor: McAfee

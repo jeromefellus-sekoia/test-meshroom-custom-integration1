@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/40bac399-2d8e-40e3-af3b-f73a622c9687
+intake_format_uuid: 40bac399-2d8e-40e3-af3b-f73a622c9687
+product: sekoia
+role: consumer
+target_product: mcafee_web_gateway
+topic: events

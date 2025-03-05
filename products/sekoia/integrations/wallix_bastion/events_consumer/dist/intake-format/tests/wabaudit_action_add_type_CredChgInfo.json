@@ -1,0 +1,36 @@
+{
+  "input": {
+    "message": "[wabaudit] action=\"add\" type=\"CredChgInfo\" object=\"local1/None\" user=\"QA_ADMIN\" client_ip=\"10.10.45.212\" infos=\"service_name ['None' to 'XE'], host ['None' to 'my.db.hostname'], port ['None' to '1234']\""
+  },
+  "expected": {
+    "message": "[wabaudit] action=\"add\" type=\"CredChgInfo\" object=\"local1/None\" user=\"QA_ADMIN\" client_ip=\"10.10.45.212\" infos=\"service_name ['None' to 'XE'], host ['None' to 'my.db.hostname'], port ['None' to '1234']\"",
+    "event": {
+      "action": "CredChgInfo",
+      "provider": "wabengine",
+      "reason": "service_name ['None' to 'XE'], host ['None' to 'my.db.hostname'], port ['None' to '1234']",
+      "type": [
+        "creation"
+      ]
+    },
+    "related": {
+      "ip": [
+        "10.10.45.212"
+      ],
+      "user": [
+        "QA_ADMIN"
+      ]
+    },
+    "source": {
+      "address": "10.10.45.212",
+      "ip": "10.10.45.212"
+    },
+    "user": {
+      "name": "QA_ADMIN"
+    },
+    "wallix": {
+      "action": "add",
+      "object": "local1/None",
+      "type": "CredChgInfo"
+    }
+  }
+}

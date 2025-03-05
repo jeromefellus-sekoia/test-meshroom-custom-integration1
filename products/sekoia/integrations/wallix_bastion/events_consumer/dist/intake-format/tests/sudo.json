@@ -1,0 +1,24 @@
+{
+  "input": {
+    "message": "root : TTY=unknown ; PWD=/root ; USER=wabuser ; COMMAND=/opt/wab/bin/WABCleanApprovals close"
+  },
+  "expected": {
+    "message": "root : TTY=unknown ; PWD=/root ; USER=wabuser ; COMMAND=/opt/wab/bin/WABCleanApprovals close",
+    "event": {
+      "provider": "sudo"
+    },
+    "process": {
+      "command_line": "/opt/wab/bin/WABCleanApprovals close",
+      "working_directory": "/root"
+    },
+    "related": {
+      "user": [
+        "wabuser"
+      ]
+    },
+    "user": {
+      "name": "wabuser"
+    },
+    "wallix": {}
+  }
+}

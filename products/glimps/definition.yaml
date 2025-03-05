@@ -1,0 +1,11 @@
+description: Glimps offers a DeepLearning solution to detect, analyze and classify
+  malwares. It enables faster responses during incidents with a detailed understanding
+  of the threat
+name: glimps
+settings:
+- description: Glimps detect token
+  name: api_key
+  required: true
+- description: Glimps detect url
+  name: base_url
+  required: true

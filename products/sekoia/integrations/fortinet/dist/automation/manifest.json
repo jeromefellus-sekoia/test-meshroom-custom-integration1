@@ -1,0 +1,17 @@
+{
+  "configuration": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Fortinet",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "description": "Fortinet is a cybersecurity company that delivers a broad range of security solutions, including firewalls, antivirus, intrusion prevention, and endpoint security. It is known for its FortiGate network security appliances and its focus on integrated and automated cybersecurity.",
+  "name": "Fortinet",
+  "uuid": "a4b5ca63-c146-4658-ac3f-e24a018414bc",
+  "version": "1.0.0",
+  "slug": "fortinet",
+  "categories": [
+    "Network"
+  ]
+}

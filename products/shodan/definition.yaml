@@ -1,0 +1,10 @@
+description: Shodan is a Cybersecurity company keeping track of devices exposed to
+  the Internet. It collect information on devices, running software and related CVEs.
+name: shodan
+settings:
+- description: The user API key
+  name: api_key
+  required: true
+- default: https://api.shodan.io/
+  description: Shodan base url, like https://api.shodan.io/.
+  name: base_url

@@ -1,0 +1,40 @@
+automation_connector_uuid: 8128d255-22df-4f4c-96af-ca6c1123f4cf
+automation_module_uuid: b96361fb-a01b-4ae7-8927-9622b9ea0acf
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/9f89b634-0531-437b-b060-a9d9f2d270db
+intake_format_uuid: 9f89b634-0531-437b-b060-a9d9f2d270db
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: module_configuration
+  properties:
+  - default: https://<tenant>.cybereason.net
+    description: API base URL
+    name: base_url
+    required: true
+  - description: The username to use to authenticate against the API
+    name: username
+    required: true
+  - description: The password to use to authenticate against the API
+    name: password
+    required: true
+    secret: true
+  type: object
+- name: connector_configuration
+  properties:
+  - default: 60
+    description: Batch frequency in seconds
+    name: frequency
+    required: true
+    type: integer
+  - default: 1000
+    description: The size of chunks for the batch processing
+    name: chunk_size
+    type: integer
+  - description: The sensors' group ids from which events must be retrieved
+    items: string
+    name: group_ids
+    type: array
+  type: object
+target_product: cybereason_malop_json
+topic: events

@@ -1,0 +1,10 @@
+description: 'Azure Database for MySQL provides fully managed MySQL database as a
+  service.
+
+  Sending Azure MySQL logs helps Sekoia.io detect unauthorized database autenthication
+  and suspicous SQL requests.'
+name: azure_database_for_mysql
+produces:
+  events:
+  - mode: pull
+vendor: Azure

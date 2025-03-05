@@ -1,0 +1,40 @@
+automation_connector_uuid: e9cf256b-eabb-449a-9662-0c1f98c2d5c8
+automation_module_uuid: 4ef895d1-3f21-4678-8d0a-5c39c37210fe
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/e6bb2404-8fc8-4124-a785-c1276277b5d7
+intake_format_uuid: e6bb2404-8fc8-4124-a785-c1276277b5d7
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: module_configuration
+  properties:
+  - description: The url to your Okta tenant
+    name: base_url
+    required: true
+  - description: The APIkey to authenticate call to the API
+    name: apikey
+    required: true
+  type: object
+- name: connector_configuration
+  properties:
+  - default: 60
+    description: Batch frequency in seconds
+    name: frequency
+    required: true
+    type: integer
+  - default: 1000
+    description: The size of chunks for the batch processing
+    name: chunk_size
+    type: integer
+  - description: '[Filter Expression](https://developer.okta.com/docs/reference/api/system-log/#expression-filter)
+      that filters the results'
+    name: filter
+  - description: Filters the log events results by one or more exact [keywords](https://developer.okta.com/docs/reference/api/system-log/#keyword-filter)
+    name: q
+  - default: 20
+    description: The number of requests allowed to the API in one minute for the token
+    name: ratelimit_per_minute
+    type: integer
+  type: object
+target_product: okta_system_logs
+topic: events

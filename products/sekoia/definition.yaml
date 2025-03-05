@@ -1,0 +1,17 @@
+consumes:
+  events:
+  - {}
+executes:
+  actions:
+  - {}
+  workflow:
+  - {}
+name: sekoia
+settings:
+- name: API_KEY
+  secret: true
+- default: FRA1
+  name: region
+triggers:
+  action:
+  - {}

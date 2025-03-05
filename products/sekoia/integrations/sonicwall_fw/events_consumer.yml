@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/ee0b3023-524c-40f6-baf5-b69c7b679887
+intake_format_uuid: ee0b3023-524c-40f6-baf5-b69c7b679887
+product: sekoia
+role: consumer
+target_product: sonicwall_fw
+topic: events

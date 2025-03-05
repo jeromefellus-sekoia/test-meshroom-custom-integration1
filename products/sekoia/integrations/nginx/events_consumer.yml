@@ -1,0 +1,6 @@
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/ab25af2e-4916-40ba-955c-34d2301c1f51
+intake_format_uuid: ab25af2e-4916-40ba-955c-34d2301c1f51
+product: sekoia
+role: consumer
+target_product: nginx
+topic: events

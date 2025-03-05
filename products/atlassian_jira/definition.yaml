@@ -1,0 +1,15 @@
+description: Atlassian JIRA is a popular project management and issue-tracking software
+  designed to help teams plan, track, and manage agile software development projects
+  efficiently. It offers customizable workflows and integrates seamlessly with other
+  Atlassian products.
+name: atlassian_jira
+settings:
+- description: Your organization JIRA domain (e.g. 'sandbox.atlassian.net')
+  name: domain
+  required: true
+- description: Email of the user
+  name: email
+  required: true
+- description: API Key to use to connect to JIRA API endpoints
+  name: api_key
+  required: true

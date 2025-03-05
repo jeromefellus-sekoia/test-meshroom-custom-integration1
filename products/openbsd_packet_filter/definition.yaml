@@ -1,0 +1,8 @@
+description: OpenBSD is packet filter is stateful firewall available in many BSD-derived
+  Operating system. Providing Packet filter logs to Sekoia.io can be useful in discovering
+  potential network security threats.
+name: openbsd_packet_filter
+produces:
+  events:
+  - {}
+vendor: OpenBSD

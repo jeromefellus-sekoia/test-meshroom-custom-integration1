@@ -1,0 +1,9 @@
+description: Fastly Next-Gen WAF is a web application firewall solution designed to
+  protect online assets by mitigating web application threats, ensuring security,
+  and enhancing application performance with its edge-based, real-time protection
+  capabilities.
+name: fastly_waf_alerts
+produces:
+  events:
+  - mode: pull
+vendor: Fastly

@@ -1,0 +1,6 @@
+description: "WALLIX Bastion is a \u201CPrivileged Access Management\u201D solution."
+name: wallix_bastion
+produces:
+  events:
+  - {}
+vendor: Wallix

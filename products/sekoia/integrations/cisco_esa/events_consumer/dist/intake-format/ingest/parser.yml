@@ -1,0 +1,211 @@
+name: cisco-esa
+pipeline:
+  - name: parsed_event
+    external:
+      name: cef.parse-cef
+
+  - name: parse_start_date
+    filter: "{{parsed_event.message.start != null or parsed_event.message.startTime != null}}"
+    external:
+      name: date.parse
+      properties:
+        input_field: "{{parsed_event.message.start or parsed_event.message.startTime}}"
+        output_field: date
+
+  - name: parse_end_date
+    filter: "{{parsed_event.message.end != null or parsed_event.message.endTime != null}}"
+    external:
+      name: date.parse
+      properties:
+        input_field: "{{parsed_event.message.end or parsed_event.message.endTime}}"
+        output_field: date
+
+  # Parse 'rt' (as a timestamp or as a date)
+  - name: parse_receipt_time
+    external:
+      name: date.parse
+      properties:
+        input_field: "{{parsed_event.message.rt}}"
+        output_field: date
+
+  - name: parse_message_id
+    external:
+      name: grok.match
+      properties:
+        raise_errors: false
+        input_field: "{{parsed_event.message.ExternalMsgID}}"
+        output_field: message
+        pattern: "<%{MESSAGE_ID}>|%{MESSAGE_ID}"
+        custom_patterns:
+          MESSAGE_ID: "%{GREEDYDATA:id}"
+
+  - name: parse_duser
+    external:
+      name: grok.match
+      properties:
+        raise_errors: false
+        input_field: "{{parsed_event.message.duser}}"
+        output_field: message
+        pattern: "%{GREEDYDATA:duser_name}@%{GREEDYDATA:duser_domain}"
+
+  - name: parse_suser
+    external:
+      name: grok.match
+      properties:
+        raise_errors: false
+        input_field: "{{parsed_event.message.suser}}"
+        output_field: message
+        pattern: "%{GREEDYDATA:suser_name}@%{GREEDYDATA:suser_domain}"
+
+  - name: json_event_esaattachmentdetails
+    filter: "{{ parsed_event.message.get('ESAAttachmentDetails') != None }}"
+    external:
+      name: dict.parse
+      properties:
+        input_field: >
+          {{ parsed_event.message.ESAAttachmentDetails }}
+
+  - name: json_event_url_details
+    filter: "{{ parsed_event.message.get('ESAURLDetails') != None }}"
+    external:
+      name: dict.parse
+      properties:
+        output_field: message
+        input_field: >
+          {{ parsed_event.message.ESAURLDetails }}
+
+  - name: set_timestamp
+  - name: set_cef_header_fields
+  - name: set_cef_extension_fields
+
+stages:
+  set_timestamp:
+    actions:
+      # Default timestamp is the start or startTime field
+      - set:
+          "@timestamp": "{{parse_start_date.date}}"
+
+      # Second choice is the receipt time (rc) field
+      - set:
+          "@timestamp": "{{parse_receipt_time.date}}"
+        filter: "{{parse_start_date == null and parse_receipt_time != null}}"
+
+      # Last choice is the end or endTime field
+      - set:
+          "@timestamp": "{{parse_end_date.date}}"
+        filter: "{{parse_start_date == null and parse_receipt_time == null and parse_end_date != null}}"
+
+  set_cef_header_fields:
+    # CEF:Version|Device Vendor|Device Product|Device Version|Device Event Class ID|Name|Severity|[Extension]
+    actions:
+      - set:
+          observer.vendor: "{{parsed_event.message.DeviceVendor}}"
+          observer.type: "{{parsed_event.message.DeviceProduct}}"
+          observer.version: "{{parsed_event.message.DeviceVersion}}"
+
+      - set:
+          # Match only for agentSeverity of type int
+          event.severity: "{{parsed_event.message.Severity}}"
+        filter: "{{parsed_event.message.Severity | re_match('[1-9]|10')}}"
+
+  set_cef_extension_fields:
+    actions:
+      - set:
+          event.action: "{{parsed_event.message.act | lower}}"
+        filter: '{{parsed_event.message.get("act") != None}}'
+
+      - set:
+          email.subject: "{{parsed_event.message.msg}}"
+          email.from.address: "{{parsed_event.message.suser}}"
+
+      - set:
+          source.ip: "{{parsed_event.message.src }}"
+        filter: "{{parsed_event.message.src | is_ipaddress}}"
+
+      - set:
+          source.ip: "{{parsed_event.message.sourceAddress}}"
+        filter: "{{parsed_event.message.sourceAddress | is_ipaddress}}"
+
+      - translate:
+        dictionary:
+          0: "inbound"
+          1: "outbound"
+        mapping:
+          parsed_event.message.deviceDirection: network.direction
+
+      - set:
+          host.name: "{{parsed_event.message.dvchost or parsed_event.message.get('deviceDns Domain')}}"
+          host.id: "{{parsed_event.message.get('deviceExternalId')}}"
+          log.syslog.facility.name: "{{parsed_event.message.deviceFacility}}"
+          observer.ingress.interface.name: "{{parsed_event.message.get('deviceInboundInterface')}}"
+          observer.egress.interface.name: "{{parsed_event.message.get('deviceOutboundInterface')}}"
+
+      - set:
+          email.to.address: "{{parsed_event.message.duser}}"
+
+      - set:
+          server.ip: "{{parsed_event.message.dvc}}"
+        filter: "{{parsed_event.message.dvc | is_ipaddress}}"
+
+      - set:
+          event.end: "{{parse_end_date.date}}"
+          event.action: "{{parsed_event.message.reason}}"
+          url.original: "{{parsed_event.message.request}}"
+          user_agent.original: "{{parsed_event.message.get('requestClient Application')}}"
+          host.hostname: "{{parsed_event.message.shost or parsed_event.message.sourceHostName}}"
+
+      - set:
+          event.start: "{{parse_start_date.date}}"
+          email.message_id: "{{parse_message_id.message.MESSAGE_ID}}"
+          email.local_id: "{{parsed_event.message.ESAMID}}"
+          rule.name: "{{parsed_event.message.MailPolicy}}"
+          email.attachments: >-
+            [{% for filename, info in json_event_esaattachmentdetails.message.items() -%}
+              {% set hashes = info.get("AMP", {}).get("fileHash") %}
+              {% if hashes is none %}
+                {"file":{ "name": "{{ filename }}"}},
+              {% else %}
+                {% if hashes is string %}
+                  {"file":{"name": "{{ filename }}", "hash":{"sha256": "{{ hashes }}"}}},
+                {% else %}
+                  {% for hash in hashes %}
+                    {"file":{"name": "{{ filename }}", "hash":{"sha256": "{{ hash }}"}}},
+                  {% endfor %}
+                {% endif %}
+              {% endif %}
+            {%- endfor %}]
+          url.domain: "{{parsed_event.message.EAURLDetails}}"
+          cisco.esa.delivery.connection_id: "{{parsed_event.message.ESADCID}}"
+          cisco.esa.injection.connection_id: "{{parsed_event.message.ESAICID}}"
+          cisco.esa.protection.spam.verdict: "{{parsed_event.message.ESAASVerdict}}"
+          cisco.esa.protection.antivirus.verdict: "{{parsed_event.message.ESAAVVerdict}}"
+          cisco.esa.protection.amp.verdict: "{{parsed_event.message.ESAAMPVerdict}}"
+          cisco.esa.protection.dlp.verdict: "{{parsed_event.message.ESADLPVerdict}}"
+          cisco.esa.authentication.dmarc.verdict: "{{parsed_event.message.ESADMARCVerdict}}"
+          cisco.esa.authentication.spf.verdict: "{{parsed_event.message.ESASPFVerdict}}"
+          cisco.esa.authentication.dkim.verdict: "{{parsed_event.message.ESADKIMVerdict}}"
+          cisco.esa.source.domain.age: "{{parsed_event.message.ESASDRDomainAge}}"
+          cisco.esa.email.message_size: "{{parsed_event.message.ESAMsgSize}}"
+          cisco.esa.event.action_details: "{{parsed_event.message.ESAFinalActionDetails}}"
+
+      - set:
+          cisco.esa.helo.ip: "{{parsed_event.message.ESAHeloIP}}"
+        filter: "{{parsed_event.message.ESAHeloIP | is_ipaddress}}"
+
+      - set:
+          cisco.esa.url_domain: >-
+            [{% for url, details in json_event_url_details.message.items() %}
+              {% if details.get('ExpandedUrl') is not none %}"{{url.replace('https://','').replace('http://','').split('/')[0]}}", "{{ details.ExpandedUrl.replace('https://','').replace('http://','').split('/')[0] }}"{% else %}"{{ url.replace('https://','').replace('http://','').split('/')[0] }}"{% endif %}
+              {% if not loop.last %},{% endif %}
+            {% endfor %}]
+          cisco.esa.url: >-
+            [{% for url, details in json_event_url_details.message.items() %}
+              {% if details.get('ExpandedUrl') is not none %}"{{url}}", "{{ details.ExpandedUrl }}"{% else %}"{{ url }}"{% endif %}
+              {% if not loop.last %},{% endif %}
+            {% endfor %}]
+        filter: "{{json_event_url_details.message | length > 0}}"
+
+      - set:
+          cisco.esa.helo.domain: "{{parsed_event.message.ESAHeloDomain}}"
+          cisco.esa.sender_group: "{{parsed_event.message.ESASenderGroup}}"
+          cisco.esa.status: "{{parsed_event.message.ESAStatus}}"

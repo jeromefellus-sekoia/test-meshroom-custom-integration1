@@ -1,0 +1,101 @@
+{
+  "input": {
+    "message": "Info: 1278096903.150 97 172.10.11.22 TCP_MISS/200 8187 GET http://my.site.com/ - DIRECT/my.site.com text/plain DEFAULT_CASE_11-PolicyGroupName-Identity-OutboundMalwareScanningPolicy-DataSecurityPolicy-ExternalDLPPolicy-RoutingPolicy <IW_comp,6.9,-,\"-\",-,-,-,-,\"-\",-,-,-,\"-\",-,-,\"-\",\"-\",-,-,IW_comp,-,\"-\",\"-\",\"Unknown\",\"Unknown\",\"-\",\"-\",198.34,0,-,[Local],\"-\",37,\"W32.CiscoTestVector\",33,0,\"WSA-INFECTED-FILE.pdf\",\"fd5ef49d4213e05f448f11ed9c98253d85829614fba368a421d14e64c426da5e\"> -"
+  },
+  "expected": {
+    "message": "Info: 1278096903.150 97 172.10.11.22 TCP_MISS/200 8187 GET http://my.site.com/ - DIRECT/my.site.com text/plain DEFAULT_CASE_11-PolicyGroupName-Identity-OutboundMalwareScanningPolicy-DataSecurityPolicy-ExternalDLPPolicy-RoutingPolicy <IW_comp,6.9,-,\"-\",-,-,-,-,\"-\",-,-,-,\"-\",-,-,\"-\",\"-\",-,-,IW_comp,-,\"-\",\"-\",\"Unknown\",\"Unknown\",\"-\",\"-\",198.34,0,-,[Local],\"-\",37,\"W32.CiscoTestVector\",33,0,\"WSA-INFECTED-FILE.pdf\",\"fd5ef49d4213e05f448f11ed9c98253d85829614fba368a421d14e64c426da5e\"> -",
+    "event": {
+      "category": [
+        "network",
+        "web"
+      ],
+      "duration": 97,
+      "start": "2010-07-02T18:55:03.150000Z"
+    },
+    "@timestamp": "2010-07-02T18:55:03.150000Z",
+    "cisco_wsa": {
+      "cache_status": "miss",
+      "hierarchy_code": "DIRECT",
+      "rule": {
+        "policy": {
+          "data_security": "DataSecurityPolicy",
+          "external_dlp": "ExternalDLPPolicy",
+          "name": "PolicyGroupName",
+          "outbound_malware_scanning": "OutboundMalwareScanningPolicy",
+          "routing": "RoutingPolicy"
+        }
+      },
+      "threat": {
+        "category": "Known Malicious and High-Risk Files",
+        "category_code": 37,
+        "name": "W32.CiscoTestVector",
+        "reputation_score": 33
+      },
+      "url": {
+        "category": "Computers and Internet",
+        "category_code": "IW_comp"
+      }
+    },
+    "destination": {
+      "address": "my.site.com",
+      "domain": "my.site.com",
+      "registered_domain": "site.com",
+      "subdomain": "my",
+      "top_level_domain": "com"
+    },
+    "file": {
+      "hash": {
+        "sha256": "fd5ef49d4213e05f448f11ed9c98253d85829614fba368a421d14e64c426da5e"
+      },
+      "name": "WSA-INFECTED-FILE.pdf"
+    },
+    "http": {
+      "request": {
+        "method": "GET"
+      },
+      "response": {
+        "bytes": 8187,
+        "mime_type": "text/plain",
+        "status_code": 200
+      }
+    },
+    "network": {
+      "direction": "egress",
+      "transport": "tcp"
+    },
+    "observer": {
+      "product": "Cisco Web Security Appliances",
+      "type": "proxy",
+      "vendor": "Cisco"
+    },
+    "related": {
+      "hash": [
+        "fd5ef49d4213e05f448f11ed9c98253d85829614fba368a421d14e64c426da5e"
+      ],
+      "hosts": [
+        "my.site.com"
+      ],
+      "ip": [
+        "172.10.11.22"
+      ]
+    },
+    "rule": {
+      "id": "DEFAULT_CASE_11",
+      "ruleset": "Identity"
+    },
+    "source": {
+      "address": "172.10.11.22",
+      "ip": "172.10.11.22"
+    },
+    "url": {
+      "domain": "my.site.com",
+      "original": "http://my.site.com/",
+      "path": "/",
+      "port": 80,
+      "registered_domain": "site.com",
+      "scheme": "http",
+      "subdomain": "my",
+      "top_level_domain": "com"
+    }
+  }
+}

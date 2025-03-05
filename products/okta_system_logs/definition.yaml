@@ -1,0 +1,6 @@
+description: Okta System log provides activity records related to your organization.
+name: okta_system_logs
+produces:
+  events:
+  - mode: pull
+vendor: Okta

@@ -1,0 +1,77 @@
+{
+  "input": {
+    "message": "LEEF:1.0|WatchGuard|XTM|12.8.2.B666661|30000148|serial=000000000000\tpolicy=Unhandled External Packet-00\tdisp=Deny\tin_if=WAN1\tout_if=Firebox\tgeo_src=CHN\tsrc=1.2.3.4\tsrcPort=35186\tdst=192.168.1.2\tdstPort=6379\tip_len=60\tip_TTL=49\tproto=tcp\ttcp_offset=10\ttcp_flag=S\ttcp_seq=2630166840\ttcp_window=4210"
+  },
+  "expected": {
+    "message": "LEEF:1.0|WatchGuard|XTM|12.8.2.B666661|30000148|serial=000000000000\tpolicy=Unhandled External Packet-00\tdisp=Deny\tin_if=WAN1\tout_if=Firebox\tgeo_src=CHN\tsrc=1.2.3.4\tsrcPort=35186\tdst=192.168.1.2\tdstPort=6379\tip_len=60\tip_TTL=49\tproto=tcp\ttcp_offset=10\ttcp_flag=S\ttcp_seq=2630166840\ttcp_window=4210",
+    "event": {
+      "action": "Deny",
+      "category": [
+        "network"
+      ],
+      "code": "30000148",
+      "type": [
+        "connection",
+        "denied"
+      ]
+    },
+    "destination": {
+      "address": "192.168.1.2",
+      "ip": "192.168.1.2",
+      "port": 6379
+    },
+    "network": {
+      "transport": "tcp"
+    },
+    "observer": {
+      "egress": {
+        "interface": {
+          "name": "Firebox"
+        }
+      },
+      "ingress": {
+        "interface": {
+          "name": "WAN1"
+        }
+      },
+      "product": "XTM",
+      "serial_number": "000000000000",
+      "type": "firewall",
+      "vendor": "WatchGuard",
+      "version": "12.8.2.B666661"
+    },
+    "related": {
+      "ip": [
+        "1.2.3.4",
+        "192.168.1.2"
+      ]
+    },
+    "rule": {
+      "ruleset": "Unhandled External Packet-00"
+    },
+    "source": {
+      "address": "1.2.3.4",
+      "geo": {
+        "country_iso_code": "CHN"
+      },
+      "ip": "1.2.3.4",
+      "port": 35186
+    },
+    "watchguard": {
+      "firebox": {
+        "network": {
+          "ip": {
+            "len": 60,
+            "ttl": 49
+          },
+          "tcp": {
+            "flag": "S",
+            "offset": 10,
+            "sequence": "2630166840",
+            "window": "4210"
+          }
+        }
+      }
+    }
+  }
+}

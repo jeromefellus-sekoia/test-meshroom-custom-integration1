@@ -1,0 +1,32 @@
+automation_connector_uuid: a5b598ef-a962-4274-93de-b9e6be0cd915
+automation_module_uuid: 72af1e06-84db-497d-b4ac-10defb1f265f
+documentation_url: https://docs.sekoia.io/operation_center/integration_catalog/uuid/041e915e-2fb6-4604-9b24-902c9daa2d3c
+intake_format_uuid: 041e915e-2fb6-4604-9b24-902c9daa2d3c
+mode: pull
+product: sekoia
+role: consumer
+settings:
+- name: module_configuration
+  properties:
+  - description: Client ID
+    name: client_id
+    required: true
+  - description: Client Secret
+    name: client_secret
+    required: true
+    secret: true
+  type: object
+- name: connector_configuration
+  properties:
+  - default: 480
+    description: Batch frequency in seconds (default to 8 minutes; because batches
+      are available every 15 minutes)
+    name: frequency
+    type: integer
+  - default: 100
+    description: The size of chunks for the batch processing
+    name: chunk_size
+    type: integer
+  type: object
+target_product: mimecast_email_security
+topic: events

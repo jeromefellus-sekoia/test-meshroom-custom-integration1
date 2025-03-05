@@ -1,0 +1,7 @@
+description: Vectra Cognito Detect is an AI-powered Network Threat Detection & Response
+  Platform.
+name: vectra_cognito_detect
+produces:
+  events:
+  - {}
+vendor: Vectra

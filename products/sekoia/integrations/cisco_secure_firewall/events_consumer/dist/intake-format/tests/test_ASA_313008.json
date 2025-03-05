@@ -1,0 +1,45 @@
+{
+  "input": {
+    "message": "%ASA-3-313008: Denied IPv6-ICMP type=136, code=0 from fe80::f037:5fbc:b824:230d on interface NEA-FOR-WIFOR"
+  },
+  "expected": {
+    "message": "%ASA-3-313008: Denied IPv6-ICMP type=136, code=0 from fe80::f037:5fbc:b824:230d on interface NEA-FOR-WIFOR",
+    "event": {
+      "category": [
+        "network"
+      ],
+      "code": "313008"
+    },
+    "action": {
+      "name": "denied",
+      "target": "network-traffic"
+    },
+    "cisco": {
+      "ftd": {
+        "icmp_code": "0",
+        "icmp_type": "136"
+      }
+    },
+    "network": {
+      "transport": "ipv6-icmp"
+    },
+    "observer": {
+      "egress": {
+        "interface": {
+          "name": "NEA-FOR-WIFOR"
+        }
+      },
+      "product": "Adaptive Security Appliance",
+      "vendor": "Cisco"
+    },
+    "related": {
+      "ip": [
+        "fe80::f037:5fbc:b824:230d"
+      ]
+    },
+    "source": {
+      "address": "fe80::f037:5fbc:b824:230d",
+      "ip": "fe80::f037:5fbc:b824:230d"
+    }
+  }
+}

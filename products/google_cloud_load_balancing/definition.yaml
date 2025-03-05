@@ -1,0 +1,8 @@
+description: Google Cloud Load Balancing is a fully distributed, software-defined
+  managed service that distributes traffic across multiple backend instances in multiple
+  regions, enhancing performance, reliability, and scalability.
+name: google_cloud_load_balancing
+produces:
+  events:
+  - {}
+vendor: Google Cloud
